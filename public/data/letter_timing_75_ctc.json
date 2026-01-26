@@ -1,0 +1,4259 @@
+[
+  {
+    "wordIdx": 0,
+    "charIdx": 0,
+    "char": "أ",
+    "start": 31,
+    "end": 151,
+    "duration": 120,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 0,
+    "charIdx": 1,
+    "char": "ع",
+    "start": 151,
+    "end": 255,
+    "duration": 104,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 0,
+    "charIdx": 2,
+    "char": "و",
+    "start": 255,
+    "end": 383,
+    "duration": 128,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 0,
+    "charIdx": 3,
+    "char": "ذ",
+    "start": 383,
+    "end": 472,
+    "duration": 88,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 1,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 492,
+    "end": 599,
+    "duration": 107,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 1,
+    "charIdx": 1,
+    "char": "ا",
+    "start": 599,
+    "end": 791,
+    "duration": 192,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 1,
+    "charIdx": 2,
+    "char": "ل",
+    "start": 791,
+    "end": 898,
+    "duration": 107,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 1,
+    "charIdx": 3,
+    "char": "ل",
+    "start": 898,
+    "end": 1005,
+    "duration": 107,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 1,
+    "charIdx": 4,
+    "char": "ه",
+    "start": 1005,
+    "end": 1113,
+    "duration": 107,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 2,
+    "charIdx": 0,
+    "char": "م",
+    "start": 1173,
+    "end": 1253,
+    "duration": 80,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 2,
+    "charIdx": 1,
+    "char": "ن",
+    "start": 1253,
+    "end": 1333,
+    "duration": 80,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 3,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 1373,
+    "end": 1531,
+    "duration": 158,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 3,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 1531,
+    "end": 1619,
+    "duration": 87,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 3,
+    "charIdx": 2,
+    "char": "ش",
+    "start": 1619,
+    "end": 1724,
+    "duration": 105,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 3,
+    "charIdx": 3,
+    "char": "ي",
+    "start": 1724,
+    "end": 1865,
+    "duration": 140,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 3,
+    "charIdx": 4,
+    "char": "ط",
+    "start": 1865,
+    "end": 1988,
+    "duration": 123,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 3,
+    "charIdx": 5,
+    "char": "ا",
+    "start": 1988,
+    "end": 2147,
+    "duration": 158,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 3,
+    "charIdx": 6,
+    "char": "ن",
+    "start": 2147,
+    "end": 2235,
+    "duration": 87,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 4,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 2295,
+    "end": 3006,
+    "duration": 711,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 4,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 3006,
+    "end": 3402,
+    "duration": 395,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 4,
+    "charIdx": 2,
+    "char": "ر",
+    "start": 3402,
+    "end": 3797,
+    "duration": 395,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 4,
+    "charIdx": 3,
+    "char": "ج",
+    "start": 3797,
+    "end": 4232,
+    "duration": 435,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 4,
+    "charIdx": 4,
+    "char": "ي",
+    "start": 4232,
+    "end": 4865,
+    "duration": 632,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 4,
+    "charIdx": 5,
+    "char": "م",
+    "start": 4865,
+    "end": 5261,
+    "duration": 395,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 5,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 5281,
+    "end": 5393,
+    "duration": 112,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 5,
+    "charIdx": 1,
+    "char": "س",
+    "start": 5393,
+    "end": 5528,
+    "duration": 134,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 5,
+    "charIdx": 2,
+    "char": "م",
+    "start": 5528,
+    "end": 5641,
+    "duration": 112,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 6,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 5682,
+    "end": 5974,
+    "duration": 292,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 6,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 5974,
+    "end": 6137,
+    "duration": 162,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 6,
+    "charIdx": 2,
+    "char": "ل",
+    "start": 6137,
+    "end": 6300,
+    "duration": 162,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 6,
+    "charIdx": 3,
+    "char": "ه",
+    "start": 6300,
+    "end": 6462,
+    "duration": 162,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 7,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 6503,
+    "end": 6792,
+    "duration": 289,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 7,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 6792,
+    "end": 6953,
+    "duration": 160,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 7,
+    "charIdx": 2,
+    "char": "ر",
+    "start": 6953,
+    "end": 7114,
+    "duration": 160,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 7,
+    "charIdx": 3,
+    "char": "ح",
+    "start": 7114,
+    "end": 7323,
+    "duration": 209,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 7,
+    "charIdx": 4,
+    "char": "م",
+    "start": 7323,
+    "end": 7484,
+    "duration": 160,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 7,
+    "charIdx": 5,
+    "char": "ن",
+    "start": 7484,
+    "end": 7645,
+    "duration": 160,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 8,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 7685,
+    "end": 8495,
+    "duration": 810,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 8,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 8495,
+    "end": 8945,
+    "duration": 450,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 8,
+    "charIdx": 2,
+    "char": "ر",
+    "start": 8945,
+    "end": 9395,
+    "duration": 450,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 8,
+    "charIdx": 3,
+    "char": "ح",
+    "start": 9395,
+    "end": 9981,
+    "duration": 585,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 8,
+    "charIdx": 4,
+    "char": "ي",
+    "start": 9981,
+    "end": 10701,
+    "duration": 720,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 8,
+    "charIdx": 5,
+    "char": "م",
+    "start": 10701,
+    "end": 11152,
+    "duration": 450,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 9,
+    "charIdx": 0,
+    "char": "ل",
+    "start": 11172,
+    "end": 12044,
+    "duration": 872,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 9,
+    "charIdx": 1,
+    "char": "ا",
+    "start": 12044,
+    "end": 13616,
+    "duration": 1571,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 10,
+    "charIdx": 0,
+    "char": "أ",
+    "start": 13636,
+    "end": 13918,
+    "duration": 282,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 10,
+    "charIdx": 1,
+    "char": "ق",
+    "start": 13918,
+    "end": 14163,
+    "duration": 244,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 10,
+    "charIdx": 2,
+    "char": "س",
+    "start": 14163,
+    "end": 14389,
+    "duration": 226,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 10,
+    "charIdx": 3,
+    "char": "م",
+    "start": 14389,
+    "end": 14578,
+    "duration": 188,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 11,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 14658,
+    "end": 14831,
+    "duration": 173,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 11,
+    "charIdx": 1,
+    "char": "ي",
+    "start": 14831,
+    "end": 15109,
+    "duration": 277,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 11,
+    "charIdx": 2,
+    "char": "و",
+    "start": 15109,
+    "end": 15386,
+    "duration": 277,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 11,
+    "charIdx": 3,
+    "char": "م",
+    "start": 15386,
+    "end": 15560,
+    "duration": 173,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 12,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 15640,
+    "end": 15954,
+    "duration": 314,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 12,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 15954,
+    "end": 16128,
+    "duration": 174,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 12,
+    "charIdx": 2,
+    "char": "ق",
+    "start": 16128,
+    "end": 16355,
+    "duration": 226,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 12,
+    "charIdx": 3,
+    "char": "ي",
+    "start": 16355,
+    "end": 16634,
+    "duration": 279,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 12,
+    "charIdx": 4,
+    "char": "ا",
+    "start": 16634,
+    "end": 16948,
+    "duration": 314,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 12,
+    "charIdx": 5,
+    "char": "م",
+    "start": 16948,
+    "end": 17123,
+    "duration": 174,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 12,
+    "charIdx": 6,
+    "char": "ة",
+    "start": 17123,
+    "end": 17263,
+    "duration": 139,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 13,
+    "charIdx": 0,
+    "char": "و",
+    "start": 17868,
+    "end": 18836,
+    "duration": 968,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 13,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 18836,
+    "end": 19441,
+    "duration": 605,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 13,
+    "charIdx": 2,
+    "char": "ا",
+    "start": 19441,
+    "end": 20531,
+    "duration": 1089,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 14,
+    "charIdx": 0,
+    "char": "أ",
+    "start": 20551,
+    "end": 20821,
+    "duration": 270,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 14,
+    "charIdx": 1,
+    "char": "ق",
+    "start": 20821,
+    "end": 21055,
+    "duration": 234,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 14,
+    "charIdx": 2,
+    "char": "س",
+    "start": 21055,
+    "end": 21271,
+    "duration": 216,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 14,
+    "charIdx": 3,
+    "char": "م",
+    "start": 21271,
+    "end": 21452,
+    "duration": 180,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 15,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 21552,
+    "end": 21798,
+    "duration": 246,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 15,
+    "charIdx": 1,
+    "char": "ا",
+    "start": 21798,
+    "end": 22240,
+    "duration": 442,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 15,
+    "charIdx": 2,
+    "char": "ل",
+    "start": 22240,
+    "end": 22486,
+    "duration": 246,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 15,
+    "charIdx": 3,
+    "char": "ن",
+    "start": 22486,
+    "end": 22732,
+    "duration": 246,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 15,
+    "charIdx": 4,
+    "char": "ف",
+    "start": 22732,
+    "end": 22978,
+    "duration": 246,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 15,
+    "charIdx": 5,
+    "char": "س",
+    "start": 22978,
+    "end": 23274,
+    "duration": 295,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 16,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 23675,
+    "end": 24167,
+    "duration": 492,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 16,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 24167,
+    "end": 24441,
+    "duration": 273,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 16,
+    "charIdx": 2,
+    "char": "ل",
+    "start": 24441,
+    "end": 24714,
+    "duration": 273,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 16,
+    "charIdx": 3,
+    "char": "و",
+    "start": 24714,
+    "end": 25152,
+    "duration": 437,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 16,
+    "charIdx": 4,
+    "char": "ا",
+    "start": 25152,
+    "end": 25645,
+    "duration": 492,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 16,
+    "charIdx": 5,
+    "char": "م",
+    "start": 25645,
+    "end": 25919,
+    "duration": 273,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 16,
+    "charIdx": 6,
+    "char": "ة",
+    "start": 25919,
+    "end": 26138,
+    "duration": 218,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 17,
+    "charIdx": 0,
+    "char": "أ",
+    "start": 26278,
+    "end": 26465,
+    "duration": 187,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 17,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 26465,
+    "end": 26503,
+    "duration": 37,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 17,
+    "charIdx": 2,
+    "char": "ي",
+    "start": 26503,
+    "end": 26703,
+    "duration": 200,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 17,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 26703,
+    "end": 26740,
+    "duration": 37,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 17,
+    "charIdx": 4,
+    "char": "ح",
+    "start": 26740,
+    "end": 26903,
+    "duration": 162,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 17,
+    "charIdx": 5,
+    "char": "ْ",
+    "start": 26903,
+    "end": 26928,
+    "duration": 25,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 17,
+    "charIdx": 6,
+    "char": "س",
+    "start": 26928,
+    "end": 27078,
+    "duration": 150,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 17,
+    "charIdx": 7,
+    "char": "ِ",
+    "start": 27078,
+    "end": 27116,
+    "duration": 37,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 17,
+    "charIdx": 8,
+    "char": "ب",
+    "start": 27116,
+    "end": 27241,
+    "duration": 125,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 17,
+    "charIdx": 9,
+    "char": "ُ",
+    "start": 27241,
+    "end": 27278,
+    "duration": 37,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 18,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 27359,
+    "end": 27687,
+    "duration": 328,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 18,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 27687,
+    "end": 27870,
+    "duration": 182,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 18,
+    "charIdx": 2,
+    "char": "إ",
+    "start": 27870,
+    "end": 28143,
+    "duration": 273,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 18,
+    "charIdx": 3,
+    "char": "ِ",
+    "start": 28143,
+    "end": 28198,
+    "duration": 54,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 18,
+    "charIdx": 4,
+    "char": "ن",
+    "start": 28198,
+    "end": 28381,
+    "duration": 182,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 18,
+    "charIdx": 5,
+    "char": "س",
+    "start": 28381,
+    "end": 28600,
+    "duration": 219,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 18,
+    "charIdx": 6,
+    "char": "َ",
+    "start": 28600,
+    "end": 28655,
+    "duration": 54,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 18,
+    "charIdx": 7,
+    "char": "ا",
+    "start": 28655,
+    "end": 28983,
+    "duration": 328,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 18,
+    "charIdx": 8,
+    "char": "ن",
+    "start": 28983,
+    "end": 29166,
+    "duration": 182,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 18,
+    "charIdx": 9,
+    "char": "ُ",
+    "start": 29166,
+    "end": 29221,
+    "duration": 54,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 19,
+    "charIdx": 0,
+    "char": "أ",
+    "start": 29241,
+    "end": 29487,
+    "duration": 246,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 19,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 29487,
+    "end": 29537,
+    "duration": 49,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 19,
+    "charIdx": 2,
+    "char": "ن",
+    "start": 29537,
+    "end": 29702,
+    "duration": 164,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 0,
+    "char": "ل",
+    "start": 29722,
+    "end": 29968,
+    "duration": 246,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 29968,
+    "end": 30042,
+    "duration": 73,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 2,
+    "char": "ن",
+    "start": 30042,
+    "end": 30289,
+    "duration": 246,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 30289,
+    "end": 30363,
+    "duration": 73,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 4,
+    "char": "ّ",
+    "start": 30363,
+    "end": 30732,
+    "duration": 369,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 5,
+    "char": "ج",
+    "start": 30732,
+    "end": 31004,
+    "duration": 271,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 6,
+    "char": "ْ",
+    "start": 31004,
+    "end": 31053,
+    "duration": 49,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 7,
+    "char": "م",
+    "start": 31053,
+    "end": 31300,
+    "duration": 246,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 8,
+    "char": "َ",
+    "start": 31300,
+    "end": 31374,
+    "duration": 73,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 9,
+    "char": "ع",
+    "start": 31374,
+    "end": 31694,
+    "duration": 320,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 20,
+    "charIdx": 10,
+    "char": "ْ",
+    "start": 31694,
+    "end": 31743,
+    "duration": 49,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 21,
+    "charIdx": 0,
+    "char": "ع",
+    "start": 31844,
+    "end": 32200,
+    "duration": 356,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 21,
+    "charIdx": 1,
+    "char": "ِ",
+    "start": 32200,
+    "end": 32282,
+    "duration": 82,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 21,
+    "charIdx": 2,
+    "char": "ظ",
+    "start": 32282,
+    "end": 32666,
+    "duration": 383,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 21,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 32666,
+    "end": 32748,
+    "duration": 82,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 21,
+    "charIdx": 4,
+    "char": "ا",
+    "start": 32748,
+    "end": 33241,
+    "duration": 493,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 21,
+    "charIdx": 5,
+    "char": "م",
+    "start": 33241,
+    "end": 33515,
+    "duration": 274,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 21,
+    "charIdx": 6,
+    "char": "َ",
+    "start": 33515,
+    "end": 33598,
+    "duration": 82,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 21,
+    "charIdx": 7,
+    "char": "ه",
+    "start": 33598,
+    "end": 33872,
+    "duration": 274,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 21,
+    "charIdx": 8,
+    "char": "ْ",
+    "start": 33872,
+    "end": 33927,
+    "duration": 54,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 22,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 34087,
+    "end": 34287,
+    "duration": 200,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 22,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 34287,
+    "end": 34347,
+    "duration": 60,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 22,
+    "charIdx": 2,
+    "char": "ل",
+    "start": 34347,
+    "end": 34547,
+    "duration": 200,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 22,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 34547,
+    "end": 34607,
+    "duration": 60,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 22,
+    "charIdx": 4,
+    "char": "ي",
+    "start": 34607,
+    "end": 34927,
+    "duration": 320,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 22,
+    "charIdx": 5,
+    "char": "ْ",
+    "start": 34927,
+    "end": 34968,
+    "duration": 40,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 23,
+    "charIdx": 0,
+    "char": "ق",
+    "start": 34988,
+    "end": 35219,
+    "duration": 231,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 23,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 35219,
+    "end": 35272,
+    "duration": 53,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 23,
+    "charIdx": 2,
+    "char": "ا",
+    "start": 35272,
+    "end": 35592,
+    "duration": 319,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 23,
+    "charIdx": 3,
+    "char": "د",
+    "start": 35592,
+    "end": 35770,
+    "duration": 177,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 23,
+    "charIdx": 4,
+    "char": "ِ",
+    "start": 35770,
+    "end": 35823,
+    "duration": 53,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 23,
+    "charIdx": 5,
+    "char": "ر",
+    "start": 35823,
+    "end": 36001,
+    "duration": 177,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 23,
+    "charIdx": 6,
+    "char": "ِ",
+    "start": 36001,
+    "end": 36054,
+    "duration": 53,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 23,
+    "charIdx": 7,
+    "char": "ي",
+    "start": 36054,
+    "end": 36338,
+    "duration": 284,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 23,
+    "charIdx": 8,
+    "char": "ن",
+    "start": 36338,
+    "end": 36516,
+    "duration": 177,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 23,
+    "charIdx": 9,
+    "char": "َ",
+    "start": 36516,
+    "end": 36569,
+    "duration": 53,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 24,
+    "charIdx": 0,
+    "char": "ع",
+    "start": 36710,
+    "end": 37804,
+    "duration": 1094,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 24,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 37804,
+    "end": 38056,
+    "duration": 252,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 24,
+    "charIdx": 2,
+    "char": "ل",
+    "start": 38056,
+    "end": 38898,
+    "duration": 841,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 24,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 38898,
+    "end": 39151,
+    "duration": 252,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 24,
+    "charIdx": 4,
+    "char": "ى",
+    "start": 39151,
+    "end": 40414,
+    "duration": 1262,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 24,
+    "charIdx": 5,
+    "char": "ٰ",
+    "start": 40414,
+    "end": 41256,
+    "duration": 841,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 25,
+    "charIdx": 0,
+    "char": "أ",
+    "start": 41276,
+    "end": 41308,
+    "duration": 32,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 25,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 41308,
+    "end": 41314,
+    "duration": 6,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 25,
+    "charIdx": 2,
+    "char": "ن",
+    "start": 41314,
+    "end": 41336,
+    "duration": 21,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 26,
+    "charIdx": 0,
+    "char": "ن",
+    "start": 41356,
+    "end": 41526,
+    "duration": 170,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 26,
+    "charIdx": 1,
+    "char": "ُ",
+    "start": 41526,
+    "end": 41577,
+    "duration": 51,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 26,
+    "charIdx": 2,
+    "char": "س",
+    "start": 41577,
+    "end": 41782,
+    "duration": 204,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 26,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 41782,
+    "end": 41833,
+    "duration": 51,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 26,
+    "charIdx": 4,
+    "char": "و",
+    "start": 41833,
+    "end": 42106,
+    "duration": 272,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 26,
+    "charIdx": 5,
+    "char": "ِ",
+    "start": 42106,
+    "end": 42157,
+    "duration": 51,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 26,
+    "charIdx": 6,
+    "char": "ّ",
+    "start": 42157,
+    "end": 42413,
+    "duration": 255,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 26,
+    "charIdx": 7,
+    "char": "ي",
+    "start": 42413,
+    "end": 42685,
+    "duration": 272,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 26,
+    "charIdx": 8,
+    "char": "َ",
+    "start": 42685,
+    "end": 42736,
+    "duration": 51,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 27,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 42757,
+    "end": 42963,
+    "duration": 206,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 27,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 42963,
+    "end": 43024,
+    "duration": 61,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 27,
+    "charIdx": 2,
+    "char": "ن",
+    "start": 43024,
+    "end": 43230,
+    "duration": 206,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 27,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 43230,
+    "end": 43292,
+    "duration": 61,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 27,
+    "charIdx": 4,
+    "char": "ا",
+    "start": 43292,
+    "end": 43663,
+    "duration": 370,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 27,
+    "charIdx": 5,
+    "char": "ن",
+    "start": 43663,
+    "end": 43869,
+    "duration": 206,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 27,
+    "charIdx": 6,
+    "char": "َ",
+    "start": 43869,
+    "end": 43931,
+    "duration": 61,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 27,
+    "charIdx": 7,
+    "char": "ه",
+    "start": 43931,
+    "end": 44137,
+    "duration": 206,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 27,
+    "charIdx": 8,
+    "char": "ْ",
+    "start": 44137,
+    "end": 44178,
+    "duration": 41,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 28,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 44851,
+    "end": 45071,
+    "duration": 220,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 28,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 45071,
+    "end": 45291,
+    "duration": 220,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 29,
+    "charIdx": 0,
+    "char": "ي",
+    "start": 45392,
+    "end": 45656,
+    "duration": 264,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 29,
+    "charIdx": 1,
+    "char": "ر",
+    "start": 45656,
+    "end": 45822,
+    "duration": 165,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 29,
+    "charIdx": 2,
+    "char": "ي",
+    "start": 45822,
+    "end": 46087,
+    "duration": 264,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 29,
+    "charIdx": 3,
+    "char": "د",
+    "start": 46087,
+    "end": 46253,
+    "duration": 165,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 30,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 46333,
+    "end": 46705,
+    "duration": 372,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 30,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 46705,
+    "end": 46911,
+    "duration": 206,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 30,
+    "charIdx": 2,
+    "char": "إ",
+    "start": 46911,
+    "end": 47221,
+    "duration": 310,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 30,
+    "charIdx": 3,
+    "char": "ن",
+    "start": 47221,
+    "end": 47428,
+    "duration": 206,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 30,
+    "charIdx": 4,
+    "char": "س",
+    "start": 47428,
+    "end": 47676,
+    "duration": 248,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 30,
+    "charIdx": 5,
+    "char": "ا",
+    "start": 47676,
+    "end": 48048,
+    "duration": 372,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 30,
+    "charIdx": 6,
+    "char": "ن",
+    "start": 48048,
+    "end": 48254,
+    "duration": 206,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 31,
+    "charIdx": 0,
+    "char": "ل",
+    "start": 48335,
+    "end": 48563,
+    "duration": 228,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 31,
+    "charIdx": 1,
+    "char": "ي",
+    "start": 48563,
+    "end": 48928,
+    "duration": 365,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 31,
+    "charIdx": 2,
+    "char": "ف",
+    "start": 48928,
+    "end": 49156,
+    "duration": 228,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 31,
+    "charIdx": 3,
+    "char": "ج",
+    "start": 49156,
+    "end": 49407,
+    "duration": 251,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 31,
+    "charIdx": 4,
+    "char": "ر",
+    "start": 49407,
+    "end": 49635,
+    "duration": 228,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 32,
+    "charIdx": 0,
+    "char": "أ",
+    "start": 49776,
+    "end": 50281,
+    "duration": 505,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 32,
+    "charIdx": 1,
+    "char": "م",
+    "start": 50281,
+    "end": 50618,
+    "duration": 336,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 32,
+    "charIdx": 2,
+    "char": "ا",
+    "start": 50618,
+    "end": 51225,
+    "duration": 606,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 32,
+    "charIdx": 3,
+    "char": "م",
+    "start": 51225,
+    "end": 51562,
+    "duration": 336,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 32,
+    "charIdx": 4,
+    "char": "ه",
+    "start": 51562,
+    "end": 51899,
+    "duration": 336,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 33,
+    "charIdx": 0,
+    "char": "ي",
+    "start": 52019,
+    "end": 52315,
+    "duration": 296,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 33,
+    "charIdx": 1,
+    "char": "س",
+    "start": 52315,
+    "end": 52537,
+    "duration": 222,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 33,
+    "charIdx": 2,
+    "char": "أ",
+    "start": 52537,
+    "end": 52814,
+    "duration": 277,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 33,
+    "charIdx": 3,
+    "char": "ل",
+    "start": 52814,
+    "end": 53000,
+    "duration": 185,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 34,
+    "charIdx": 0,
+    "char": "أ",
+    "start": 53140,
+    "end": 53496,
+    "duration": 356,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 34,
+    "charIdx": 1,
+    "char": "ي",
+    "start": 53496,
+    "end": 53876,
+    "duration": 380,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 34,
+    "charIdx": 2,
+    "char": "ا",
+    "start": 53876,
+    "end": 54304,
+    "duration": 427,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 34,
+    "charIdx": 3,
+    "char": "ن",
+    "start": 54304,
+    "end": 54541,
+    "duration": 237,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 35,
+    "charIdx": 0,
+    "char": "ي",
+    "start": 54662,
+    "end": 54967,
+    "duration": 305,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 35,
+    "charIdx": 1,
+    "char": "و",
+    "start": 54967,
+    "end": 55272,
+    "duration": 305,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 35,
+    "charIdx": 2,
+    "char": "م",
+    "start": 55272,
+    "end": 55462,
+    "duration": 190,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 36,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 55523,
+    "end": 55978,
+    "duration": 455,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 36,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 55978,
+    "end": 56231,
+    "duration": 252,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 36,
+    "charIdx": 2,
+    "char": "ق",
+    "start": 56231,
+    "end": 56560,
+    "duration": 328,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 36,
+    "charIdx": 3,
+    "char": "ي",
+    "start": 56560,
+    "end": 56964,
+    "duration": 404,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 36,
+    "charIdx": 4,
+    "char": "ا",
+    "start": 56964,
+    "end": 57420,
+    "duration": 455,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 36,
+    "charIdx": 5,
+    "char": "م",
+    "start": 57420,
+    "end": 57673,
+    "duration": 252,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 36,
+    "charIdx": 6,
+    "char": "ه",
+    "start": 57673,
+    "end": 57926,
+    "duration": 252,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 37,
+    "charIdx": 0,
+    "char": "ف",
+    "start": 58046,
+    "end": 58209,
+    "duration": 163,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 37,
+    "charIdx": 1,
+    "char": "إ",
+    "start": 58209,
+    "end": 58453,
+    "duration": 244,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 37,
+    "charIdx": 2,
+    "char": "ذ",
+    "start": 58453,
+    "end": 58633,
+    "duration": 179,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 37,
+    "charIdx": 3,
+    "char": "ا",
+    "start": 58633,
+    "end": 58926,
+    "duration": 293,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 38,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 59087,
+    "end": 59323,
+    "duration": 236,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 38,
+    "charIdx": 1,
+    "char": "ر",
+    "start": 59323,
+    "end": 59560,
+    "duration": 236,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 38,
+    "charIdx": 2,
+    "char": "ق",
+    "start": 59560,
+    "end": 59867,
+    "duration": 307,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 39,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 59888,
+    "end": 60399,
+    "duration": 511,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 39,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 60399,
+    "end": 60683,
+    "duration": 284,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 39,
+    "charIdx": 2,
+    "char": "ب",
+    "start": 60683,
+    "end": 60967,
+    "duration": 284,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 39,
+    "charIdx": 3,
+    "char": "ص",
+    "start": 60967,
+    "end": 61365,
+    "duration": 397,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 39,
+    "charIdx": 4,
+    "char": "ر",
+    "start": 61365,
+    "end": 61650,
+    "duration": 284,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 40,
+    "charIdx": 0,
+    "char": "و",
+    "start": 61730,
+    "end": 62025,
+    "duration": 295,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 40,
+    "charIdx": 1,
+    "char": "خ",
+    "start": 62025,
+    "end": 62265,
+    "duration": 239,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 40,
+    "charIdx": 2,
+    "char": "س",
+    "start": 62265,
+    "end": 62486,
+    "duration": 221,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 40,
+    "charIdx": 3,
+    "char": "ف",
+    "start": 62486,
+    "end": 62671,
+    "duration": 184,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 41,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 62831,
+    "end": 63374,
+    "duration": 543,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 41,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 63374,
+    "end": 63676,
+    "duration": 301,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 41,
+    "charIdx": 2,
+    "char": "ق",
+    "start": 63676,
+    "end": 64069,
+    "duration": 392,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 41,
+    "charIdx": 3,
+    "char": "م",
+    "start": 64069,
+    "end": 64371,
+    "duration": 301,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 41,
+    "charIdx": 4,
+    "char": "ر",
+    "start": 64371,
+    "end": 64673,
+    "duration": 301,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 42,
+    "charIdx": 0,
+    "char": "و",
+    "start": 64833,
+    "end": 65121,
+    "duration": 288,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 42,
+    "charIdx": 1,
+    "char": "ج",
+    "start": 65121,
+    "end": 65319,
+    "duration": 198,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 42,
+    "charIdx": 2,
+    "char": "م",
+    "start": 65319,
+    "end": 65499,
+    "duration": 180,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 42,
+    "charIdx": 3,
+    "char": "ع",
+    "start": 65499,
+    "end": 65734,
+    "duration": 234,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 43,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 65834,
+    "end": 66130,
+    "duration": 296,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 43,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 66130,
+    "end": 66295,
+    "duration": 164,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 43,
+    "charIdx": 2,
+    "char": "ش",
+    "start": 66295,
+    "end": 66492,
+    "duration": 197,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 43,
+    "charIdx": 3,
+    "char": "م",
+    "start": 66492,
+    "end": 66657,
+    "duration": 164,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 43,
+    "charIdx": 4,
+    "char": "س",
+    "start": 66657,
+    "end": 66854,
+    "duration": 197,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 44,
+    "charIdx": 0,
+    "char": "و",
+    "start": 66936,
+    "end": 67214,
+    "duration": 278,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 44,
+    "charIdx": 1,
+    "char": "ا",
+    "start": 67214,
+    "end": 67528,
+    "duration": 313,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 44,
+    "charIdx": 2,
+    "char": "ل",
+    "start": 67528,
+    "end": 67702,
+    "duration": 174,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 44,
+    "charIdx": 3,
+    "char": "ق",
+    "start": 67702,
+    "end": 67928,
+    "duration": 226,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 44,
+    "charIdx": 4,
+    "char": "م",
+    "start": 67928,
+    "end": 68102,
+    "duration": 174,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 44,
+    "charIdx": 5,
+    "char": "ر",
+    "start": 68102,
+    "end": 68277,
+    "duration": 174,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 45,
+    "charIdx": 0,
+    "char": "ي",
+    "start": 68864,
+    "end": 69213,
+    "duration": 349,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 45,
+    "charIdx": 1,
+    "char": "ق",
+    "start": 69213,
+    "end": 69497,
+    "duration": 284,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 45,
+    "charIdx": 2,
+    "char": "و",
+    "start": 69497,
+    "end": 69847,
+    "duration": 349,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 45,
+    "charIdx": 3,
+    "char": "ل",
+    "start": 69847,
+    "end": 70066,
+    "duration": 218,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 46,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 70086,
+    "end": 70485,
+    "duration": 399,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 46,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 70485,
+    "end": 70706,
+    "duration": 221,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 46,
+    "charIdx": 2,
+    "char": "إ",
+    "start": 70706,
+    "end": 71039,
+    "duration": 332,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 46,
+    "charIdx": 3,
+    "char": "ن",
+    "start": 71039,
+    "end": 71261,
+    "duration": 221,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 46,
+    "charIdx": 4,
+    "char": "س",
+    "start": 71261,
+    "end": 71527,
+    "duration": 266,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 46,
+    "charIdx": 5,
+    "char": "ا",
+    "start": 71527,
+    "end": 71926,
+    "duration": 399,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 46,
+    "charIdx": 6,
+    "char": "ن",
+    "start": 71926,
+    "end": 72147,
+    "duration": 221,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 47,
+    "charIdx": 0,
+    "char": "ي",
+    "start": 72269,
+    "end": 72670,
+    "duration": 401,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 47,
+    "charIdx": 1,
+    "char": "و",
+    "start": 72670,
+    "end": 73072,
+    "duration": 401,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 47,
+    "charIdx": 2,
+    "char": "م",
+    "start": 73072,
+    "end": 73323,
+    "duration": 251,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 47,
+    "charIdx": 3,
+    "char": "ئ",
+    "start": 73323,
+    "end": 73674,
+    "duration": 351,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 47,
+    "charIdx": 4,
+    "char": "ذ",
+    "start": 73674,
+    "end": 73951,
+    "duration": 276,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 48,
+    "charIdx": 0,
+    "char": "ن",
+    "start": 73971,
+    "end": 74187,
+    "duration": 216,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 48,
+    "charIdx": 1,
+    "char": "ي",
+    "start": 74187,
+    "end": 74535,
+    "duration": 347,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 48,
+    "charIdx": 2,
+    "char": "ن",
+    "start": 74535,
+    "end": 74751,
+    "duration": 216,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 49,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 74772,
+    "end": 75430,
+    "duration": 658,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 49,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 75430,
+    "end": 75796,
+    "duration": 366,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 49,
+    "charIdx": 2,
+    "char": "م",
+    "start": 75796,
+    "end": 76162,
+    "duration": 366,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 49,
+    "charIdx": 3,
+    "char": "ف",
+    "start": 76162,
+    "end": 76528,
+    "duration": 366,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 49,
+    "charIdx": 4,
+    "char": "ر",
+    "start": 76528,
+    "end": 76895,
+    "duration": 366,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 50,
+    "charIdx": 0,
+    "char": "ك",
+    "start": 77015,
+    "end": 77368,
+    "duration": 353,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 50,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 77368,
+    "end": 77721,
+    "duration": 353,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 50,
+    "charIdx": 2,
+    "char": "ا",
+    "start": 77721,
+    "end": 78357,
+    "duration": 635,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 51,
+    "charIdx": 0,
+    "char": "ل",
+    "start": 78377,
+    "end": 78591,
+    "duration": 214,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 51,
+    "charIdx": 1,
+    "char": "ا",
+    "start": 78591,
+    "end": 78978,
+    "duration": 386,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 52,
+    "charIdx": 0,
+    "char": "و",
+    "start": 79098,
+    "end": 79792,
+    "duration": 694,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 52,
+    "charIdx": 1,
+    "char": "ز",
+    "start": 79792,
+    "end": 80226,
+    "duration": 433,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 52,
+    "charIdx": 2,
+    "char": "ر",
+    "start": 80226,
+    "end": 80660,
+    "duration": 433,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 53,
+    "charIdx": 0,
+    "char": "إ",
+    "start": 80780,
+    "end": 81057,
+    "duration": 277,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 53,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 81057,
+    "end": 81243,
+    "duration": 185,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 53,
+    "charIdx": 2,
+    "char": "ى",
+    "start": 81243,
+    "end": 81521,
+    "duration": 277,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 54,
+    "charIdx": 0,
+    "char": "ر",
+    "start": 81641,
+    "end": 81988,
+    "duration": 347,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 54,
+    "charIdx": 1,
+    "char": "ب",
+    "start": 81988,
+    "end": 82335,
+    "duration": 347,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 54,
+    "charIdx": 2,
+    "char": "ك",
+    "start": 82335,
+    "end": 82682,
+    "duration": 347,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 55,
+    "charIdx": 0,
+    "char": "ي",
+    "start": 82803,
+    "end": 83199,
+    "duration": 396,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 55,
+    "charIdx": 1,
+    "char": "و",
+    "start": 83199,
+    "end": 83596,
+    "duration": 396,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 55,
+    "charIdx": 2,
+    "char": "م",
+    "start": 83596,
+    "end": 83844,
+    "duration": 248,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 55,
+    "charIdx": 3,
+    "char": "ئ",
+    "start": 83844,
+    "end": 84192,
+    "duration": 347,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 55,
+    "charIdx": 4,
+    "char": "ذ",
+    "start": 84192,
+    "end": 84465,
+    "duration": 272,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 56,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 84686,
+    "end": 85241,
+    "duration": 555,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 56,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 85241,
+    "end": 85550,
+    "duration": 308,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 56,
+    "charIdx": 2,
+    "char": "م",
+    "start": 85550,
+    "end": 85859,
+    "duration": 308,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 56,
+    "charIdx": 3,
+    "char": "س",
+    "start": 85859,
+    "end": 86229,
+    "duration": 370,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 56,
+    "charIdx": 4,
+    "char": "ت",
+    "start": 86229,
+    "end": 86538,
+    "duration": 308,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 56,
+    "charIdx": 5,
+    "char": "ق",
+    "start": 86538,
+    "end": 86940,
+    "duration": 401,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 56,
+    "charIdx": 6,
+    "char": "ر",
+    "start": 86940,
+    "end": 87249,
+    "duration": 308,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 57,
+    "charIdx": 0,
+    "char": "ي",
+    "start": 87369,
+    "end": 87721,
+    "duration": 352,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 57,
+    "charIdx": 1,
+    "char": "ن",
+    "start": 87721,
+    "end": 87941,
+    "duration": 220,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 57,
+    "charIdx": 2,
+    "char": "ب",
+    "start": 87941,
+    "end": 88161,
+    "duration": 220,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 57,
+    "charIdx": 3,
+    "char": "أ",
+    "start": 88161,
+    "end": 88491,
+    "duration": 330,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 58,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 88531,
+    "end": 88856,
+    "duration": 325,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 58,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 88856,
+    "end": 89037,
+    "duration": 180,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 58,
+    "charIdx": 2,
+    "char": "إ",
+    "start": 89037,
+    "end": 89308,
+    "duration": 271,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 58,
+    "charIdx": 3,
+    "char": "ن",
+    "start": 89308,
+    "end": 89489,
+    "duration": 180,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 58,
+    "charIdx": 4,
+    "char": "س",
+    "start": 89489,
+    "end": 89706,
+    "duration": 217,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 58,
+    "charIdx": 5,
+    "char": "ا",
+    "start": 89706,
+    "end": 90032,
+    "duration": 325,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 58,
+    "charIdx": 6,
+    "char": "ن",
+    "start": 90032,
+    "end": 90213,
+    "duration": 180,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 59,
+    "charIdx": 0,
+    "char": "ي",
+    "start": 90313,
+    "end": 90767,
+    "duration": 454,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 59,
+    "charIdx": 1,
+    "char": "و",
+    "start": 90767,
+    "end": 91221,
+    "duration": 454,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 59,
+    "charIdx": 2,
+    "char": "م",
+    "start": 91221,
+    "end": 91505,
+    "duration": 284,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 59,
+    "charIdx": 3,
+    "char": "ئ",
+    "start": 91505,
+    "end": 91903,
+    "duration": 397,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 59,
+    "charIdx": 4,
+    "char": "ذ",
+    "start": 91903,
+    "end": 92216,
+    "duration": 312,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 60,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 92336,
+    "end": 92525,
+    "duration": 189,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 60,
+    "charIdx": 1,
+    "char": "م",
+    "start": 92525,
+    "end": 92715,
+    "duration": 189,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 60,
+    "charIdx": 2,
+    "char": "ا",
+    "start": 92715,
+    "end": 93057,
+    "duration": 341,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 61,
+    "charIdx": 0,
+    "char": "ق",
+    "start": 93297,
+    "end": 93691,
+    "duration": 394,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 61,
+    "charIdx": 1,
+    "char": "د",
+    "start": 93691,
+    "end": 93995,
+    "duration": 303,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 61,
+    "charIdx": 2,
+    "char": "م",
+    "start": 93995,
+    "end": 94299,
+    "duration": 303,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 62,
+    "charIdx": 0,
+    "char": "و",
+    "start": 94399,
+    "end": 94774,
+    "duration": 375,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 62,
+    "charIdx": 1,
+    "char": "أ",
+    "start": 94774,
+    "end": 95126,
+    "duration": 352,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 62,
+    "charIdx": 2,
+    "char": "خ",
+    "start": 95126,
+    "end": 95431,
+    "duration": 305,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 62,
+    "charIdx": 3,
+    "char": "ف",
+    "start": 95431,
+    "end": 95666,
+    "duration": 234,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 62,
+    "charIdx": 4,
+    "char": "ر",
+    "start": 95666,
+    "end": 95901,
+    "duration": 234,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 63,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 96674,
+    "end": 96964,
+    "duration": 290,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 63,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 96964,
+    "end": 97255,
+    "duration": 290,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 64,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 97275,
+    "end": 97624,
+    "duration": 349,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 64,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 97624,
+    "end": 97818,
+    "duration": 193,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 64,
+    "charIdx": 2,
+    "char": "إ",
+    "start": 97818,
+    "end": 98109,
+    "duration": 290,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 64,
+    "charIdx": 3,
+    "char": "ن",
+    "start": 98109,
+    "end": 98303,
+    "duration": 193,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 64,
+    "charIdx": 4,
+    "char": "س",
+    "start": 98303,
+    "end": 98535,
+    "duration": 232,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 64,
+    "charIdx": 5,
+    "char": "ا",
+    "start": 98535,
+    "end": 98885,
+    "duration": 349,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 64,
+    "charIdx": 6,
+    "char": "ن",
+    "start": 98885,
+    "end": 99079,
+    "duration": 193,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 65,
+    "charIdx": 0,
+    "char": "ع",
+    "start": 99200,
+    "end": 99474,
+    "duration": 274,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 65,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 99474,
+    "end": 99684,
+    "duration": 210,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 65,
+    "charIdx": 2,
+    "char": "ى",
+    "start": 99684,
+    "end": 100001,
+    "duration": 316,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 66,
+    "charIdx": 0,
+    "char": "ن",
+    "start": 100122,
+    "end": 100441,
+    "duration": 319,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 66,
+    "charIdx": 1,
+    "char": "ف",
+    "start": 100441,
+    "end": 100761,
+    "duration": 319,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 66,
+    "charIdx": 2,
+    "char": "س",
+    "start": 100761,
+    "end": 101145,
+    "duration": 383,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 66,
+    "charIdx": 3,
+    "char": "ه",
+    "start": 101145,
+    "end": 101465,
+    "duration": 319,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 67,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 101605,
+    "end": 102026,
+    "duration": 421,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 67,
+    "charIdx": 1,
+    "char": "ص",
+    "start": 102026,
+    "end": 102616,
+    "duration": 590,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 67,
+    "charIdx": 2,
+    "char": "ي",
+    "start": 102616,
+    "end": 103291,
+    "duration": 674,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 67,
+    "charIdx": 3,
+    "char": "ر",
+    "start": 103291,
+    "end": 103712,
+    "duration": 421,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 67,
+    "charIdx": 4,
+    "char": "ة",
+    "start": 103712,
+    "end": 104050,
+    "duration": 337,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 68,
+    "charIdx": 0,
+    "char": "و",
+    "start": 104150,
+    "end": 104447,
+    "duration": 297,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 68,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 104447,
+    "end": 104634,
+    "duration": 186,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 68,
+    "charIdx": 2,
+    "char": "و",
+    "start": 104634,
+    "end": 104932,
+    "duration": 297,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 69,
+    "charIdx": 0,
+    "char": "ا",
+    "start": 104952,
+    "end": 105268,
+    "duration": 316,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 69,
+    "charIdx": 1,
+    "char": "ل",
+    "start": 105268,
+    "end": 105444,
+    "duration": 175,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 69,
+    "charIdx": 2,
+    "char": "ق",
+    "start": 105444,
+    "end": 105672,
+    "duration": 228,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 69,
+    "charIdx": 3,
+    "char": "ي",
+    "start": 105672,
+    "end": 105954,
+    "duration": 281,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 70,
+    "charIdx": 0,
+    "char": "م",
+    "start": 105974,
+    "end": 106300,
+    "duration": 326,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 70,
+    "charIdx": 1,
+    "char": "ع",
+    "start": 106300,
+    "end": 106724,
+    "duration": 424,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 70,
+    "charIdx": 2,
+    "char": "ا",
+    "start": 106724,
+    "end": 107312,
+    "duration": 587,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 70,
+    "charIdx": 3,
+    "char": "ذ",
+    "start": 107312,
+    "end": 107671,
+    "duration": 359,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 70,
+    "charIdx": 4,
+    "char": "ي",
+    "start": 107671,
+    "end": 108193,
+    "duration": 522,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 70,
+    "charIdx": 5,
+    "char": "ر",
+    "start": 108193,
+    "end": 108519,
+    "duration": 326,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 70,
+    "charIdx": 6,
+    "char": "ة",
+    "start": 108519,
+    "end": 108781,
+    "duration": 261,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 71,
+    "charIdx": 0,
+    "char": "ل",
+    "start": 108921,
+    "end": 109042,
+    "duration": 121,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 71,
+    "charIdx": 1,
+    "char": "ا",
+    "start": 109042,
+    "end": 109262,
+    "duration": 219,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 72,
+    "charIdx": 0,
+    "char": "ت",
+    "start": 109442,
+    "end": 109721,
+    "duration": 279,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 72,
+    "charIdx": 1,
+    "char": "ح",
+    "start": 109721,
+    "end": 110085,
+    "duration": 363,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 72,
+    "charIdx": 2,
+    "char": "ر",
+    "start": 110085,
+    "end": 110365,
+    "duration": 279,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 72,
+    "charIdx": 3,
+    "char": "ك",
+    "start": 110365,
+    "end": 110644,
+    "duration": 279,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 73,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 110785,
+    "end": 111166,
+    "duration": 381,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 73,
+    "charIdx": 1,
+    "char": "ه",
+    "start": 111166,
+    "end": 111547,
+    "duration": 381,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 74,
+    "charIdx": 0,
+    "char": "ل",
+    "start": 111667,
+    "end": 111877,
+    "duration": 210,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 74,
+    "charIdx": 1,
+    "char": "س",
+    "start": 111877,
+    "end": 112130,
+    "duration": 252,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 74,
+    "charIdx": 2,
+    "char": "ا",
+    "start": 112130,
+    "end": 112509,
+    "duration": 378,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 74,
+    "charIdx": 3,
+    "char": "ن",
+    "start": 112509,
+    "end": 112719,
+    "duration": 210,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 74,
+    "charIdx": 4,
+    "char": "ك",
+    "start": 112719,
+    "end": 112930,
+    "duration": 210,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 75,
+    "charIdx": 0,
+    "char": "ل",
+    "start": 113050,
+    "end": 113291,
+    "duration": 241,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 75,
+    "charIdx": 1,
+    "char": "ت",
+    "start": 113291,
+    "end": 113532,
+    "duration": 241,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 75,
+    "charIdx": 2,
+    "char": "ع",
+    "start": 113532,
+    "end": 113846,
+    "duration": 313,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 75,
+    "charIdx": 3,
+    "char": "ج",
+    "start": 113846,
+    "end": 114111,
+    "duration": 265,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 75,
+    "charIdx": 4,
+    "char": "ل",
+    "start": 114111,
+    "end": 114352,
+    "duration": 241,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 76,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 114473,
+    "end": 114924,
+    "duration": 451,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 76,
+    "charIdx": 1,
+    "char": "ه",
+    "start": 114924,
+    "end": 115375,
+    "duration": 451,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 77,
+    "charIdx": 0,
+    "char": "إ",
+    "start": 115675,
+    "end": 116067,
+    "duration": 392,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 77,
+    "charIdx": 1,
+    "char": "ِ",
+    "start": 116067,
+    "end": 116145,
+    "duration": 78,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 77,
+    "charIdx": 2,
+    "char": "ن",
+    "start": 116145,
+    "end": 116407,
+    "duration": 261,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 77,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 116407,
+    "end": 116485,
+    "duration": 78,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 77,
+    "charIdx": 4,
+    "char": "ّ",
+    "start": 116485,
+    "end": 116878,
+    "duration": 392,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 78,
+    "charIdx": 0,
+    "char": "ع",
+    "start": 117019,
+    "end": 117246,
+    "duration": 227,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 78,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 117246,
+    "end": 117298,
+    "duration": 52,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 78,
+    "charIdx": 2,
+    "char": "ل",
+    "start": 117298,
+    "end": 117473,
+    "duration": 174,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 78,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 117473,
+    "end": 117526,
+    "duration": 52,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 78,
+    "charIdx": 4,
+    "char": "ي",
+    "start": 117526,
+    "end": 117805,
+    "duration": 279,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 78,
+    "charIdx": 5,
+    "char": "ْ",
+    "start": 117805,
+    "end": 117840,
+    "duration": 34,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 78,
+    "charIdx": 6,
+    "char": "ن",
+    "start": 117840,
+    "end": 118015,
+    "duration": 174,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 78,
+    "charIdx": 7,
+    "char": "َ",
+    "start": 118015,
+    "end": 118068,
+    "duration": 52,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 78,
+    "charIdx": 8,
+    "char": "ا",
+    "start": 118068,
+    "end": 118382,
+    "duration": 314,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 79,
+    "charIdx": 0,
+    "char": "ج",
+    "start": 118583,
+    "end": 118831,
+    "duration": 248,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 79,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 118831,
+    "end": 118899,
+    "duration": 67,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 79,
+    "charIdx": 2,
+    "char": "م",
+    "start": 118899,
+    "end": 119125,
+    "duration": 226,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 79,
+    "charIdx": 3,
+    "char": "ْ",
+    "start": 119125,
+    "end": 119171,
+    "duration": 45,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 79,
+    "charIdx": 4,
+    "char": "ع",
+    "start": 119171,
+    "end": 119465,
+    "duration": 294,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 79,
+    "charIdx": 5,
+    "char": "َ",
+    "start": 119465,
+    "end": 119532,
+    "duration": 67,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 79,
+    "charIdx": 6,
+    "char": "ه",
+    "start": 119532,
+    "end": 119759,
+    "duration": 226,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 79,
+    "charIdx": 7,
+    "char": "ُ",
+    "start": 119759,
+    "end": 119826,
+    "duration": 67,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 0,
+    "char": "و",
+    "start": 119927,
+    "end": 120379,
+    "duration": 452,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 120379,
+    "end": 120463,
+    "duration": 84,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 2,
+    "char": "ق",
+    "start": 120463,
+    "end": 120831,
+    "duration": 367,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 3,
+    "char": "ُ",
+    "start": 120831,
+    "end": 120916,
+    "duration": 84,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 4,
+    "char": "ر",
+    "start": 120916,
+    "end": 121198,
+    "duration": 282,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 5,
+    "char": "ْ",
+    "start": 121198,
+    "end": 121255,
+    "duration": 56,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 6,
+    "char": "آ",
+    "start": 121255,
+    "end": 121820,
+    "duration": 565,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 7,
+    "char": "ن",
+    "start": 121820,
+    "end": 122102,
+    "duration": 282,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 8,
+    "char": "َ",
+    "start": 122102,
+    "end": 122187,
+    "duration": 84,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 9,
+    "char": "ه",
+    "start": 122187,
+    "end": 122470,
+    "duration": 282,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 80,
+    "charIdx": 10,
+    "char": "ُ",
+    "start": 122470,
+    "end": 122555,
+    "duration": 84,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 81,
+    "charIdx": 0,
+    "char": "ف",
+    "start": 122675,
+    "end": 122808,
+    "duration": 133,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 81,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 122808,
+    "end": 122848,
+    "duration": 40,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 81,
+    "charIdx": 2,
+    "char": "إ",
+    "start": 122848,
+    "end": 123049,
+    "duration": 200,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 81,
+    "charIdx": 3,
+    "char": "ِ",
+    "start": 123049,
+    "end": 123089,
+    "duration": 40,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 81,
+    "charIdx": 4,
+    "char": "ذ",
+    "start": 123089,
+    "end": 123236,
+    "duration": 147,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 81,
+    "charIdx": 5,
+    "char": "َ",
+    "start": 123236,
+    "end": 123276,
+    "duration": 40,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 81,
+    "charIdx": 6,
+    "char": "ا",
+    "start": 123276,
+    "end": 123517,
+    "duration": 240,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 0,
+    "char": "ق",
+    "start": 123738,
+    "end": 123955,
+    "duration": 217,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 123955,
+    "end": 124005,
+    "duration": 50,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 2,
+    "char": "ر",
+    "start": 124005,
+    "end": 124172,
+    "duration": 167,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 124172,
+    "end": 124222,
+    "duration": 50,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 4,
+    "char": "أ",
+    "start": 124222,
+    "end": 124473,
+    "duration": 250,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 5,
+    "char": "ْ",
+    "start": 124473,
+    "end": 124506,
+    "duration": 33,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 6,
+    "char": "ن",
+    "start": 124506,
+    "end": 124673,
+    "duration": 167,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 7,
+    "char": "َ",
+    "start": 124673,
+    "end": 124723,
+    "duration": 50,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 8,
+    "char": "ا",
+    "start": 124723,
+    "end": 125024,
+    "duration": 300,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 9,
+    "char": "ه",
+    "start": 125024,
+    "end": 125191,
+    "duration": 167,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 82,
+    "charIdx": 10,
+    "char": "ُ",
+    "start": 125191,
+    "end": 125241,
+    "duration": 50,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 83,
+    "charIdx": 0,
+    "char": "ف",
+    "start": 125363,
+    "end": 125522,
+    "duration": 159,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 83,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 125522,
+    "end": 125569,
+    "duration": 47,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 83,
+    "charIdx": 2,
+    "char": "ا",
+    "start": 125569,
+    "end": 125856,
+    "duration": 286,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 83,
+    "charIdx": 3,
+    "char": "ت",
+    "start": 125856,
+    "end": 126015,
+    "duration": 159,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 83,
+    "charIdx": 4,
+    "char": "َ",
+    "start": 126015,
+    "end": 126062,
+    "duration": 47,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 83,
+    "charIdx": 5,
+    "char": "ّ",
+    "start": 126062,
+    "end": 126301,
+    "duration": 238,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 83,
+    "charIdx": 6,
+    "char": "ب",
+    "start": 126301,
+    "end": 126460,
+    "duration": 159,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 83,
+    "charIdx": 7,
+    "char": "ِ",
+    "start": 126460,
+    "end": 126508,
+    "duration": 47,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 83,
+    "charIdx": 8,
+    "char": "ع",
+    "start": 126508,
+    "end": 126715,
+    "duration": 206,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 83,
+    "charIdx": 9,
+    "char": "ْ",
+    "start": 126715,
+    "end": 126747,
+    "duration": 31,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 84,
+    "charIdx": 0,
+    "char": "ق",
+    "start": 126767,
+    "end": 127140,
+    "duration": 373,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 84,
+    "charIdx": 1,
+    "char": "ُ",
+    "start": 127140,
+    "end": 127226,
+    "duration": 86,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 84,
+    "charIdx": 2,
+    "char": "ر",
+    "start": 127226,
+    "end": 127513,
+    "duration": 287,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 84,
+    "charIdx": 3,
+    "char": "ْ",
+    "start": 127513,
+    "end": 127571,
+    "duration": 57,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 84,
+    "charIdx": 4,
+    "char": "آ",
+    "start": 127571,
+    "end": 128146,
+    "duration": 574,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 84,
+    "charIdx": 5,
+    "char": "ن",
+    "start": 128146,
+    "end": 128433,
+    "duration": 287,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 84,
+    "charIdx": 6,
+    "char": "َ",
+    "start": 128433,
+    "end": 128519,
+    "duration": 86,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 84,
+    "charIdx": 7,
+    "char": "ه",
+    "start": 128519,
+    "end": 128806,
+    "duration": 287,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 84,
+    "charIdx": 8,
+    "char": "ُ",
+    "start": 128806,
+    "end": 128892,
+    "duration": 86,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 85,
+    "charIdx": 0,
+    "char": "ث",
+    "start": 129073,
+    "end": 129356,
+    "duration": 283,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 85,
+    "charIdx": 1,
+    "char": "ُ",
+    "start": 129356,
+    "end": 129434,
+    "duration": 77,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 85,
+    "charIdx": 2,
+    "char": "م",
+    "start": 129434,
+    "end": 129691,
+    "duration": 257,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 85,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 129691,
+    "end": 129769,
+    "duration": 77,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 85,
+    "charIdx": 4,
+    "char": "ّ",
+    "start": 129769,
+    "end": 130156,
+    "duration": 386,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 86,
+    "charIdx": 0,
+    "char": "إ",
+    "start": 130276,
+    "end": 130643,
+    "duration": 366,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 86,
+    "charIdx": 1,
+    "char": "ِ",
+    "start": 130643,
+    "end": 130716,
+    "duration": 73,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 86,
+    "charIdx": 2,
+    "char": "ن",
+    "start": 130716,
+    "end": 130960,
+    "duration": 244,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 86,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 130960,
+    "end": 131033,
+    "duration": 73,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 86,
+    "charIdx": 4,
+    "char": "ّ",
+    "start": 131033,
+    "end": 131400,
+    "duration": 366,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 87,
+    "charIdx": 0,
+    "char": "ع",
+    "start": 131520,
+    "end": 131800,
+    "duration": 280,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 87,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 131800,
+    "end": 131865,
+    "duration": 64,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 87,
+    "charIdx": 2,
+    "char": "ل",
+    "start": 131865,
+    "end": 132081,
+    "duration": 216,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 87,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 132081,
+    "end": 132146,
+    "duration": 64,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 87,
+    "charIdx": 4,
+    "char": "ي",
+    "start": 132146,
+    "end": 132492,
+    "duration": 345,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 87,
+    "charIdx": 5,
+    "char": "ْ",
+    "start": 132492,
+    "end": 132535,
+    "duration": 43,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 87,
+    "charIdx": 6,
+    "char": "ن",
+    "start": 132535,
+    "end": 132751,
+    "duration": 216,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 87,
+    "charIdx": 7,
+    "char": "َ",
+    "start": 132751,
+    "end": 132816,
+    "duration": 64,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 87,
+    "charIdx": 8,
+    "char": "ا",
+    "start": 132816,
+    "end": 133205,
+    "duration": 388,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 88,
+    "charIdx": 0,
+    "char": "ب",
+    "start": 133345,
+    "end": 133653,
+    "duration": 308,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 88,
+    "charIdx": 1,
+    "char": "َ",
+    "start": 133653,
+    "end": 133746,
+    "duration": 92,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 88,
+    "charIdx": 2,
+    "char": "ي",
+    "start": 133746,
+    "end": 134240,
+    "duration": 494,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 88,
+    "charIdx": 3,
+    "char": "َ",
+    "start": 134240,
+    "end": 134333,
+    "duration": 92,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 88,
+    "charIdx": 4,
+    "char": "ا",
+    "start": 134333,
+    "end": 134889,
+    "duration": 555,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 88,
+    "charIdx": 5,
+    "char": "ن",
+    "start": 134889,
+    "end": 135197,
+    "duration": 308,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 88,
+    "charIdx": 6,
+    "char": "َ",
+    "start": 135197,
+    "end": 135290,
+    "duration": 92,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 88,
+    "charIdx": 7,
+    "char": "ه",
+    "start": 135290,
+    "end": 135599,
+    "duration": 308,
+    "method": "phonetic"
+  },
+  {
+    "wordIdx": 88,
+    "charIdx": 8,
+    "char": "ُ",
+    "start": 135599,
+    "end": 135692,
+    "duration": 92,
+    "method": "phonetic"
+  }
+]
