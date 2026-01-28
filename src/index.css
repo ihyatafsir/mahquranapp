@@ -169,6 +169,13 @@ body {
   border-radius: 10px;
   overflow-wrap: break-word;
   word-wrap: break-word;
+
+  /* Arabic ligature settings - essential for connected letters */
+  font-feature-settings: 'liga' 1, 'calt' 1, 'rlig' 1;
+  font-kerning: normal;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* Word styling */

@@ -3,32 +3,26 @@ import { useLetterSync } from './hooks/useLetterSync';
 import type { LetterTiming, Verse } from './types/quran';
 import './index.css';
 
-// Surahs with MAH audio + letter timing
-const AVAILABLE_SURAHS = [
-  { number: 1, name: 'Al-Fatiha', arabicName: 'الفاتحة' },
-  { number: 18, name: 'Al-Kahf', arabicName: 'الكهف' },
-  { number: 36, name: 'Ya-Sin', arabicName: 'يس' },
-  { number: 47, name: 'Muhammad', arabicName: 'محمد' },
-  { number: 53, name: 'An-Najm', arabicName: 'النجم' },
-  { number: 55, name: 'Ar-Rahman', arabicName: 'الرحمن' },
-  { number: 56, name: 'Al-Waqiah', arabicName: 'الواقعة' },
-  { number: 67, name: 'Al-Mulk', arabicName: 'الملك' },
-  { number: 71, name: 'Nuh', arabicName: 'نوح' },
-  { number: 75, name: 'Al-Qiyamah', arabicName: 'القيامة' },
-  { number: 80, name: 'Abasa', arabicName: 'عبس' },
-  { number: 82, name: 'Al-Infitar', arabicName: 'الانفطار' },
-  { number: 85, name: 'Al-Buruj', arabicName: 'البروج' },
-  { number: 87, name: 'Al-Ala', arabicName: 'الأعلى' },
-  { number: 89, name: 'Al-Fajr', arabicName: 'الفجر' },
-  { number: 90, name: 'Al-Balad', arabicName: 'البلد' },
-  { number: 91, name: 'Ash-Shams', arabicName: 'الشمس' },
-  { number: 92, name: 'Al-Layl', arabicName: 'الليل' },
-  { number: 93, name: 'Ad-Duha', arabicName: 'الضحى' },
-  { number: 109, name: 'Al-Kafirun', arabicName: 'الكافرون' },
-  { number: 112, name: 'Al-Ikhlas', arabicName: 'الإخلاص' },
-  { number: 113, name: 'Al-Falaq', arabicName: 'الفلق' },
-  { number: 114, name: 'An-Nas', arabicName: 'الناس' },
+// Reciters
+const RECITERS = [
+  { id: 'mah', name: 'Sheikh Muhammad Ahmad Hassan', shortName: 'MAH' },
+  { id: 'abdul_basit', name: 'Sheikh AbdulBaset AbdulSamad (Mujawwad)', shortName: 'Abdul Basit' },
 ];
+
+// Surahs with audio + letter timing (per reciter)
+const SURAHS_BY_RECITER: Record<string, { number: number; name: string; arabicName: string }[]> = {
+  mah: [
+    { number: 1, name: 'Al-Fatiha', arabicName: 'الفاتحة' },
+    { number: 18, name: 'Al-Kahf', arabicName: 'الكهف' },
+    { number: 36, name: 'Ya-Sin', arabicName: 'يس' },
+    { number: 55, name: 'Ar-Rahman', arabicName: 'الرحمن' },
+    { number: 56, name: 'Al-Waqiah', arabicName: 'الواقعة' },
+    { number: 67, name: 'Al-Mulk', arabicName: 'الملك' },
+  ],
+  abdul_basit: [
+    { number: 1, name: 'Al-Fatiha', arabicName: 'الفاتحة' },
+  ],
+};
 
 // Normalize timing to seconds
 function normalizeTimingToSeconds(timing: LetterTiming[]): LetterTiming[] {
@@ -100,6 +94,7 @@ function distributeToVerses(timedWords: TimedWord[], verses: Verse[]): Map<numbe
 }
 
 function App() {
+  const [selectedReciter, setSelectedReciter] = useState('abdul_basit');
   const [selectedSurah, setSelectedSurah] = useState(1);
   const [verses, setVerses] = useState<Verse[]>([]);
   const [letterTiming, setLetterTiming] = useState<LetterTiming[]>([]);
@@ -110,7 +105,8 @@ function App() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const syncState = useLetterSync(audioRef, letterTiming);
 
-  const surahInfo = AVAILABLE_SURAHS.find(s => s.number === selectedSurah);
+  const availableSurahs = SURAHS_BY_RECITER[selectedReciter] || [];
+  const surahInfo = availableSurahs.find(s => s.number === selectedSurah);
 
   // Group timing data into words
   const timedWords = useMemo(() => groupLettersIntoWords(letterTiming), [letterTiming]);
@@ -129,7 +125,12 @@ function App() {
         const allVerses = await versesRes.json();
         setVerses(allVerses[selectedSurah.toString()] || []);
 
-        const timingRes = await fetch(`/data/letter_timing_${selectedSurah}.json`);
+        // Load timing from reciter-specific path
+        const timingPath = selectedReciter === 'mah'
+          ? `/data/letter_timing_${selectedSurah}.json`
+          : `/data/${selectedReciter}/letter_timing_${selectedSurah}.json`;
+
+        const timingRes = await fetch(timingPath);
         if (timingRes.ok) {
           let rawTiming: LetterTiming[] = await timingRes.json();
           rawTiming = normalizeTimingToSeconds(rawTiming);
@@ -146,24 +147,39 @@ function App() {
     };
 
     loadData();
-  }, [selectedSurah]);
+  }, [selectedSurah, selectedReciter]);
 
   const currentLetter = syncState.currentLetterIdx >= 0 ? letterTiming[syncState.currentLetterIdx] : null;
 
   return (
     <div className="app-container">
       <header className="header">
-        <h1>📿 MAH Quran</h1>
-        <p>Letter-by-letter recitation with Sheikh Muhammad Ahmad Hassan</p>
+        <h1>💿 MAH Quran</h1>
+        <p>Letter-by-letter recitation with {RECITERS.find(r => r.id === selectedReciter)?.name}</p>
       </header>
 
       <div className="controls">
+        <select
+          value={selectedReciter}
+          onChange={(e) => {
+            setSelectedReciter(e.target.value);
+            setSelectedSurah(SURAHS_BY_RECITER[e.target.value]?.[0]?.number || 1);
+          }}
+          className="surah-select"
+          style={{ marginRight: '10px' }}
+        >
+          {RECITERS.map(reciter => (
+            <option key={reciter.id} value={reciter.id}>
+              {reciter.shortName}
+            </option>
+          ))}
+        </select>
         <select
           value={selectedSurah}
           onChange={(e) => setSelectedSurah(Number(e.target.value))}
           className="surah-select"
         >
-          {AVAILABLE_SURAHS.map(surah => (
+          {availableSurahs.map(surah => (
             <option key={surah.number} value={surah.number}>
               {surah.number}. {surah.name} ({surah.arabicName})
             </option>
@@ -184,7 +200,10 @@ function App() {
         <audio
           ref={audioRef}
           controls
-          src={`/audio/surah_${selectedSurah.toString().padStart(3, '0')}.mp3`}
+          src={selectedReciter === 'mah'
+            ? `/audio/surah_${selectedSurah.toString().padStart(3, '0')}.mp3`
+            : `/audio/${selectedReciter}/surah_${selectedSurah.toString().padStart(3, '0')}.mp3`
+          }
         />
       </div>
 

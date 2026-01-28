@@ -1,211 +1,253 @@
 #!/usr/bin/env python3
 """
-Align WhisperX letter-level timing with actual Quran text.
-Preserves original letter timestamps while using correct Quran characters.
-"""
+Millisecond-Accurate Quran Letter Alignment
 
+Strategy:
+1. WhisperX gives timing for base letters (consonants)
+2. Quran text has base letters + diacritics (tashkeel)
+3. We match base letters and distribute timing to cover diacritics
+
+Example:
+  WhisperX: "ب" at 500-600ms
+  Quran: "بِ" (ba + kasra)
+  Result: "ب" at 500-550ms, "ِ" at 550-600ms
+"""
 import json
-import os
 import re
 from pathlib import Path
+from difflib import SequenceMatcher
 
-DATA_DIR = Path('/home/absolut7/Documents/26apps/MahQuranApp/public/data')
-OUTPUT_DIR = DATA_DIR
+# Paths
+DATA_DIR = Path(__file__).parent.parent / "public" / "data"
+ABDUL_BASIT_ORIG_DIR = DATA_DIR / "abdul_basit_original"
+ABDUL_BASIT_DIR = DATA_DIR / "abdul_basit"
+VERSES_FILE = DATA_DIR / "verses_v4.json"
 
-PREFIX_PATTERNS = [
-    ['أعوذ', 'بالله', 'من', 'الشيطان', 'الرجيم'],
-    ['اعوذ', 'بالله', 'من', 'الشيطان', 'الرجيم'],
-    ['بسم', 'الله', 'الرحمن', 'الرحيم'],
-    ['بسم', 'الله', 'الرحمان', 'الرحيم'],
-]
+# Arabic diacritics (tashkeel) - these don't have their own timing
+DIACRITICS = set('\u064B\u064C\u064D\u064E\u064F\u0650\u0651\u0652\u0653\u0654\u0655\u0656\u0657\u0658\u065C\u065D\u065E\u065F\u0670')
 
-def strip_diacritics(text: str) -> str:
-    """Remove Arabic diacritics and normalize."""
-    diacritics = re.compile(r'[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED]')
-    text = diacritics.sub('', text)
-    text = re.sub(r'[إأآٱا]', 'ا', text)
+# Additional marks that should share timing with previous letter
+COMBINING_MARKS = DIACRITICS | set('\u0640')  # tatweel
+
+def is_base_letter(char):
+    """Check if character is a base letter (not a diacritic or space)"""
+    return char not in DIACRITICS and not char.isspace() and char != '\u0640'
+
+def strip_diacritics(text):
+    """Remove diacritics for matching"""
+    return ''.join(c for c in text if c not in DIACRITICS)
+
+def normalize_for_matching(text):
+    """Normalize text for matching: remove diacritics, spaces, normalize alef"""
+    text = strip_diacritics(text)
+    text = re.sub(r'\s+', '', text)
+    text = re.sub(r'[إأآا]', 'ا', text)
+    text = re.sub(r'[ؤئء]', 'ء', text)
     return text
 
-def load_quran_text(surah_num: int) -> list[dict]:
-    with open(DATA_DIR / 'verses_v4.json') as f:
-        return json.load(f).get(str(surah_num), [])
-
-def load_original_timing(surah_num: int) -> list[dict]:
-    """Load original letter timing from backup."""
-    backup_path = DATA_DIR / f'letter_timing_{surah_num}.backup.json'
-    if backup_path.exists():
-        with open(backup_path) as f:
-            return json.load(f)
-    
-    timing_path = DATA_DIR / f'letter_timing_{surah_num}.json'
-    if timing_path.exists():
-        with open(timing_path) as f:
-            return json.load(f)
-    return []
-
-def get_timing_words(timing: list[dict]) -> dict:
-    """Group letters by wordIdx, preserving letter-level timing."""
-    words = {}
-    for t in timing:
-        wid = t['wordIdx']
-        if wid not in words:
-            words[wid] = []
-        words[wid].append(t)
-    return words
-
-def get_quran_words(verses: list[dict]) -> list[str]:
-    words = []
-    for verse in verses:
-        words.extend(verse.get('text', '').split())
-    return words
-
-def find_prefix_length(timing_words: dict, quran_first_word: str) -> int:
-    """Find how many words in timing are prefix."""
-    quran_first_clean = strip_diacritics(quran_first_word)
-    
-    for wid in sorted(timing_words.keys())[:15]:
-        word_chars = ''.join([t['char'] for t in timing_words[wid]])
-        timing_clean = strip_diacritics(word_chars)
-        if timing_clean == quran_first_clean or quran_first_clean.startswith(timing_clean):
-            return wid
-    
-    # Check for known patterns
-    timing_text = ' '.join([strip_diacritics(''.join([t['char'] for t in timing_words[i]])) 
-                           for i in sorted(timing_words.keys())[:10]])
-    for pattern in PREFIX_PATTERNS:
-        pattern_text = ' '.join([strip_diacritics(p) for p in pattern])
-        if pattern_text in timing_text:
-            return len(pattern)
-    
-    return 0
-
-def align_letters_to_quran(timing_words: dict, quran_words: list[str], prefix_len: int) -> list[dict]:
+def build_base_letter_indices(text):
     """
-    Map letter-level timing to Quran characters.
-    Preserves original timing per letter while using correct Quran text.
+    Build mapping: base_letter_index -> list of (char_index, char) for that letter group
+    Each group = base letter + following diacritics
     """
-    aligned = []
+    groups = []
+    current_group = []
     
-    # Get timing wordIds after prefix
-    timing_wids = sorted([w for w in timing_words.keys() if w >= prefix_len])
+    for i, char in enumerate(text):
+        if char.isspace():
+            # Space - start new group
+            if current_group:
+                groups.append(current_group)
+                current_group = []
+        elif is_base_letter(char):
+            # Base letter - start new group
+            if current_group:
+                groups.append(current_group)
+            current_group = [(i, char)]
+        else:
+            # Diacritic - add to current group
+            if current_group:
+                current_group.append((i, char))
     
-    # Check if timing is in ms
-    first_letter = timing_words[timing_wids[0]][0] if timing_wids and timing_words[timing_wids[0]] else None
-    is_ms = first_letter and first_letter['start'] > 100
+    if current_group:
+        groups.append(current_group)
     
-    for i, quran_word in enumerate(quran_words):
-        if i >= len(timing_wids):
-            print(f"    Warning: Ran out of timing at word {i}")
-            break
-        
-        timing_wid = timing_wids[i]
-        timing_letters = timing_words[timing_wid]
-        
-        # Get base letters from both (without diacritics)
-        quran_base = list(strip_diacritics(quran_word))
-        timing_base = [strip_diacritics(t['char']) for t in timing_letters]
-        
-        # Map timing to Quran letters
-        t_idx = 0  # Index into timing letters
-        q_base_idx = 0  # Index into quran base letters
-        
-        for q_idx, q_char in enumerate(quran_word):
-            q_is_base = bool(strip_diacritics(q_char))
-            
-            if q_is_base and t_idx < len(timing_letters):
-                # Use timing from original letter
-                t = timing_letters[t_idx]
-                start = t['start'] / 1000 if is_ms else t['start']
-                end = t['end'] / 1000 if is_ms else t['end']
-                duration = (end - start) * 1000
-                t_idx += 1
-                q_base_idx += 1
-            elif aligned:
-                # Diacritic - use previous letter's timing
-                start = aligned[-1]['start']
-                end = aligned[-1]['end']
-                duration = aligned[-1]['duration']
-            else:
-                # First char is diacritic (shouldn't happen)
-                t = timing_letters[0] if timing_letters else {'start': 0, 'end': 0}
-                start = t['start'] / 1000 if is_ms else t['start']
-                end = t['end'] / 1000 if is_ms else t['end']
-                duration = (end - start) * 1000
-            
-            aligned.append({
-                'charIdx': q_idx,
-                'char': q_char,
-                'start': round(start, 3),
-                'end': round(end, 3),
-                'duration': round(duration, 1),
-                'wordIdx': i
-            })
-    
-    return aligned
+    return groups
 
-def process_surah(surah_num: int) -> bool:
-    print(f"\n{'='*50}")
-    print(f"Processing Surah {surah_num}")
-    print('='*50)
+def align_timing_to_quran(surah_num, timing_data, quran_text):
+    """
+    Align WhisperX timing to Quran text with millisecond accuracy.
     
-    verses = load_quran_text(surah_num)
-    if not verses:
-        print(f"  No verses found")
-        return False
+    Returns list of timing entries for EVERY character in quran_text (including spaces).
+    """
+    # Build letter groups from Quran text
+    letter_groups = build_base_letter_indices(quran_text)
     
-    timing = load_original_timing(surah_num)
-    if not timing:
-        print(f"  No timing data found")
-        return False
+    # Get WhisperX timing entries (filter out empty)
+    whisper_entries = [t for t in timing_data if t.get('char', '').strip()]
     
-    timing_words = get_timing_words(timing)
-    quran_words = get_quran_words(verses)
+    # Normalize both for matching
+    whisper_base_letters = [normalize_for_matching(t['char']) for t in whisper_entries]
+    quran_base_letters = [normalize_for_matching(g[0][1]) for g in letter_groups]
     
-    print(f"  Timing words: {len(timing_words)}")
-    print(f"  Quran words: {len(quran_words)}")
-    print(f"  Original letters: {len(timing)}")
+    whisper_str = ''.join(whisper_base_letters)
+    quran_str = ''.join(quran_base_letters)
     
-    prefix_len = find_prefix_length(timing_words, quran_words[0] if quran_words else '')
-    print(f"  Prefix to skip: {prefix_len} words")
+    print(f"  WhisperX: {len(whisper_entries)} timed letters")
+    print(f"  Quran: {len(letter_groups)} letter groups, {len(quran_text)} total chars")
     
-    if prefix_len > 0:
-        skipped = [strip_diacritics(''.join([t['char'] for t in timing_words[w]])) 
-                   for w in sorted(timing_words.keys())[:prefix_len]]
-        print(f"  Skipping: {skipped}")
+    # Use SequenceMatcher to find aligned blocks
+    matcher = SequenceMatcher(None, whisper_str, quran_str, autojunk=False)
+    matching_blocks = matcher.get_matching_blocks()
     
-    aligned = align_letters_to_quran(timing_words, quran_words, prefix_len)
-    print(f"  Aligned letters: {len(aligned)}")
+    # Initialize output with empty timing values
+    output = []
+    for i, char in enumerate(quran_text):
+        output.append({
+            'idx': i,
+            'char': char,
+            'start': 0,
+            'end': 0,
+            'duration': 0,
+            'is_space': char.isspace()
+        })
     
-    # Show sample
-    print(f"  Sample (first 3 words):")
-    for wid in range(min(3, max([a['wordIdx'] for a in aligned]) + 1)):
-        word_letters = [a for a in aligned if a['wordIdx'] == wid]
-        word_text = ''.join([a['char'] for a in word_letters])
-        first_t = word_letters[0]['start'] if word_letters else 0
-        last_t = word_letters[-1]['end'] if word_letters else 0
-        print(f"    Word {wid}: '{word_text}' ({first_t:.3f}s - {last_t:.3f}s)")
+    # Map matched Quran letter groups to WhisperX timing
+    matched_groups = 0
+    total_groups = len(letter_groups)
     
-    output_path = OUTPUT_DIR / f'letter_timing_{surah_num}.json'
+    for block in matching_blocks:
+        whisper_start, quran_start, size = block.a, block.b, block.size
+        
+        for offset in range(size):
+            whisper_idx = whisper_start + offset
+            quran_group_idx = quran_start + offset
+            
+            if whisper_idx >= len(whisper_entries) or quran_group_idx >= len(letter_groups):
+                continue
+            
+            # Get timing from WhisperX (already in ms)
+            timing = whisper_entries[whisper_idx]
+            start_ms = timing.get('start', 0) or 0
+            end_ms = timing.get('end', 0) or 0
+            
+            # Ensure we're working in milliseconds
+            if start_ms < 1000 and start_ms > 0:  # Likely seconds, convert to ms
+                start_ms = start_ms * 1000
+                end_ms = end_ms * 1000
+            
+            # Get the character group (base letter + diacritics)
+            group = letter_groups[quran_group_idx]
+            group_size = len(group)
+            
+            # Distribute timing across the group (in milliseconds)
+            if group_size > 0 and end_ms > start_ms:
+                duration_per_char = (end_ms - start_ms) / group_size
+                
+                for j, (char_idx, char) in enumerate(group):
+                    char_start = start_ms + (j * duration_per_char)
+                    char_end = char_start + duration_per_char
+                    
+                    output[char_idx]['start'] = int(char_start)
+                    output[char_idx]['end'] = int(char_end)
+                    output[char_idx]['duration'] = int(duration_per_char)
+            
+            matched_groups += 1
+    
+    match_pct = (matched_groups / total_groups * 100) if total_groups > 0 else 0
+    print(f"  ✓ Matched {matched_groups}/{total_groups} letter groups ({match_pct:.1f}%)")
+    
+    # Interpolate gaps for unmatched groups
+    interpolate_gaps(output)
+    
+    # Filter out spaces for final output (App expects non-space chars only)
+    final_output = [t for t in output if not t['is_space']]
+    
+    return final_output
+
+def interpolate_gaps(timing_list):
+    """Fill in timing gaps by linear interpolation"""
+    # Find indices with valid timing
+    timed_indices = [i for i, t in enumerate(timing_list) if t['end'] > 0]
+    
+    if len(timed_indices) < 2:
+        return
+    
+    for i, entry in enumerate(timing_list):
+        if entry['is_space'] or entry['end'] > 0:
+            continue
+        
+        # Find previous and next timed entries
+        prev_idx = None
+        next_idx = None
+        
+        for j in range(i - 1, -1, -1):
+            if timing_list[j]['end'] > 0:
+                prev_idx = j
+                break
+        
+        for j in range(i + 1, len(timing_list)):
+            if timing_list[j]['end'] > 0:
+                next_idx = j
+                break
+        
+        if prev_idx is not None and next_idx is not None:
+            # Interpolate
+            prev_end = timing_list[prev_idx]['end']
+            next_start = timing_list[next_idx]['start']
+            
+            # Count gap characters
+            gap_chars = sum(1 for k in range(prev_idx + 1, next_idx) if not timing_list[k]['is_space'])
+            if gap_chars > 0:
+                # Find position in gap
+                pos = sum(1 for k in range(prev_idx + 1, i + 1) if not timing_list[k]['is_space'])
+                
+                gap_duration = max(0, next_start - prev_end)
+                step = gap_duration / (gap_chars + 1)
+                
+                entry['start'] = int(prev_end + step * (pos - 0.5))
+                entry['end'] = int(prev_end + step * (pos + 0.5))
+                entry['duration'] = int(step)
+
+def process_surah(surah_num, verses, timing_path, output_path):
+    """Process one surah"""
+    with open(timing_path) as f:
+        timing_data = json.load(f)
+    
+    # Join verses with space (standard)
+    full_text = ' '.join(v['text'] for v in verses)
+    
+    print(f"Surah {surah_num}: {len(timing_data)} timing entries")
+    
+    aligned = align_timing_to_quran(surah_num, timing_data, full_text)
+    
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(aligned, f, ensure_ascii=False, indent=2)
-    print(f"  Saved to {output_path.name}")
     
-    return True
+    print(f"  ✓ Saved {len(aligned)} entries -> {output_path.name}")
 
 def main():
-    surahs = [1, 18, 36, 47, 53, 55, 56, 67, 71, 75, 80, 82, 85, 87, 89, 90, 91, 92, 93, 109, 112, 113, 114]
-    
-    print("Aligning letter-level timing with Quran text")
-    print("Preserving original letter timestamps")
+    print("=" * 60)
+    print("MILLISECOND-ACCURATE QURAN LETTER ALIGNMENT")
     print("=" * 60)
     
-    success = 0
-    for surah in surahs:
-        if process_surah(surah):
-            success += 1
+    with open(VERSES_FILE) as f:
+        all_verses = json.load(f)
     
-    print(f"\n{'='*60}")
-    print(f"Done! Processed {success}/{len(surahs)} surahs")
+    for timing_file in sorted(ABDUL_BASIT_ORIG_DIR.glob("letter_timing_*.json")):
+        surah_num = int(timing_file.stem.split('_')[-1])
+        
+        verses = all_verses.get(str(surah_num), [])
+        if not verses:
+            print(f"Skipping surah {surah_num} - no verse data")
+            continue
+        
+        output_path = ABDUL_BASIT_DIR / f"letter_timing_{surah_num}.json"
+        process_surah(surah_num, verses, timing_file, output_path)
+    
+    print("\n" + "=" * 60)
+    print("ALIGNMENT COMPLETE!")
+    print("=" * 60)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
