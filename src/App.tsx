@@ -207,6 +207,17 @@ function App() {
         />
       </div>
 
+      <div className="version-tag" style={{
+        position: 'absolute',
+        top: '10px',
+        left: '10px',
+        color: 'var(--text-secondary)',
+        fontSize: '0.8rem',
+        opacity: 0.7
+      }}>
+        v1.0 (Lisan Wave-Tajweed)
+      </div>
+
       {showDebug && (
         <div className="debug-panel">
           <span><b>Time:</b> {syncState.currentTime.toFixed(2)}s</span>

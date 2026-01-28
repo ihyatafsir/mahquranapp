@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Alignment Tester</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #1a1a1a; color: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .controls { margin-bottom: 20px; background: #333; padding: 20px; border-radius: 8px; }
+        .timeline { 
+            position: relative; 
+            height: 200px; 
+            background: #222; 
+            border: 1px solid #444; 
+            overflow-x: auto; 
+            margin-top: 20px;
+            white-space: nowrap;
+        }
+        .marker {
+            position: absolute;
+            height: 100%;
+            background: rgba(0, 255, 0, 0.1);
+            border-left: 1px solid rgba(0, 255, 0, 0.3);
+            top: 0;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .marker:hover { background: rgba(0, 255, 0, 0.3); z-index: 10; }
+        .marker.active { background: rgba(255, 255, 0, 0.3); border-left: 1px solid yellow; }
+        .marker span {
+            position: absolute;
+            bottom: 5px;
+            left: 2px;
+            font-size: 10px;
+            color: #aaa;
+            pointer-events: none;
+        }
+        .cursor {
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background: red;
+            top: 0;
+            z-index: 100;
+        }
+        .quran-text {
+            font-size: 32px;
+            direction: rtl;
+            line-height: 2;
+            margin-top: 30px;
+            font-family: 'Amiri', serif;
+        }
+        .char { transition: color 0.1s; display: inline-block; }
+        .char.active { color: yellow; text-shadow: 0 0 10px orange; }
+        input, select, button { padding: 8px; margin: 5px; background: #444; color: white; border: 1px solid #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Quran Alignment Visualizer</h1>
+        
+        <div class="controls">
+            <div>
+                <h3>1. Audio Source</h3>
+                <input type="text" id="audioUrl" value="https://download.quranicaudio.com/qdc/abdul_baset/mujawwad/1.mp3" style="width: 80%">
+                <button onclick="loadAudio()">Load Audio</button>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h3>2. Timing Data</h3>
+                <select id="dataFile">
+                    <option value="/data/abdul_basit/letter_timing_1.json">Current (abdul_basit/letter_timing_1.json)</option>
+                    <option value="/data/letter_timing_1.json">Root (letter_timing_1.json)</option>
+                    <option value="/data/abdul_basit_original/letter_timing_1.json">Original (abdul_basit_original)</option>
+                </select>
+                <button onclick="loadData()">Load Data</button>
+            </div>
+
+            <div style="margin-top: 20px;">
+                 <h3>3. Scale & Offset</h3>
+                 <label>Scale Factor: <input type="number" id="scale" value="1.0" step="0.01" onchange="renderTimeline()"></label>
+                 <label>Offset (s): <input type="number" id="offset" value="0.0" step="0.1" onchange="renderTimeline()"></label>
+                 <button onclick="autoScale()">Auto-Scale to Audio</button>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <audio id="player" controls style="width: 100%"></audio>
+            </div>
+        </div>
+
+        <div id="timeline" class="timeline">
+            <div id="cursor" class="cursor"></div>
+            <div id="markers"></div>
+        </div>
+
+        <div id="quranText" class="quran-text"></div>
+    </div>
+
+    <script>
+        let timingData = [];
+        let audioDuration = 0;
+        const player = document.getElementById('player');
+        const timeline = document.getElementById('timeline');
+        const markersContainer = document.getElementById('markers');
+        const cursor = document.getElementById('cursor');
+        const quranContainer = document.getElementById('quranText');
+
+        player.ontimeupdate = updateState;
+        player.onloadedmetadata = () => {
+            audioDuration = player.duration;
+            console.log('Audio duration:', audioDuration);
+            renderTimeline();
+        };
+
+        function loadAudio() {
+            player.src = document.getElementById('audioUrl').value;
+        }
+
+        async function loadData() {
+            const path = document.getElementById('dataFile').value;
+            try {
+                const res = await fetch(path);
+                timingData = await res.json();
+                console.log('Loaded entries:', timingData.length);
+                renderTimeline();
+                renderText();
+            } catch (e) {
+                alert('Failed to load data: ' + e.message);
+            }
+        }
+
+        function autoScale() {
+            if (!timingData.length || !audioDuration) return;
+            const lastEnd = timingData[timingData.length - 1].end;
+            const scale = audioDuration / lastEnd;
+            document.getElementById('scale').value = scale.toFixed(4);
+            renderTimeline();
+        }
+
+        function getAdjustedData() {
+            const scale = parseFloat(document.getElementById('scale').value) || 1;
+            const offset = parseFloat(document.getElementById('offset').value) || 0;
+            
+            return timingData.map(t => ({
+                ...t,
+                start: (t.start * scale) + offset,
+                end: (t.end * scale) + offset,
+                char: t.char
+            }));
+        }
+
+        function renderTimeline() {
+            markersContainer.innerHTML = '';
+            if (!audioDuration) return;
+
+            const widthPerSec = 100; // pixels per second
+            timeline.style.width = '100%';
+            
+            // Set timeline container width physically large if needed, or rely on scroll
+            // Only way to scroll is if content is wider
+            const totalWidth = audioDuration * widthPerSec;
+            markersContainer.style.width = totalWidth + 'px';
+
+            const data = getAdjustedData();
+            
+            data.forEach((t, i) => {
+                const el = document.createElement('div');
+                el.className = 'marker';
+                const left = (t.start / audioDuration) * 100;
+                const width = ((t.end - t.start) / audioDuration) * 100;
+                
+                el.style.left = left + '%';
+                el.style.width = width + '%';
+                el.innerHTML = `<span>${t.char}</span>`;
+                el.title = `${t.char} (${t.start.toFixed(2)} - ${t.end.toFixed(2)})`;
+                
+                el.onclick = () => {
+                    player.currentTime = t.start;
+                    player.play();
+                };
+                
+                markersContainer.appendChild(el);
+            });
+        }
+
+        function renderText() {
+            quranContainer.innerHTML = timingData.map((t, i) => 
+                `<span id="char-${i}" class="char">${t.char}</span>`
+            ).join('');
+        }
+
+        function updateState() {
+            const time = player.currentTime;
+            
+            // Update cursor
+            if (audioDuration) {
+                cursor.style.left = (time / audioDuration) * 100 + '%';
+            }
+
+            // Update highlighting
+            const data = getAdjustedData();
+            
+            // Clear current
+            document.querySelectorAll('.char.active').forEach(e => e.classList.remove('active'));
+            document.querySelectorAll('.marker.active').forEach(e => e.classList.remove('active'));
+
+            // Find active
+            data.forEach((t, i) => {
+                if (time >= t.start && time <= t.end) {
+                    const charEl = document.getElementById(`char-${i}`);
+                    if (charEl) charEl.classList.add('active');
+                }
+            });
+        }
+        
+        // Initial load
+        loadAudio();
+        loadData();
+    </script>
+</body>
+</html>

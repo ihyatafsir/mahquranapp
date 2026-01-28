@@ -30,7 +30,7 @@ from ctc_forced_aligner import (
 
 DIACRITICS = set('\u064B\u064C\u064D\u064E\u064F\u0650\u0651\u0652\u0653\u0654\u0655\u0656\u0657\u0658\u065C\u065D\u065E\u065F\u0670')
 SHADDA = '\u0651'
-MADD_LETTERS = set('اويٱ')  # Including alif wasla
+MADD_LETTERS = set('اويٱى')  # Including alif wasla and alif maqsura
 LONG_VOWELS = set('ٰ')  # Superscript alif (already indicates long)
 HALQ_LETTERS = set('ءهعحغخ')
 
@@ -155,17 +155,66 @@ class LisanMaddDetector:
         """Get base ratio for character type."""
         if char in DIACRITICS:
             if char == SHADDA:
+                # Shadda itself is short event, but doubles previous
                 return 0.4
             elif char == '\u0652':  # Sukun
                 return 0.3
-            else:  # Harakat
+            elif char == '\u0650':  # Kasra (i)
+                return 0.9
+            elif char == '\u064E':  # Fatha (a)
+                return 0.85
+            elif char == '\u064F':  # Damma (u)
+                return 0.85
+            else:  # Other marks
                 return 0.6
         
+        if char in 'وي':  # Waw and Ya - MADD letters
+            return 1.4
+            
         if char in HALQ_LETTERS:
             return 1.3
         
         return 1.0
     
+    def anti_drift_stabilize(self, timings):
+        """
+        Anti-Drift Mechanism:
+        1. Closes small gaps between words (< 150ms) by extending the previous letter.
+        2. Extends end-of-word letters (especially vowels) into silence.
+        3. Ensures 'i' and 'y' are never too short.
+        """
+        if not timings:
+            return []
+            
+        stabilized = []
+        for i, t in enumerate(timings):
+            # 1. Enforce minimum duration for visibility (Anti-Flicker)
+            dur = t['end'] - t['start']
+            min_dur = 0.045  # 45ms visual min
+            
+            # Boost 'i' and 'y' specifically
+            if t['char'] in ['ي', '\u0650']: # Ya or Kasra
+                min_dur = 0.060  # 60ms min for these
+            
+            if dur < min_dur:
+                # Extend end to meet min duration
+                # Note: This might overlap next, but visual stability is priority
+                t['end'] = t['start'] + min_dur
+            
+            # 2. Gap Closing (Anti-Drift) between this and next
+            if i < len(timings) - 1:
+                next_t = timings[i+1]
+                gap = next_t['start'] - t['end']
+                
+                # If gap is small (silence between words), extend current letter to cover it
+                # This makes the highlight "persist" until the next word starts
+                if 0 < gap < 0.150:  # 150ms gap close
+                    t['end'] = next_t['start']
+            
+            stabilized.append(t)
+            
+        return stabilized
+
     def align(self, text):
         """Full alignment with madd detection."""
         words = self.get_word_boundaries(text)
@@ -214,6 +263,10 @@ class LisanMaddDetector:
                 # Shadda doubles the preceding consonant
                 if c == SHADDA and i > 0 and all_chars[i-1] not in DIACRITICS:
                     ratios[i-1] *= 2.0
+                    
+                # End-of-word vowel boost (often held longer by reciter before silence)
+                if i == len(all_chars) - 1 and (c in DIACRITICS or c in MADD_LETTERS):
+                    ratio *= 1.5
                 
                 ratios.append(ratio)
             
@@ -231,6 +284,10 @@ class LisanMaddDetector:
                     'end': current + char_dur
                 })
                 current += char_dur
+        
+        # Apply Anti-Drift Stabilization
+        print("Applying word-based anti-drift stabilization...")
+        all_timings = self.anti_drift_stabilize(all_timings)
         
         # Add indices
         for i, t in enumerate(all_timings):

@@ -1,0 +1,6257 @@
+[
+  {
+    "idx": 0,
+    "char": "ي",
+    "ayah": 1,
+    "start": 1583,
+    "end": 2845,
+    "duration": 1262,
+    "weight": 1.3
+  },
+  {
+    "idx": 1,
+    "char": "س",
+    "ayah": 1,
+    "start": 2845,
+    "end": 2865,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 2,
+    "char": "ب",
+    "ayah": 1,
+    "start": 2865,
+    "end": 3185,
+    "duration": 320,
+    "weight": 1.0
+  },
+  {
+    "idx": 3,
+    "char": "ح",
+    "ayah": 1,
+    "start": 3185,
+    "end": 3847,
+    "duration": 662,
+    "weight": 1.0
+  },
+  {
+    "idx": 4,
+    "char": "ل",
+    "ayah": 1,
+    "start": 3867,
+    "end": 4467,
+    "duration": 600,
+    "weight": 1.0
+  },
+  {
+    "idx": 5,
+    "char": "ل",
+    "ayah": 1,
+    "start": 4467,
+    "end": 5409,
+    "duration": 942,
+    "weight": 1.0
+  },
+  {
+    "idx": 6,
+    "char": "ه",
+    "ayah": 1,
+    "start": 5409,
+    "end": 5589,
+    "duration": 180,
+    "weight": 1.0
+  },
+  {
+    "idx": 7,
+    "char": "م",
+    "ayah": 1,
+    "start": 5729,
+    "end": 5890,
+    "duration": 161,
+    "weight": 1.0
+  },
+  {
+    "idx": 8,
+    "char": "ا",
+    "ayah": 1,
+    "start": 5890,
+    "end": 6411,
+    "duration": 521,
+    "weight": 1.5
+  },
+  {
+    "idx": 9,
+    "char": "ف",
+    "ayah": 1,
+    "start": 6611,
+    "end": 6711,
+    "duration": 100,
+    "weight": 1.0
+  },
+  {
+    "idx": 10,
+    "char": "ي",
+    "ayah": 1,
+    "start": 6711,
+    "end": 6791,
+    "duration": 80,
+    "weight": 1.3
+  },
+  {
+    "idx": 11,
+    "char": "ا",
+    "ayah": 1,
+    "start": 7332,
+    "end": 7352,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 12,
+    "char": "ل",
+    "ayah": 1,
+    "start": 7352,
+    "end": 7372,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 13,
+    "char": "س",
+    "ayah": 1,
+    "start": 7372,
+    "end": 7773,
+    "duration": 401,
+    "weight": 1.0
+  },
+  {
+    "idx": 14,
+    "char": "م",
+    "ayah": 1,
+    "start": 7773,
+    "end": 7953,
+    "duration": 180,
+    "weight": 1.0
+  },
+  {
+    "idx": 15,
+    "char": "ا",
+    "ayah": 1,
+    "start": 7953,
+    "end": 9475,
+    "duration": 1522,
+    "weight": 1.5
+  },
+  {
+    "idx": 16,
+    "char": "و",
+    "ayah": 1,
+    "start": 9475,
+    "end": 9495,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 17,
+    "char": "ا",
+    "ayah": 1,
+    "start": 9495,
+    "end": 9515,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 18,
+    "char": "ت",
+    "ayah": 1,
+    "start": 9515,
+    "end": 9876,
+    "duration": 361,
+    "weight": 1.0
+  },
+  {
+    "idx": 19,
+    "char": "و",
+    "ayah": 1,
+    "start": 10196,
+    "end": 10357,
+    "duration": 161,
+    "weight": 1.3
+  },
+  {
+    "idx": 20,
+    "char": "م",
+    "ayah": 1,
+    "start": 10357,
+    "end": 10497,
+    "duration": 140,
+    "weight": 1.0
+  },
+  {
+    "idx": 21,
+    "char": "ا",
+    "ayah": 1,
+    "start": 10497,
+    "end": 11118,
+    "duration": 621,
+    "weight": 1.5
+  },
+  {
+    "idx": 22,
+    "char": "ف",
+    "ayah": 1,
+    "start": 11138,
+    "end": 11398,
+    "duration": 260,
+    "weight": 1.0
+  },
+  {
+    "idx": 23,
+    "char": "ي",
+    "ayah": 1,
+    "start": 11398,
+    "end": 11919,
+    "duration": 521,
+    "weight": 1.3
+  },
+  {
+    "idx": 24,
+    "char": "ا",
+    "ayah": 1,
+    "start": 11939,
+    "end": 11959,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 25,
+    "char": "ل",
+    "ayah": 1,
+    "start": 11959,
+    "end": 12079,
+    "duration": 120,
+    "weight": 1.0
+  },
+  {
+    "idx": 26,
+    "char": "أ",
+    "ayah": 1,
+    "start": 12079,
+    "end": 12220,
+    "duration": 141,
+    "weight": 1.2
+  },
+  {
+    "idx": 27,
+    "char": "ر",
+    "ayah": 1,
+    "start": 12220,
+    "end": 12680,
+    "duration": 460,
+    "weight": 1.0
+  },
+  {
+    "idx": 28,
+    "char": "ض",
+    "ayah": 1,
+    "start": 12680,
+    "end": 13682,
+    "duration": 1002,
+    "weight": 1.0
+  },
+  {
+    "idx": 29,
+    "char": "ا",
+    "ayah": 1,
+    "start": 13702,
+    "end": 13722,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 30,
+    "char": "ل",
+    "ayah": 1,
+    "start": 13722,
+    "end": 13742,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 31,
+    "char": "م",
+    "ayah": 1,
+    "start": 13742,
+    "end": 14143,
+    "duration": 401,
+    "weight": 1.0
+  },
+  {
+    "idx": 32,
+    "char": "ل",
+    "ayah": 1,
+    "start": 14143,
+    "end": 14503,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 33,
+    "char": "ك",
+    "ayah": 1,
+    "start": 14503,
+    "end": 14904,
+    "duration": 401,
+    "weight": 1.0
+  },
+  {
+    "idx": 34,
+    "char": "ا",
+    "ayah": 1,
+    "start": 15024,
+    "end": 15044,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 35,
+    "char": "ل",
+    "ayah": 1,
+    "start": 15044,
+    "end": 16326,
+    "duration": 1282,
+    "weight": 1.0
+  },
+  {
+    "idx": 36,
+    "char": "ق",
+    "ayah": 1,
+    "start": 16326,
+    "end": 16346,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 37,
+    "char": "د",
+    "ayah": 1,
+    "start": 16346,
+    "end": 16526,
+    "duration": 180,
+    "weight": 1.0
+  },
+  {
+    "idx": 38,
+    "char": "و",
+    "ayah": 1,
+    "start": 16526,
+    "end": 17187,
+    "duration": 661,
+    "weight": 1.3
+  },
+  {
+    "idx": 39,
+    "char": "س",
+    "ayah": 1,
+    "start": 17187,
+    "end": 17768,
+    "duration": 581,
+    "weight": 1.0
+  },
+  {
+    "idx": 40,
+    "char": "ا",
+    "ayah": 1,
+    "start": 17788,
+    "end": 17808,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 41,
+    "char": "ل",
+    "ayah": 1,
+    "start": 17808,
+    "end": 18429,
+    "duration": 621,
+    "weight": 1.0
+  },
+  {
+    "idx": 42,
+    "char": "ع",
+    "ayah": 1,
+    "start": 18429,
+    "end": 18449,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 43,
+    "char": "ز",
+    "ayah": 1,
+    "start": 18449,
+    "end": 18690,
+    "duration": 241,
+    "weight": 1.0
+  },
+  {
+    "idx": 44,
+    "char": "ي",
+    "ayah": 1,
+    "start": 18690,
+    "end": 19291,
+    "duration": 601,
+    "weight": 1.3
+  },
+  {
+    "idx": 45,
+    "char": "ز",
+    "ayah": 1,
+    "start": 19291,
+    "end": 19831,
+    "duration": 540,
+    "weight": 1.0
+  },
+  {
+    "idx": 46,
+    "char": "ا",
+    "ayah": 1,
+    "start": 20032,
+    "end": 20052,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 47,
+    "char": "ل",
+    "ayah": 1,
+    "start": 20052,
+    "end": 20132,
+    "duration": 80,
+    "weight": 1.0
+  },
+  {
+    "idx": 48,
+    "char": "ح",
+    "ayah": 1,
+    "start": 20132,
+    "end": 20553,
+    "duration": 421,
+    "weight": 1.0
+  },
+  {
+    "idx": 49,
+    "char": "ك",
+    "ayah": 1,
+    "start": 20553,
+    "end": 20693,
+    "duration": 140,
+    "weight": 1.0
+  },
+  {
+    "idx": 50,
+    "char": "ي",
+    "ayah": 1,
+    "start": 20693,
+    "end": 20833,
+    "duration": 140,
+    "weight": 1.3
+  },
+  {
+    "idx": 51,
+    "char": "م",
+    "ayah": 1,
+    "start": 20833,
+    "end": 23457,
+    "duration": 2624,
+    "weight": 1.0
+  },
+  {
+    "idx": 52,
+    "char": "ه",
+    "ayah": 2,
+    "start": 26795,
+    "end": 28058,
+    "duration": 1263,
+    "weight": 1.0
+  },
+  {
+    "idx": 53,
+    "char": "و",
+    "ayah": 2,
+    "start": 28058,
+    "end": 28138,
+    "duration": 80,
+    "weight": 1.3
+  },
+  {
+    "idx": 54,
+    "char": "ا",
+    "ayah": 2,
+    "start": 28158,
+    "end": 28178,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 55,
+    "char": "ل",
+    "ayah": 2,
+    "start": 28178,
+    "end": 28198,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 56,
+    "char": "ذ",
+    "ayah": 2,
+    "start": 28198,
+    "end": 28379,
+    "duration": 181,
+    "weight": 1.0
+  },
+  {
+    "idx": 57,
+    "char": "ي",
+    "ayah": 2,
+    "start": 28379,
+    "end": 28860,
+    "duration": 481,
+    "weight": 1.3
+  },
+  {
+    "idx": 58,
+    "char": "ب",
+    "ayah": 2,
+    "start": 29000,
+    "end": 29742,
+    "duration": 742,
+    "weight": 1.0
+  },
+  {
+    "idx": 59,
+    "char": "ع",
+    "ayah": 2,
+    "start": 29742,
+    "end": 29762,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 60,
+    "char": "ث",
+    "ayah": 2,
+    "start": 29762,
+    "end": 30002,
+    "duration": 240,
+    "weight": 1.0
+  },
+  {
+    "idx": 61,
+    "char": "ف",
+    "ayah": 2,
+    "start": 30343,
+    "end": 30363,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 62,
+    "char": "ي",
+    "ayah": 2,
+    "start": 30363,
+    "end": 30844,
+    "duration": 481,
+    "weight": 1.3
+  },
+  {
+    "idx": 63,
+    "char": "ا",
+    "ayah": 2,
+    "start": 32267,
+    "end": 32287,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 64,
+    "char": "ل",
+    "ayah": 2,
+    "start": 32287,
+    "end": 32307,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 65,
+    "char": "أ",
+    "ayah": 2,
+    "start": 32307,
+    "end": 32327,
+    "duration": 20,
+    "weight": 1.2
+  },
+  {
+    "idx": 66,
+    "char": "م",
+    "ayah": 2,
+    "start": 32327,
+    "end": 32528,
+    "duration": 201,
+    "weight": 1.0
+  },
+  {
+    "idx": 67,
+    "char": "ي",
+    "ayah": 2,
+    "start": 32528,
+    "end": 34272,
+    "duration": 1744,
+    "weight": 1.3
+  },
+  {
+    "idx": 68,
+    "char": "ن",
+    "ayah": 2,
+    "start": 34272,
+    "end": 34292,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 69,
+    "char": "ر",
+    "ayah": 2,
+    "start": 34312,
+    "end": 34692,
+    "duration": 380,
+    "weight": 1.0
+  },
+  {
+    "idx": 70,
+    "char": "س",
+    "ayah": 2,
+    "start": 34692,
+    "end": 34893,
+    "duration": 201,
+    "weight": 1.0
+  },
+  {
+    "idx": 71,
+    "char": "و",
+    "ayah": 2,
+    "start": 34893,
+    "end": 35534,
+    "duration": 641,
+    "weight": 1.3
+  },
+  {
+    "idx": 72,
+    "char": "ل",
+    "ayah": 2,
+    "start": 35534,
+    "end": 37278,
+    "duration": 1744,
+    "weight": 1.0
+  },
+  {
+    "idx": 73,
+    "char": "ا",
+    "ayah": 2,
+    "start": 37278,
+    "end": 37298,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 74,
+    "char": "م",
+    "ayah": 2,
+    "start": 37539,
+    "end": 37559,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 75,
+    "char": "ن",
+    "ayah": 2,
+    "start": 37559,
+    "end": 37579,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 76,
+    "char": "ه",
+    "ayah": 2,
+    "start": 37579,
+    "end": 38240,
+    "duration": 661,
+    "weight": 1.0
+  },
+  {
+    "idx": 77,
+    "char": "م",
+    "ayah": 2,
+    "start": 38240,
+    "end": 38421,
+    "duration": 181,
+    "weight": 1.0
+  },
+  {
+    "idx": 78,
+    "char": "ي",
+    "ayah": 2,
+    "start": 38441,
+    "end": 39323,
+    "duration": 882,
+    "weight": 1.3
+  },
+  {
+    "idx": 79,
+    "char": "ت",
+    "ayah": 2,
+    "start": 39323,
+    "end": 39343,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 80,
+    "char": "ل",
+    "ayah": 2,
+    "start": 39343,
+    "end": 39523,
+    "duration": 180,
+    "weight": 1.0
+  },
+  {
+    "idx": 81,
+    "char": "و",
+    "ayah": 2,
+    "start": 39523,
+    "end": 40205,
+    "duration": 682,
+    "weight": 1.3
+  },
+  {
+    "idx": 82,
+    "char": "ع",
+    "ayah": 2,
+    "start": 40225,
+    "end": 40565,
+    "duration": 340,
+    "weight": 1.3
+  },
+  {
+    "idx": 83,
+    "char": "ل",
+    "ayah": 2,
+    "start": 40565,
+    "end": 41528,
+    "duration": 963,
+    "weight": 1.0
+  },
+  {
+    "idx": 84,
+    "char": "ي",
+    "ayah": 2,
+    "start": 41528,
+    "end": 43652,
+    "duration": 2124,
+    "weight": 1.3
+  },
+  {
+    "idx": 85,
+    "char": "ه",
+    "ayah": 2,
+    "start": 43652,
+    "end": 43672,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 86,
+    "char": "م",
+    "ayah": 2,
+    "start": 43672,
+    "end": 43692,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 87,
+    "char": "آ",
+    "ayah": 2,
+    "start": 43712,
+    "end": 44053,
+    "duration": 341,
+    "weight": 1.5
+  },
+  {
+    "idx": 88,
+    "char": "ي",
+    "ayah": 2,
+    "start": 44053,
+    "end": 44073,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 89,
+    "char": "ا",
+    "ayah": 2,
+    "start": 44073,
+    "end": 44093,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 90,
+    "char": "ت",
+    "ayah": 2,
+    "start": 44093,
+    "end": 45136,
+    "duration": 1043,
+    "weight": 1.0
+  },
+  {
+    "idx": 91,
+    "char": "ه",
+    "ayah": 2,
+    "start": 45136,
+    "end": 45156,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 92,
+    "char": "و",
+    "ayah": 2,
+    "start": 45356,
+    "end": 45957,
+    "duration": 601,
+    "weight": 1.3
+  },
+  {
+    "idx": 93,
+    "char": "ا",
+    "ayah": 2,
+    "start": 45957,
+    "end": 45977,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 94,
+    "char": "ل",
+    "ayah": 2,
+    "start": 45977,
+    "end": 45998,
+    "duration": 21,
+    "weight": 1.0
+  },
+  {
+    "idx": 95,
+    "char": "و",
+    "ayah": 2,
+    "start": 45998,
+    "end": 46178,
+    "duration": 180,
+    "weight": 1.3
+  },
+  {
+    "idx": 96,
+    "char": "ز",
+    "ayah": 2,
+    "start": 46178,
+    "end": 46198,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 97,
+    "char": "ي",
+    "ayah": 2,
+    "start": 46198,
+    "end": 46218,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 98,
+    "char": "ر",
+    "ayah": 2,
+    "start": 46218,
+    "end": 46238,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 99,
+    "char": "و",
+    "ayah": 3,
+    "start": 53845,
+    "end": 54426,
+    "duration": 581,
+    "weight": 1.3
+  },
+  {
+    "idx": 100,
+    "char": "ي",
+    "ayah": 3,
+    "start": 54426,
+    "end": 54446,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 101,
+    "char": "ز",
+    "ayah": 3,
+    "start": 54446,
+    "end": 54686,
+    "duration": 240,
+    "weight": 1.0
+  },
+  {
+    "idx": 102,
+    "char": "ك",
+    "ayah": 3,
+    "start": 54686,
+    "end": 55447,
+    "duration": 761,
+    "weight": 1.0
+  },
+  {
+    "idx": 103,
+    "char": "ي",
+    "ayah": 3,
+    "start": 55447,
+    "end": 56087,
+    "duration": 640,
+    "weight": 1.3
+  },
+  {
+    "idx": 104,
+    "char": "ه",
+    "ayah": 3,
+    "start": 56087,
+    "end": 56448,
+    "duration": 361,
+    "weight": 1.0
+  },
+  {
+    "idx": 105,
+    "char": "م",
+    "ayah": 3,
+    "start": 56448,
+    "end": 56928,
+    "duration": 480,
+    "weight": 1.0
+  },
+  {
+    "idx": 106,
+    "char": "و",
+    "ayah": 3,
+    "start": 56948,
+    "end": 70683,
+    "duration": 13735,
+    "weight": 1.3
+  },
+  {
+    "idx": 107,
+    "char": "ي",
+    "ayah": 3,
+    "start": 70683,
+    "end": 71103,
+    "duration": 420,
+    "weight": 1.3
+  },
+  {
+    "idx": 108,
+    "char": "ع",
+    "ayah": 3,
+    "start": 71103,
+    "end": 71263,
+    "duration": 160,
+    "weight": 1.3
+  },
+  {
+    "idx": 109,
+    "char": "ل",
+    "ayah": 3,
+    "start": 71263,
+    "end": 72525,
+    "duration": 1262,
+    "weight": 1.0
+  },
+  {
+    "idx": 110,
+    "char": "م",
+    "ayah": 3,
+    "start": 72525,
+    "end": 72545,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 111,
+    "char": "ه",
+    "ayah": 3,
+    "start": 72545,
+    "end": 73486,
+    "duration": 941,
+    "weight": 1.0
+  },
+  {
+    "idx": 112,
+    "char": "م",
+    "ayah": 3,
+    "start": 73486,
+    "end": 73506,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 113,
+    "char": "ا",
+    "ayah": 3,
+    "start": 73526,
+    "end": 73546,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 114,
+    "char": "ل",
+    "ayah": 3,
+    "start": 73546,
+    "end": 73786,
+    "duration": 240,
+    "weight": 1.0
+  },
+  {
+    "idx": 115,
+    "char": "ك",
+    "ayah": 3,
+    "start": 73786,
+    "end": 74347,
+    "duration": 561,
+    "weight": 1.0
+  },
+  {
+    "idx": 116,
+    "char": "ت",
+    "ayah": 3,
+    "start": 74347,
+    "end": 74367,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 117,
+    "char": "ا",
+    "ayah": 3,
+    "start": 74367,
+    "end": 75027,
+    "duration": 660,
+    "weight": 1.5
+  },
+  {
+    "idx": 118,
+    "char": "ب",
+    "ayah": 3,
+    "start": 75027,
+    "end": 75928,
+    "duration": 901,
+    "weight": 1.0
+  },
+  {
+    "idx": 119,
+    "char": "و",
+    "ayah": 3,
+    "start": 76028,
+    "end": 76048,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 120,
+    "char": "ا",
+    "ayah": 3,
+    "start": 76048,
+    "end": 76068,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 121,
+    "char": "ل",
+    "ayah": 3,
+    "start": 76068,
+    "end": 77009,
+    "duration": 941,
+    "weight": 1.0
+  },
+  {
+    "idx": 122,
+    "char": "ح",
+    "ayah": 3,
+    "start": 77009,
+    "end": 77029,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 123,
+    "char": "ك",
+    "ayah": 3,
+    "start": 77029,
+    "end": 77049,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 124,
+    "char": "م",
+    "ayah": 3,
+    "start": 77049,
+    "end": 78011,
+    "duration": 962,
+    "weight": 1.0
+  },
+  {
+    "idx": 125,
+    "char": "ة",
+    "ayah": 3,
+    "start": 78011,
+    "end": 78031,
+    "duration": 20,
+    "weight": 0.8
+  },
+  {
+    "idx": 126,
+    "char": "و",
+    "ayah": 3,
+    "start": 78051,
+    "end": 78251,
+    "duration": 200,
+    "weight": 1.3
+  },
+  {
+    "idx": 127,
+    "char": "إ",
+    "ayah": 3,
+    "start": 78251,
+    "end": 79572,
+    "duration": 1321,
+    "weight": 1.2
+  },
+  {
+    "idx": 128,
+    "char": "ن",
+    "ayah": 3,
+    "start": 79572,
+    "end": 79592,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 129,
+    "char": "ك",
+    "ayah": 3,
+    "start": 79612,
+    "end": 79772,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 130,
+    "char": "ا",
+    "ayah": 3,
+    "start": 79772,
+    "end": 80333,
+    "duration": 561,
+    "weight": 1.5
+  },
+  {
+    "idx": 131,
+    "char": "ن",
+    "ayah": 3,
+    "start": 80333,
+    "end": 80353,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 132,
+    "char": "و",
+    "ayah": 3,
+    "start": 80353,
+    "end": 80373,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 133,
+    "char": "ا",
+    "ayah": 3,
+    "start": 80373,
+    "end": 80393,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 134,
+    "char": "و",
+    "ayah": 4,
+    "start": 85030,
+    "end": 95279,
+    "duration": 10249,
+    "weight": 1.3
+  },
+  {
+    "idx": 135,
+    "char": "آ",
+    "ayah": 4,
+    "start": 95279,
+    "end": 95299,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 136,
+    "char": "خ",
+    "ayah": 4,
+    "start": 95299,
+    "end": 95459,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 137,
+    "char": "ر",
+    "ayah": 4,
+    "start": 95459,
+    "end": 95799,
+    "duration": 340,
+    "weight": 1.0
+  },
+  {
+    "idx": 138,
+    "char": "ي",
+    "ayah": 4,
+    "start": 95799,
+    "end": 96420,
+    "duration": 621,
+    "weight": 1.3
+  },
+  {
+    "idx": 139,
+    "char": "ن",
+    "ayah": 4,
+    "start": 96420,
+    "end": 96780,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 140,
+    "char": "م",
+    "ayah": 4,
+    "start": 96800,
+    "end": 97100,
+    "duration": 300,
+    "weight": 1.0
+  },
+  {
+    "idx": 141,
+    "char": "ن",
+    "ayah": 4,
+    "start": 97100,
+    "end": 97601,
+    "duration": 501,
+    "weight": 1.0
+  },
+  {
+    "idx": 142,
+    "char": "ه",
+    "ayah": 4,
+    "start": 97601,
+    "end": 98241,
+    "duration": 640,
+    "weight": 1.0
+  },
+  {
+    "idx": 143,
+    "char": "م",
+    "ayah": 4,
+    "start": 98241,
+    "end": 98441,
+    "duration": 200,
+    "weight": 1.0
+  },
+  {
+    "idx": 144,
+    "char": "ل",
+    "ayah": 4,
+    "start": 98461,
+    "end": 99862,
+    "duration": 1401,
+    "weight": 1.0
+  },
+  {
+    "idx": 145,
+    "char": "م",
+    "ayah": 4,
+    "start": 99862,
+    "end": 100023,
+    "duration": 161,
+    "weight": 1.0
+  },
+  {
+    "idx": 146,
+    "char": "ا",
+    "ayah": 4,
+    "start": 100023,
+    "end": 100943,
+    "duration": 920,
+    "weight": 1.5
+  },
+  {
+    "idx": 147,
+    "char": "ي",
+    "ayah": 4,
+    "start": 101003,
+    "end": 101464,
+    "duration": 461,
+    "weight": 1.3
+  },
+  {
+    "idx": 148,
+    "char": "ل",
+    "ayah": 4,
+    "start": 101464,
+    "end": 101584,
+    "duration": 120,
+    "weight": 1.0
+  },
+  {
+    "idx": 149,
+    "char": "ح",
+    "ayah": 4,
+    "start": 101584,
+    "end": 101944,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 150,
+    "char": "ق",
+    "ayah": 4,
+    "start": 101944,
+    "end": 102525,
+    "duration": 581,
+    "weight": 1.0
+  },
+  {
+    "idx": 151,
+    "char": "و",
+    "ayah": 4,
+    "start": 102525,
+    "end": 102785,
+    "duration": 260,
+    "weight": 1.3
+  },
+  {
+    "idx": 152,
+    "char": "ا",
+    "ayah": 4,
+    "start": 102785,
+    "end": 102805,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 153,
+    "char": "ب",
+    "ayah": 4,
+    "start": 102825,
+    "end": 103125,
+    "duration": 300,
+    "weight": 1.0
+  },
+  {
+    "idx": 154,
+    "char": "ه",
+    "ayah": 4,
+    "start": 103125,
+    "end": 107749,
+    "duration": 4624,
+    "weight": 1.0
+  },
+  {
+    "idx": 155,
+    "char": "م",
+    "ayah": 4,
+    "start": 107749,
+    "end": 107769,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 156,
+    "char": "و",
+    "ayah": 4,
+    "start": 107789,
+    "end": 107969,
+    "duration": 180,
+    "weight": 1.3
+  },
+  {
+    "idx": 157,
+    "char": "ه",
+    "ayah": 4,
+    "start": 107969,
+    "end": 108790,
+    "duration": 821,
+    "weight": 1.0
+  },
+  {
+    "idx": 158,
+    "char": "و",
+    "ayah": 4,
+    "start": 108790,
+    "end": 108810,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 159,
+    "char": "ا",
+    "ayah": 4,
+    "start": 109270,
+    "end": 109290,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 160,
+    "char": "ل",
+    "ayah": 4,
+    "start": 109290,
+    "end": 109450,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 161,
+    "char": "ع",
+    "ayah": 4,
+    "start": 109450,
+    "end": 109811,
+    "duration": 361,
+    "weight": 1.3
+  },
+  {
+    "idx": 162,
+    "char": "ز",
+    "ayah": 4,
+    "start": 109811,
+    "end": 110631,
+    "duration": 820,
+    "weight": 1.0
+  },
+  {
+    "idx": 163,
+    "char": "ي",
+    "ayah": 4,
+    "start": 110631,
+    "end": 110652,
+    "duration": 21,
+    "weight": 1.3
+  },
+  {
+    "idx": 164,
+    "char": "ز",
+    "ayah": 4,
+    "start": 110652,
+    "end": 111652,
+    "duration": 1000,
+    "weight": 1.0
+  },
+  {
+    "idx": 165,
+    "char": "ا",
+    "ayah": 4,
+    "start": 111672,
+    "end": 111893,
+    "duration": 221,
+    "weight": 1.5
+  },
+  {
+    "idx": 166,
+    "char": "ل",
+    "ayah": 4,
+    "start": 111893,
+    "end": 111913,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 167,
+    "char": "ح",
+    "ayah": 4,
+    "start": 111913,
+    "end": 111933,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 168,
+    "char": "ك",
+    "ayah": 4,
+    "start": 111933,
+    "end": 114795,
+    "duration": 2862,
+    "weight": 1.0
+  },
+  {
+    "idx": 169,
+    "char": "ي",
+    "ayah": 4,
+    "start": 114795,
+    "end": 114815,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 170,
+    "char": "م",
+    "ayah": 4,
+    "start": 114815,
+    "end": 114835,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 171,
+    "char": "ذ",
+    "ayah": 5,
+    "start": 120755,
+    "end": 121756,
+    "duration": 1001,
+    "weight": 1.0
+  },
+  {
+    "idx": 172,
+    "char": "ل",
+    "ayah": 5,
+    "start": 121756,
+    "end": 121776,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 173,
+    "char": "ك",
+    "ayah": 5,
+    "start": 121776,
+    "end": 122416,
+    "duration": 640,
+    "weight": 1.0
+  },
+  {
+    "idx": 174,
+    "char": "ف",
+    "ayah": 5,
+    "start": 122436,
+    "end": 122456,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 175,
+    "char": "ض",
+    "ayah": 5,
+    "start": 122456,
+    "end": 122977,
+    "duration": 521,
+    "weight": 1.0
+  },
+  {
+    "idx": 176,
+    "char": "ل",
+    "ayah": 5,
+    "start": 122977,
+    "end": 123597,
+    "duration": 620,
+    "weight": 1.0
+  },
+  {
+    "idx": 177,
+    "char": "ا",
+    "ayah": 5,
+    "start": 123617,
+    "end": 123637,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 178,
+    "char": "ل",
+    "ayah": 5,
+    "start": 123637,
+    "end": 123778,
+    "duration": 141,
+    "weight": 1.0
+  },
+  {
+    "idx": 179,
+    "char": "ل",
+    "ayah": 5,
+    "start": 123778,
+    "end": 124578,
+    "duration": 800,
+    "weight": 1.0
+  },
+  {
+    "idx": 180,
+    "char": "ه",
+    "ayah": 5,
+    "start": 124578,
+    "end": 124918,
+    "duration": 340,
+    "weight": 1.0
+  },
+  {
+    "idx": 181,
+    "char": "ي",
+    "ayah": 5,
+    "start": 124979,
+    "end": 125859,
+    "duration": 880,
+    "weight": 1.3
+  },
+  {
+    "idx": 182,
+    "char": "ؤ",
+    "ayah": 5,
+    "start": 125859,
+    "end": 125879,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 183,
+    "char": "ت",
+    "ayah": 5,
+    "start": 125879,
+    "end": 126860,
+    "duration": 981,
+    "weight": 1.0
+  },
+  {
+    "idx": 184,
+    "char": "ي",
+    "ayah": 5,
+    "start": 126860,
+    "end": 126920,
+    "duration": 60,
+    "weight": 1.3
+  },
+  {
+    "idx": 185,
+    "char": "ه",
+    "ayah": 5,
+    "start": 126920,
+    "end": 126940,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 186,
+    "char": "م",
+    "ayah": 5,
+    "start": 127140,
+    "end": 127441,
+    "duration": 301,
+    "weight": 1.0
+  },
+  {
+    "idx": 187,
+    "char": "ن",
+    "ayah": 5,
+    "start": 127441,
+    "end": 128281,
+    "duration": 840,
+    "weight": 1.0
+  },
+  {
+    "idx": 188,
+    "char": "ي",
+    "ayah": 5,
+    "start": 128341,
+    "end": 128722,
+    "duration": 381,
+    "weight": 1.3
+  },
+  {
+    "idx": 189,
+    "char": "ش",
+    "ayah": 5,
+    "start": 128722,
+    "end": 128942,
+    "duration": 220,
+    "weight": 1.0
+  },
+  {
+    "idx": 190,
+    "char": "ا",
+    "ayah": 5,
+    "start": 128942,
+    "end": 135808,
+    "duration": 6866,
+    "weight": 1.5
+  },
+  {
+    "idx": 191,
+    "char": "ء",
+    "ayah": 5,
+    "start": 135808,
+    "end": 135828,
+    "duration": 20,
+    "weight": 0.8
+  },
+  {
+    "idx": 192,
+    "char": "و",
+    "ayah": 5,
+    "start": 135848,
+    "end": 135948,
+    "duration": 100,
+    "weight": 1.3
+  },
+  {
+    "idx": 193,
+    "char": "ا",
+    "ayah": 5,
+    "start": 135948,
+    "end": 136028,
+    "duration": 80,
+    "weight": 1.5
+  },
+  {
+    "idx": 194,
+    "char": "ل",
+    "ayah": 5,
+    "start": 136028,
+    "end": 136048,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 195,
+    "char": "ل",
+    "ayah": 5,
+    "start": 136048,
+    "end": 136969,
+    "duration": 921,
+    "weight": 1.0
+  },
+  {
+    "idx": 196,
+    "char": "ه",
+    "ayah": 5,
+    "start": 136969,
+    "end": 137349,
+    "duration": 380,
+    "weight": 1.0
+  },
+  {
+    "idx": 197,
+    "char": "ذ",
+    "ayah": 5,
+    "start": 137369,
+    "end": 137529,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 198,
+    "char": "و",
+    "ayah": 5,
+    "start": 137529,
+    "end": 137889,
+    "duration": 360,
+    "weight": 1.3
+  },
+  {
+    "idx": 199,
+    "char": "ا",
+    "ayah": 5,
+    "start": 137949,
+    "end": 138029,
+    "duration": 80,
+    "weight": 1.5
+  },
+  {
+    "idx": 200,
+    "char": "ل",
+    "ayah": 5,
+    "start": 138029,
+    "end": 138150,
+    "duration": 121,
+    "weight": 1.0
+  },
+  {
+    "idx": 201,
+    "char": "ف",
+    "ayah": 5,
+    "start": 138150,
+    "end": 138510,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 202,
+    "char": "ض",
+    "ayah": 5,
+    "start": 138510,
+    "end": 139591,
+    "duration": 1081,
+    "weight": 1.0
+  },
+  {
+    "idx": 203,
+    "char": "ل",
+    "ayah": 5,
+    "start": 139591,
+    "end": 139611,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 204,
+    "char": "ا",
+    "ayah": 5,
+    "start": 139631,
+    "end": 139651,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 205,
+    "char": "ل",
+    "ayah": 5,
+    "start": 139651,
+    "end": 140271,
+    "duration": 620,
+    "weight": 1.0
+  },
+  {
+    "idx": 206,
+    "char": "ع",
+    "ayah": 5,
+    "start": 140271,
+    "end": 140291,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 207,
+    "char": "ظ",
+    "ayah": 5,
+    "start": 140291,
+    "end": 140471,
+    "duration": 180,
+    "weight": 1.0
+  },
+  {
+    "idx": 208,
+    "char": "ي",
+    "ayah": 5,
+    "start": 140471,
+    "end": 146937,
+    "duration": 6466,
+    "weight": 1.3
+  },
+  {
+    "idx": 209,
+    "char": "م",
+    "ayah": 5,
+    "start": 146937,
+    "end": 147177,
+    "duration": 240,
+    "weight": 1.0
+  },
+  {
+    "idx": 210,
+    "char": "م",
+    "ayah": 5,
+    "start": 147197,
+    "end": 147217,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 211,
+    "char": "ث",
+    "ayah": 5,
+    "start": 147217,
+    "end": 147497,
+    "duration": 280,
+    "weight": 1.0
+  },
+  {
+    "idx": 212,
+    "char": "ل",
+    "ayah": 5,
+    "start": 147497,
+    "end": 148278,
+    "duration": 781,
+    "weight": 1.0
+  },
+  {
+    "idx": 213,
+    "char": "ا",
+    "ayah": 5,
+    "start": 148598,
+    "end": 148618,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 214,
+    "char": "ل",
+    "ayah": 5,
+    "start": 148618,
+    "end": 148758,
+    "duration": 140,
+    "weight": 1.0
+  },
+  {
+    "idx": 215,
+    "char": "ذ",
+    "ayah": 5,
+    "start": 148758,
+    "end": 148919,
+    "duration": 161,
+    "weight": 1.0
+  },
+  {
+    "idx": 216,
+    "char": "ي",
+    "ayah": 5,
+    "start": 148919,
+    "end": 149599,
+    "duration": 680,
+    "weight": 1.3
+  },
+  {
+    "idx": 217,
+    "char": "ن",
+    "ayah": 5,
+    "start": 149599,
+    "end": 149959,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 218,
+    "char": "ح",
+    "ayah": 5,
+    "start": 149979,
+    "end": 150620,
+    "duration": 641,
+    "weight": 1.0
+  },
+  {
+    "idx": 219,
+    "char": "م",
+    "ayah": 5,
+    "start": 150620,
+    "end": 150640,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 220,
+    "char": "د",
+    "ayah": 5,
+    "start": 150640,
+    "end": 150660,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 221,
+    "char": "ث",
+    "ayah": 6,
+    "start": 151265,
+    "end": 151645,
+    "duration": 380,
+    "weight": 1.0
+  },
+  {
+    "idx": 222,
+    "char": "م",
+    "ayah": 6,
+    "start": 151645,
+    "end": 151665,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 223,
+    "char": "ل",
+    "ayah": 6,
+    "start": 151686,
+    "end": 152927,
+    "duration": 1241,
+    "weight": 1.0
+  },
+  {
+    "idx": 224,
+    "char": "م",
+    "ayah": 6,
+    "start": 152927,
+    "end": 156271,
+    "duration": 3344,
+    "weight": 1.0
+  },
+  {
+    "idx": 225,
+    "char": "ي",
+    "ayah": 6,
+    "start": 156371,
+    "end": 157793,
+    "duration": 1422,
+    "weight": 1.3
+  },
+  {
+    "idx": 226,
+    "char": "ح",
+    "ayah": 6,
+    "start": 157793,
+    "end": 157813,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 227,
+    "char": "م",
+    "ayah": 6,
+    "start": 157813,
+    "end": 158454,
+    "duration": 641,
+    "weight": 1.0
+  },
+  {
+    "idx": 228,
+    "char": "ل",
+    "ayah": 6,
+    "start": 158454,
+    "end": 159335,
+    "duration": 881,
+    "weight": 1.0
+  },
+  {
+    "idx": 229,
+    "char": "و",
+    "ayah": 6,
+    "start": 159335,
+    "end": 159355,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 230,
+    "char": "ه",
+    "ayah": 6,
+    "start": 159355,
+    "end": 160476,
+    "duration": 1121,
+    "weight": 1.0
+  },
+  {
+    "idx": 231,
+    "char": "ا",
+    "ayah": 6,
+    "start": 160476,
+    "end": 160496,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 232,
+    "char": "ك",
+    "ayah": 6,
+    "start": 160576,
+    "end": 160596,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 233,
+    "char": "م",
+    "ayah": 6,
+    "start": 160596,
+    "end": 160977,
+    "duration": 381,
+    "weight": 1.0
+  },
+  {
+    "idx": 234,
+    "char": "ث",
+    "ayah": 6,
+    "start": 160977,
+    "end": 161297,
+    "duration": 320,
+    "weight": 1.0
+  },
+  {
+    "idx": 235,
+    "char": "ل",
+    "ayah": 6,
+    "start": 161297,
+    "end": 161317,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 236,
+    "char": "ا",
+    "ayah": 6,
+    "start": 161397,
+    "end": 161417,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 237,
+    "char": "ل",
+    "ayah": 6,
+    "start": 161417,
+    "end": 162639,
+    "duration": 1222,
+    "weight": 1.0
+  },
+  {
+    "idx": 238,
+    "char": "ح",
+    "ayah": 6,
+    "start": 162639,
+    "end": 162659,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 239,
+    "char": "م",
+    "ayah": 6,
+    "start": 162659,
+    "end": 162819,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 240,
+    "char": "ا",
+    "ayah": 6,
+    "start": 162819,
+    "end": 164181,
+    "duration": 1362,
+    "weight": 1.5
+  },
+  {
+    "idx": 241,
+    "char": "ر",
+    "ayah": 6,
+    "start": 164181,
+    "end": 164701,
+    "duration": 520,
+    "weight": 1.0
+  },
+  {
+    "idx": 242,
+    "char": "ي",
+    "ayah": 6,
+    "start": 164741,
+    "end": 164761,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 243,
+    "char": "ح",
+    "ayah": 6,
+    "start": 164761,
+    "end": 164781,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 244,
+    "char": "م",
+    "ayah": 6,
+    "start": 164781,
+    "end": 165162,
+    "duration": 381,
+    "weight": 1.0
+  },
+  {
+    "idx": 245,
+    "char": "ل",
+    "ayah": 6,
+    "start": 165162,
+    "end": 165803,
+    "duration": 641,
+    "weight": 1.0
+  },
+  {
+    "idx": 246,
+    "char": "أ",
+    "ayah": 6,
+    "start": 165843,
+    "end": 166444,
+    "duration": 601,
+    "weight": 1.2
+  },
+  {
+    "idx": 247,
+    "char": "س",
+    "ayah": 6,
+    "start": 166444,
+    "end": 166464,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 248,
+    "char": "ف",
+    "ayah": 6,
+    "start": 166464,
+    "end": 166704,
+    "duration": 240,
+    "weight": 1.0
+  },
+  {
+    "idx": 249,
+    "char": "ا",
+    "ayah": 6,
+    "start": 166704,
+    "end": 167425,
+    "duration": 721,
+    "weight": 1.5
+  },
+  {
+    "idx": 250,
+    "char": "ر",
+    "ayah": 6,
+    "start": 167425,
+    "end": 174593,
+    "duration": 7168,
+    "weight": 1.0
+  },
+  {
+    "idx": 251,
+    "char": "ا",
+    "ayah": 6,
+    "start": 174593,
+    "end": 174614,
+    "duration": 21,
+    "weight": 1.5
+  },
+  {
+    "idx": 252,
+    "char": "ب",
+    "ayah": 6,
+    "start": 174634,
+    "end": 175114,
+    "duration": 480,
+    "weight": 1.0
+  },
+  {
+    "idx": 253,
+    "char": "ئ",
+    "ayah": 6,
+    "start": 175114,
+    "end": 175134,
+    "duration": 20,
+    "weight": 0.9
+  },
+  {
+    "idx": 254,
+    "char": "س",
+    "ayah": 6,
+    "start": 175134,
+    "end": 175414,
+    "duration": 280,
+    "weight": 1.0
+  },
+  {
+    "idx": 255,
+    "char": "م",
+    "ayah": 6,
+    "start": 175435,
+    "end": 176035,
+    "duration": 600,
+    "weight": 1.0
+  },
+  {
+    "idx": 256,
+    "char": "ث",
+    "ayah": 6,
+    "start": 176035,
+    "end": 176055,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 257,
+    "char": "ل",
+    "ayah": 6,
+    "start": 176055,
+    "end": 176756,
+    "duration": 701,
+    "weight": 1.0
+  },
+  {
+    "idx": 258,
+    "char": "ا",
+    "ayah": 6,
+    "start": 176776,
+    "end": 176796,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 259,
+    "char": "ل",
+    "ayah": 6,
+    "start": 176796,
+    "end": 177317,
+    "duration": 521,
+    "weight": 1.0
+  },
+  {
+    "idx": 260,
+    "char": "ق",
+    "ayah": 6,
+    "start": 177317,
+    "end": 177337,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 261,
+    "char": "و",
+    "ayah": 6,
+    "start": 177337,
+    "end": 177717,
+    "duration": 380,
+    "weight": 1.3
+  },
+  {
+    "idx": 262,
+    "char": "م",
+    "ayah": 6,
+    "start": 177717,
+    "end": 178198,
+    "duration": 481,
+    "weight": 1.0
+  },
+  {
+    "idx": 263,
+    "char": "ا",
+    "ayah": 6,
+    "start": 178218,
+    "end": 178238,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 264,
+    "char": "ل",
+    "ayah": 6,
+    "start": 178238,
+    "end": 178258,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 265,
+    "char": "ذ",
+    "ayah": 6,
+    "start": 178258,
+    "end": 178278,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 266,
+    "char": "ي",
+    "ayah": 6,
+    "start": 178278,
+    "end": 178298,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 267,
+    "char": "ن",
+    "ayah": 6,
+    "start": 178298,
+    "end": 178318,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 268,
+    "char": "ك",
+    "ayah": 7,
+    "start": 179615,
+    "end": 180997,
+    "duration": 1382,
+    "weight": 1.0
+  },
+  {
+    "idx": 269,
+    "char": "ذ",
+    "ayah": 7,
+    "start": 180997,
+    "end": 181017,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 270,
+    "char": "ب",
+    "ayah": 7,
+    "start": 181017,
+    "end": 181037,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 271,
+    "char": "و",
+    "ayah": 7,
+    "start": 181037,
+    "end": 181177,
+    "duration": 140,
+    "weight": 1.3
+  },
+  {
+    "idx": 272,
+    "char": "ا",
+    "ayah": 7,
+    "start": 181177,
+    "end": 181237,
+    "duration": 60,
+    "weight": 1.5
+  },
+  {
+    "idx": 273,
+    "char": "ب",
+    "ayah": 7,
+    "start": 182319,
+    "end": 182760,
+    "duration": 441,
+    "weight": 1.0
+  },
+  {
+    "idx": 274,
+    "char": "آ",
+    "ayah": 7,
+    "start": 182760,
+    "end": 184422,
+    "duration": 1662,
+    "weight": 1.5
+  },
+  {
+    "idx": 275,
+    "char": "ي",
+    "ayah": 7,
+    "start": 184422,
+    "end": 184442,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 276,
+    "char": "ا",
+    "ayah": 7,
+    "start": 184442,
+    "end": 184462,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 277,
+    "char": "ت",
+    "ayah": 7,
+    "start": 184462,
+    "end": 185504,
+    "duration": 1042,
+    "weight": 1.0
+  },
+  {
+    "idx": 278,
+    "char": "ا",
+    "ayah": 7,
+    "start": 185524,
+    "end": 191433,
+    "duration": 5909,
+    "weight": 1.5
+  },
+  {
+    "idx": 279,
+    "char": "ل",
+    "ayah": 7,
+    "start": 191433,
+    "end": 191453,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 280,
+    "char": "ل",
+    "ayah": 7,
+    "start": 191453,
+    "end": 191473,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 281,
+    "char": "ه",
+    "ayah": 7,
+    "start": 191473,
+    "end": 191493,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 282,
+    "char": "و",
+    "ayah": 7,
+    "start": 191513,
+    "end": 192574,
+    "duration": 1061,
+    "weight": 1.3
+  },
+  {
+    "idx": 283,
+    "char": "ا",
+    "ayah": 7,
+    "start": 192574,
+    "end": 193255,
+    "duration": 681,
+    "weight": 1.5
+  },
+  {
+    "idx": 284,
+    "char": "ل",
+    "ayah": 7,
+    "start": 193255,
+    "end": 193496,
+    "duration": 241,
+    "weight": 1.0
+  },
+  {
+    "idx": 285,
+    "char": "ل",
+    "ayah": 7,
+    "start": 193496,
+    "end": 193516,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 286,
+    "char": "ه",
+    "ayah": 7,
+    "start": 193516,
+    "end": 193536,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 287,
+    "char": "ل",
+    "ayah": 7,
+    "start": 193636,
+    "end": 193796,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 288,
+    "char": "ا",
+    "ayah": 7,
+    "start": 193796,
+    "end": 194517,
+    "duration": 721,
+    "weight": 1.5
+  },
+  {
+    "idx": 289,
+    "char": "ي",
+    "ayah": 7,
+    "start": 194537,
+    "end": 195439,
+    "duration": 902,
+    "weight": 1.3
+  },
+  {
+    "idx": 290,
+    "char": "ه",
+    "ayah": 7,
+    "start": 195439,
+    "end": 195459,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 291,
+    "char": "د",
+    "ayah": 7,
+    "start": 195459,
+    "end": 195599,
+    "duration": 140,
+    "weight": 1.0
+  },
+  {
+    "idx": 292,
+    "char": "ي",
+    "ayah": 7,
+    "start": 195599,
+    "end": 196180,
+    "duration": 581,
+    "weight": 1.3
+  },
+  {
+    "idx": 293,
+    "char": "ا",
+    "ayah": 7,
+    "start": 196300,
+    "end": 196320,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 294,
+    "char": "ل",
+    "ayah": 7,
+    "start": 196320,
+    "end": 196340,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 295,
+    "char": "ق",
+    "ayah": 7,
+    "start": 196340,
+    "end": 196520,
+    "duration": 180,
+    "weight": 1.0
+  },
+  {
+    "idx": 296,
+    "char": "و",
+    "ayah": 7,
+    "start": 196520,
+    "end": 197121,
+    "duration": 601,
+    "weight": 1.3
+  },
+  {
+    "idx": 297,
+    "char": "م",
+    "ayah": 7,
+    "start": 197121,
+    "end": 197141,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 298,
+    "char": "و",
+    "ayah": 7,
+    "start": 197241,
+    "end": 198984,
+    "duration": 1743,
+    "weight": 1.3
+  },
+  {
+    "idx": 299,
+    "char": "ا",
+    "ayah": 7,
+    "start": 198984,
+    "end": 199004,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 300,
+    "char": "ل",
+    "ayah": 7,
+    "start": 199004,
+    "end": 199485,
+    "duration": 481,
+    "weight": 1.0
+  },
+  {
+    "idx": 301,
+    "char": "م",
+    "ayah": 7,
+    "start": 199485,
+    "end": 206395,
+    "duration": 6910,
+    "weight": 1.0
+  },
+  {
+    "idx": 302,
+    "char": "ي",
+    "ayah": 7,
+    "start": 206395,
+    "end": 206415,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 303,
+    "char": "ن",
+    "ayah": 7,
+    "start": 206415,
+    "end": 206435,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 304,
+    "char": "ق",
+    "ayah": 7,
+    "start": 206455,
+    "end": 206695,
+    "duration": 240,
+    "weight": 1.0
+  },
+  {
+    "idx": 305,
+    "char": "ل",
+    "ayah": 7,
+    "start": 206695,
+    "end": 206815,
+    "duration": 120,
+    "weight": 1.0
+  },
+  {
+    "idx": 306,
+    "char": "ي",
+    "ayah": 7,
+    "start": 207256,
+    "end": 208538,
+    "duration": 1282,
+    "weight": 1.3
+  },
+  {
+    "idx": 307,
+    "char": "ا",
+    "ayah": 7,
+    "start": 208538,
+    "end": 208558,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 308,
+    "char": "ف",
+    "ayah": 8,
+    "start": 217297,
+    "end": 219900,
+    "duration": 2603,
+    "weight": 1.0
+  },
+  {
+    "idx": 309,
+    "char": "ت",
+    "ayah": 8,
+    "start": 219900,
+    "end": 219920,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 310,
+    "char": "م",
+    "ayah": 8,
+    "start": 219920,
+    "end": 220201,
+    "duration": 281,
+    "weight": 1.0
+  },
+  {
+    "idx": 311,
+    "char": "ن",
+    "ayah": 8,
+    "start": 220201,
+    "end": 220221,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 312,
+    "char": "و",
+    "ayah": 8,
+    "start": 220221,
+    "end": 220241,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 313,
+    "char": "ا",
+    "ayah": 8,
+    "start": 220241,
+    "end": 220261,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 314,
+    "char": "أ",
+    "ayah": 8,
+    "start": 220281,
+    "end": 220301,
+    "duration": 20,
+    "weight": 1.2
+  },
+  {
+    "idx": 315,
+    "char": "ن",
+    "ayah": 8,
+    "start": 220301,
+    "end": 220321,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 316,
+    "char": "ك",
+    "ayah": 8,
+    "start": 220321,
+    "end": 220761,
+    "duration": 440,
+    "weight": 1.0
+  },
+  {
+    "idx": 317,
+    "char": "م",
+    "ayah": 8,
+    "start": 220761,
+    "end": 221142,
+    "duration": 381,
+    "weight": 1.0
+  },
+  {
+    "idx": 318,
+    "char": "أ",
+    "ayah": 8,
+    "start": 221222,
+    "end": 222023,
+    "duration": 801,
+    "weight": 1.2
+  },
+  {
+    "idx": 319,
+    "char": "و",
+    "ayah": 8,
+    "start": 222023,
+    "end": 222043,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 320,
+    "char": "ل",
+    "ayah": 8,
+    "start": 222043,
+    "end": 222403,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 321,
+    "char": "ي",
+    "ayah": 8,
+    "start": 222403,
+    "end": 224346,
+    "duration": 1943,
+    "weight": 1.3
+  },
+  {
+    "idx": 322,
+    "char": "ا",
+    "ayah": 8,
+    "start": 224346,
+    "end": 224366,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 323,
+    "char": "ء",
+    "ayah": 8,
+    "start": 224366,
+    "end": 224586,
+    "duration": 220,
+    "weight": 0.8
+  },
+  {
+    "idx": 324,
+    "char": "ل",
+    "ayah": 8,
+    "start": 224726,
+    "end": 226489,
+    "duration": 1763,
+    "weight": 1.0
+  },
+  {
+    "idx": 325,
+    "char": "ل",
+    "ayah": 8,
+    "start": 226489,
+    "end": 226749,
+    "duration": 260,
+    "weight": 1.0
+  },
+  {
+    "idx": 326,
+    "char": "ه",
+    "ayah": 8,
+    "start": 226749,
+    "end": 226769,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 327,
+    "char": "م",
+    "ayah": 8,
+    "start": 226849,
+    "end": 227930,
+    "duration": 1081,
+    "weight": 1.0
+  },
+  {
+    "idx": 328,
+    "char": "ن",
+    "ayah": 8,
+    "start": 227930,
+    "end": 227950,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 329,
+    "char": "د",
+    "ayah": 8,
+    "start": 228131,
+    "end": 228351,
+    "duration": 220,
+    "weight": 1.0
+  },
+  {
+    "idx": 330,
+    "char": "و",
+    "ayah": 8,
+    "start": 228351,
+    "end": 228992,
+    "duration": 641,
+    "weight": 1.3
+  },
+  {
+    "idx": 331,
+    "char": "ن",
+    "ayah": 8,
+    "start": 228992,
+    "end": 231355,
+    "duration": 2363,
+    "weight": 1.0
+  },
+  {
+    "idx": 332,
+    "char": "ا",
+    "ayah": 8,
+    "start": 231375,
+    "end": 231395,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 333,
+    "char": "ل",
+    "ayah": 8,
+    "start": 231395,
+    "end": 231415,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 334,
+    "char": "ن",
+    "ayah": 8,
+    "start": 231415,
+    "end": 231435,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 335,
+    "char": "ا",
+    "ayah": 8,
+    "start": 231435,
+    "end": 231455,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 336,
+    "char": "س",
+    "ayah": 8,
+    "start": 231455,
+    "end": 231475,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 337,
+    "char": "ف",
+    "ayah": 8,
+    "start": 231495,
+    "end": 231895,
+    "duration": 400,
+    "weight": 1.0
+  },
+  {
+    "idx": 338,
+    "char": "ت",
+    "ayah": 8,
+    "start": 231895,
+    "end": 232316,
+    "duration": 421,
+    "weight": 1.0
+  },
+  {
+    "idx": 339,
+    "char": "م",
+    "ayah": 8,
+    "start": 232316,
+    "end": 233557,
+    "duration": 1241,
+    "weight": 1.0
+  },
+  {
+    "idx": 340,
+    "char": "ن",
+    "ayah": 8,
+    "start": 233557,
+    "end": 239645,
+    "duration": 6088,
+    "weight": 1.0
+  },
+  {
+    "idx": 341,
+    "char": "و",
+    "ayah": 8,
+    "start": 239645,
+    "end": 239946,
+    "duration": 301,
+    "weight": 1.3
+  },
+  {
+    "idx": 342,
+    "char": "ا",
+    "ayah": 8,
+    "start": 239946,
+    "end": 241127,
+    "duration": 1181,
+    "weight": 1.5
+  },
+  {
+    "idx": 343,
+    "char": "و",
+    "ayah": 9,
+    "start": 247115,
+    "end": 256071,
+    "duration": 8956,
+    "weight": 1.3
+  },
+  {
+    "idx": 344,
+    "char": "ل",
+    "ayah": 9,
+    "start": 256071,
+    "end": 256091,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 345,
+    "char": "ا",
+    "ayah": 9,
+    "start": 256091,
+    "end": 256392,
+    "duration": 301,
+    "weight": 1.5
+  },
+  {
+    "idx": 346,
+    "char": "ي",
+    "ayah": 9,
+    "start": 256492,
+    "end": 256832,
+    "duration": 340,
+    "weight": 1.3
+  },
+  {
+    "idx": 347,
+    "char": "ت",
+    "ayah": 9,
+    "start": 256832,
+    "end": 257153,
+    "duration": 321,
+    "weight": 1.0
+  },
+  {
+    "idx": 348,
+    "char": "م",
+    "ayah": 9,
+    "start": 257153,
+    "end": 259177,
+    "duration": 2024,
+    "weight": 1.0
+  },
+  {
+    "idx": 349,
+    "char": "ن",
+    "ayah": 9,
+    "start": 259177,
+    "end": 259197,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 350,
+    "char": "و",
+    "ayah": 9,
+    "start": 259197,
+    "end": 259216,
+    "duration": 19,
+    "weight": 1.3
+  },
+  {
+    "idx": 351,
+    "char": "ن",
+    "ayah": 9,
+    "start": 259216,
+    "end": 259618,
+    "duration": 402,
+    "weight": 1.0
+  },
+  {
+    "idx": 352,
+    "char": "ه",
+    "ayah": 9,
+    "start": 259618,
+    "end": 261521,
+    "duration": 1903,
+    "weight": 1.0
+  },
+  {
+    "idx": 353,
+    "char": "أ",
+    "ayah": 9,
+    "start": 261601,
+    "end": 262002,
+    "duration": 401,
+    "weight": 1.2
+  },
+  {
+    "idx": 354,
+    "char": "ب",
+    "ayah": 9,
+    "start": 262002,
+    "end": 262503,
+    "duration": 501,
+    "weight": 1.0
+  },
+  {
+    "idx": 355,
+    "char": "د",
+    "ayah": 9,
+    "start": 262503,
+    "end": 262523,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 356,
+    "char": "ا",
+    "ayah": 9,
+    "start": 262523,
+    "end": 263525,
+    "duration": 1002,
+    "weight": 1.5
+  },
+  {
+    "idx": 357,
+    "char": "ب",
+    "ayah": 9,
+    "start": 263685,
+    "end": 264045,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 358,
+    "char": "م",
+    "ayah": 9,
+    "start": 264045,
+    "end": 264206,
+    "duration": 161,
+    "weight": 1.0
+  },
+  {
+    "idx": 359,
+    "char": "ا",
+    "ayah": 9,
+    "start": 264206,
+    "end": 264907,
+    "duration": 701,
+    "weight": 1.5
+  },
+  {
+    "idx": 360,
+    "char": "ق",
+    "ayah": 9,
+    "start": 264927,
+    "end": 265869,
+    "duration": 942,
+    "weight": 1.0
+  },
+  {
+    "idx": 361,
+    "char": "د",
+    "ayah": 9,
+    "start": 265869,
+    "end": 266249,
+    "duration": 380,
+    "weight": 1.0
+  },
+  {
+    "idx": 362,
+    "char": "م",
+    "ayah": 9,
+    "start": 266249,
+    "end": 266951,
+    "duration": 702,
+    "weight": 1.0
+  },
+  {
+    "idx": 363,
+    "char": "ت",
+    "ayah": 9,
+    "start": 266951,
+    "end": 267051,
+    "duration": 100,
+    "weight": 1.0
+  },
+  {
+    "idx": 364,
+    "char": "أ",
+    "ayah": 9,
+    "start": 267171,
+    "end": 268073,
+    "duration": 902,
+    "weight": 1.2
+  },
+  {
+    "idx": 365,
+    "char": "ي",
+    "ayah": 9,
+    "start": 268073,
+    "end": 268093,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 366,
+    "char": "د",
+    "ayah": 9,
+    "start": 268093,
+    "end": 269135,
+    "duration": 1042,
+    "weight": 1.0
+  },
+  {
+    "idx": 367,
+    "char": "ي",
+    "ayah": 9,
+    "start": 269135,
+    "end": 269876,
+    "duration": 741,
+    "weight": 1.3
+  },
+  {
+    "idx": 368,
+    "char": "ه",
+    "ayah": 9,
+    "start": 269876,
+    "end": 269896,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 369,
+    "char": "م",
+    "ayah": 9,
+    "start": 269896,
+    "end": 269916,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 370,
+    "char": "و",
+    "ayah": 10,
+    "start": 274958,
+    "end": 275098,
+    "duration": 140,
+    "weight": 1.3
+  },
+  {
+    "idx": 371,
+    "char": "ا",
+    "ayah": 10,
+    "start": 275098,
+    "end": 275178,
+    "duration": 80,
+    "weight": 1.5
+  },
+  {
+    "idx": 372,
+    "char": "ل",
+    "ayah": 10,
+    "start": 275178,
+    "end": 275198,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 373,
+    "char": "ل",
+    "ayah": 10,
+    "start": 275198,
+    "end": 276059,
+    "duration": 861,
+    "weight": 1.0
+  },
+  {
+    "idx": 374,
+    "char": "ه",
+    "ayah": 10,
+    "start": 276059,
+    "end": 276499,
+    "duration": 440,
+    "weight": 1.0
+  },
+  {
+    "idx": 375,
+    "char": "ع",
+    "ayah": 10,
+    "start": 276519,
+    "end": 280763,
+    "duration": 4244,
+    "weight": 1.3
+  },
+  {
+    "idx": 376,
+    "char": "ل",
+    "ayah": 10,
+    "start": 280763,
+    "end": 280943,
+    "duration": 180,
+    "weight": 1.0
+  },
+  {
+    "idx": 377,
+    "char": "ي",
+    "ayah": 10,
+    "start": 280943,
+    "end": 281103,
+    "duration": 160,
+    "weight": 1.3
+  },
+  {
+    "idx": 378,
+    "char": "م",
+    "ayah": 10,
+    "start": 281103,
+    "end": 281163,
+    "duration": 60,
+    "weight": 1.0
+  },
+  {
+    "idx": 379,
+    "char": "ب",
+    "ayah": 10,
+    "start": 281223,
+    "end": 281644,
+    "duration": 421,
+    "weight": 1.0
+  },
+  {
+    "idx": 380,
+    "char": "ا",
+    "ayah": 10,
+    "start": 281644,
+    "end": 281664,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 381,
+    "char": "ل",
+    "ayah": 10,
+    "start": 281664,
+    "end": 287809,
+    "duration": 6145,
+    "weight": 1.0
+  },
+  {
+    "idx": 382,
+    "char": "ظ",
+    "ayah": 10,
+    "start": 287809,
+    "end": 287829,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 383,
+    "char": "ا",
+    "ayah": 10,
+    "start": 287829,
+    "end": 287849,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 384,
+    "char": "ل",
+    "ayah": 10,
+    "start": 287849,
+    "end": 288149,
+    "duration": 300,
+    "weight": 1.0
+  },
+  {
+    "idx": 385,
+    "char": "م",
+    "ayah": 10,
+    "start": 288149,
+    "end": 288390,
+    "duration": 241,
+    "weight": 1.0
+  },
+  {
+    "idx": 386,
+    "char": "ي",
+    "ayah": 10,
+    "start": 288390,
+    "end": 288410,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 387,
+    "char": "ن",
+    "ayah": 10,
+    "start": 288410,
+    "end": 288430,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 388,
+    "char": "ق",
+    "ayah": 10,
+    "start": 288450,
+    "end": 290031,
+    "duration": 1581,
+    "weight": 1.0
+  },
+  {
+    "idx": 389,
+    "char": "ل",
+    "ayah": 10,
+    "start": 290031,
+    "end": 290051,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 390,
+    "char": "إ",
+    "ayah": 10,
+    "start": 290131,
+    "end": 290692,
+    "duration": 561,
+    "weight": 1.2
+  },
+  {
+    "idx": 391,
+    "char": "ن",
+    "ayah": 10,
+    "start": 290692,
+    "end": 291673,
+    "duration": 981,
+    "weight": 1.0
+  },
+  {
+    "idx": 392,
+    "char": "ا",
+    "ayah": 10,
+    "start": 291693,
+    "end": 291813,
+    "duration": 120,
+    "weight": 1.5
+  },
+  {
+    "idx": 393,
+    "char": "ل",
+    "ayah": 10,
+    "start": 291813,
+    "end": 292433,
+    "duration": 620,
+    "weight": 1.0
+  },
+  {
+    "idx": 394,
+    "char": "م",
+    "ayah": 10,
+    "start": 292433,
+    "end": 292513,
+    "duration": 80,
+    "weight": 1.0
+  },
+  {
+    "idx": 395,
+    "char": "و",
+    "ayah": 10,
+    "start": 292513,
+    "end": 292533,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 396,
+    "char": "ت",
+    "ayah": 10,
+    "start": 292533,
+    "end": 292553,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 397,
+    "char": "ا",
+    "ayah": 10,
+    "start": 292573,
+    "end": 292854,
+    "duration": 281,
+    "weight": 1.5
+  },
+  {
+    "idx": 398,
+    "char": "ل",
+    "ayah": 10,
+    "start": 292854,
+    "end": 292994,
+    "duration": 140,
+    "weight": 1.0
+  },
+  {
+    "idx": 399,
+    "char": "ذ",
+    "ayah": 10,
+    "start": 292994,
+    "end": 293014,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 400,
+    "char": "ي",
+    "ayah": 10,
+    "start": 293014,
+    "end": 293714,
+    "duration": 700,
+    "weight": 1.3
+  },
+  {
+    "idx": 401,
+    "char": "ت",
+    "ayah": 10,
+    "start": 293734,
+    "end": 294055,
+    "duration": 321,
+    "weight": 1.0
+  },
+  {
+    "idx": 402,
+    "char": "ف",
+    "ayah": 10,
+    "start": 294055,
+    "end": 294175,
+    "duration": 120,
+    "weight": 1.0
+  },
+  {
+    "idx": 403,
+    "char": "ر",
+    "ayah": 10,
+    "start": 294175,
+    "end": 294435,
+    "duration": 260,
+    "weight": 1.0
+  },
+  {
+    "idx": 404,
+    "char": "و",
+    "ayah": 10,
+    "start": 294435,
+    "end": 295936,
+    "duration": 1501,
+    "weight": 1.3
+  },
+  {
+    "idx": 405,
+    "char": "ن",
+    "ayah": 10,
+    "start": 295936,
+    "end": 296357,
+    "duration": 421,
+    "weight": 1.0
+  },
+  {
+    "idx": 406,
+    "char": "م",
+    "ayah": 10,
+    "start": 296377,
+    "end": 297257,
+    "duration": 880,
+    "weight": 1.0
+  },
+  {
+    "idx": 407,
+    "char": "ن",
+    "ayah": 10,
+    "start": 297257,
+    "end": 297277,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 408,
+    "char": "ه",
+    "ayah": 10,
+    "start": 297277,
+    "end": 297658,
+    "duration": 381,
+    "weight": 1.0
+  },
+  {
+    "idx": 409,
+    "char": "ف",
+    "ayah": 10,
+    "start": 297678,
+    "end": 298098,
+    "duration": 420,
+    "weight": 1.0
+  },
+  {
+    "idx": 410,
+    "char": "إ",
+    "ayah": 10,
+    "start": 298098,
+    "end": 299639,
+    "duration": 1541,
+    "weight": 1.2
+  },
+  {
+    "idx": 411,
+    "char": "ن",
+    "ayah": 10,
+    "start": 299639,
+    "end": 300540,
+    "duration": 901,
+    "weight": 1.0
+  },
+  {
+    "idx": 412,
+    "char": "ه",
+    "ayah": 10,
+    "start": 300540,
+    "end": 300560,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 413,
+    "char": "م",
+    "ayah": 10,
+    "start": 300580,
+    "end": 300600,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 414,
+    "char": "ل",
+    "ayah": 10,
+    "start": 300600,
+    "end": 301141,
+    "duration": 541,
+    "weight": 1.0
+  },
+  {
+    "idx": 415,
+    "char": "ا",
+    "ayah": 10,
+    "start": 301141,
+    "end": 301982,
+    "duration": 841,
+    "weight": 1.5
+  },
+  {
+    "idx": 416,
+    "char": "ق",
+    "ayah": 10,
+    "start": 301982,
+    "end": 303623,
+    "duration": 1641,
+    "weight": 1.0
+  },
+  {
+    "idx": 417,
+    "char": "ي",
+    "ayah": 10,
+    "start": 303623,
+    "end": 303643,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 418,
+    "char": "ك",
+    "ayah": 10,
+    "start": 303643,
+    "end": 303663,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 419,
+    "char": "م",
+    "ayah": 10,
+    "start": 303663,
+    "end": 303683,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 420,
+    "char": "ث",
+    "ayah": 11,
+    "start": 307105,
+    "end": 308566,
+    "duration": 1461,
+    "weight": 1.0
+  },
+  {
+    "idx": 421,
+    "char": "م",
+    "ayah": 11,
+    "start": 308566,
+    "end": 308586,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 422,
+    "char": "ت",
+    "ayah": 11,
+    "start": 308606,
+    "end": 308947,
+    "duration": 341,
+    "weight": 1.0
+  },
+  {
+    "idx": 423,
+    "char": "ر",
+    "ayah": 11,
+    "start": 308947,
+    "end": 309908,
+    "duration": 961,
+    "weight": 1.0
+  },
+  {
+    "idx": 424,
+    "char": "د",
+    "ayah": 11,
+    "start": 309908,
+    "end": 309928,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 425,
+    "char": "و",
+    "ayah": 11,
+    "start": 309928,
+    "end": 310628,
+    "duration": 700,
+    "weight": 1.3
+  },
+  {
+    "idx": 426,
+    "char": "ن",
+    "ayah": 11,
+    "start": 310628,
+    "end": 310829,
+    "duration": 201,
+    "weight": 1.0
+  },
+  {
+    "idx": 427,
+    "char": "إ",
+    "ayah": 11,
+    "start": 310969,
+    "end": 311429,
+    "duration": 460,
+    "weight": 1.2
+  },
+  {
+    "idx": 428,
+    "char": "ل",
+    "ayah": 11,
+    "start": 311429,
+    "end": 313191,
+    "duration": 1762,
+    "weight": 1.0
+  },
+  {
+    "idx": 429,
+    "char": "ى",
+    "ayah": 11,
+    "start": 313191,
+    "end": 313211,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 430,
+    "char": "ع",
+    "ayah": 11,
+    "start": 313231,
+    "end": 313251,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 431,
+    "char": "ا",
+    "ayah": 11,
+    "start": 313251,
+    "end": 313271,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 432,
+    "char": "ل",
+    "ayah": 11,
+    "start": 313271,
+    "end": 313691,
+    "duration": 420,
+    "weight": 1.0
+  },
+  {
+    "idx": 433,
+    "char": "م",
+    "ayah": 11,
+    "start": 313691,
+    "end": 314372,
+    "duration": 681,
+    "weight": 1.0
+  },
+  {
+    "idx": 434,
+    "char": "ا",
+    "ayah": 11,
+    "start": 314772,
+    "end": 314792,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 435,
+    "char": "ل",
+    "ayah": 11,
+    "start": 314792,
+    "end": 315573,
+    "duration": 781,
+    "weight": 1.0
+  },
+  {
+    "idx": 436,
+    "char": "غ",
+    "ayah": 11,
+    "start": 315573,
+    "end": 315593,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 437,
+    "char": "ي",
+    "ayah": 11,
+    "start": 315593,
+    "end": 316073,
+    "duration": 480,
+    "weight": 1.3
+  },
+  {
+    "idx": 438,
+    "char": "ب",
+    "ayah": 11,
+    "start": 316073,
+    "end": 316093,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 439,
+    "char": "و",
+    "ayah": 11,
+    "start": 316974,
+    "end": 316994,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 440,
+    "char": "ا",
+    "ayah": 11,
+    "start": 316994,
+    "end": 317014,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 441,
+    "char": "ل",
+    "ayah": 11,
+    "start": 317014,
+    "end": 317395,
+    "duration": 381,
+    "weight": 1.0
+  },
+  {
+    "idx": 442,
+    "char": "ش",
+    "ayah": 11,
+    "start": 317395,
+    "end": 317415,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 443,
+    "char": "ه",
+    "ayah": 11,
+    "start": 317415,
+    "end": 317435,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 444,
+    "char": "ا",
+    "ayah": 11,
+    "start": 317435,
+    "end": 318095,
+    "duration": 660,
+    "weight": 1.5
+  },
+  {
+    "idx": 445,
+    "char": "د",
+    "ayah": 11,
+    "start": 318095,
+    "end": 318876,
+    "duration": 781,
+    "weight": 1.0
+  },
+  {
+    "idx": 446,
+    "char": "ة",
+    "ayah": 11,
+    "start": 318876,
+    "end": 318896,
+    "duration": 20,
+    "weight": 0.8
+  },
+  {
+    "idx": 447,
+    "char": "ف",
+    "ayah": 11,
+    "start": 318916,
+    "end": 319276,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 448,
+    "char": "ي",
+    "ayah": 11,
+    "start": 319276,
+    "end": 319757,
+    "duration": 481,
+    "weight": 1.3
+  },
+  {
+    "idx": 449,
+    "char": "ن",
+    "ayah": 11,
+    "start": 319757,
+    "end": 320678,
+    "duration": 921,
+    "weight": 1.0
+  },
+  {
+    "idx": 450,
+    "char": "ب",
+    "ayah": 11,
+    "start": 320678,
+    "end": 322640,
+    "duration": 1962,
+    "weight": 1.0
+  },
+  {
+    "idx": 451,
+    "char": "ئ",
+    "ayah": 11,
+    "start": 322640,
+    "end": 322660,
+    "duration": 20,
+    "weight": 0.9
+  },
+  {
+    "idx": 452,
+    "char": "ك",
+    "ayah": 11,
+    "start": 322660,
+    "end": 322680,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 453,
+    "char": "م",
+    "ayah": 11,
+    "start": 322680,
+    "end": 322700,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 454,
+    "char": "ب",
+    "ayah": 11,
+    "start": 322720,
+    "end": 323080,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 455,
+    "char": "م",
+    "ayah": 11,
+    "start": 323080,
+    "end": 323220,
+    "duration": 140,
+    "weight": 1.0
+  },
+  {
+    "idx": 456,
+    "char": "ا",
+    "ayah": 11,
+    "start": 323220,
+    "end": 323300,
+    "duration": 80,
+    "weight": 1.5
+  },
+  {
+    "idx": 457,
+    "char": "ك",
+    "ayah": 11,
+    "start": 325502,
+    "end": 325522,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 458,
+    "char": "ن",
+    "ayah": 11,
+    "start": 325522,
+    "end": 325542,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 459,
+    "char": "ت",
+    "ayah": 11,
+    "start": 325542,
+    "end": 325883,
+    "duration": 341,
+    "weight": 1.0
+  },
+  {
+    "idx": 460,
+    "char": "م",
+    "ayah": 11,
+    "start": 325883,
+    "end": 326443,
+    "duration": 560,
+    "weight": 1.0
+  },
+  {
+    "idx": 461,
+    "char": "ت",
+    "ayah": 11,
+    "start": 326463,
+    "end": 327364,
+    "duration": 901,
+    "weight": 1.0
+  },
+  {
+    "idx": 462,
+    "char": "ع",
+    "ayah": 11,
+    "start": 327364,
+    "end": 327384,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 463,
+    "char": "م",
+    "ayah": 11,
+    "start": 327384,
+    "end": 327805,
+    "duration": 421,
+    "weight": 1.0
+  },
+  {
+    "idx": 464,
+    "char": "ل",
+    "ayah": 11,
+    "start": 327805,
+    "end": 335672,
+    "duration": 7867,
+    "weight": 1.0
+  },
+  {
+    "idx": 465,
+    "char": "و",
+    "ayah": 11,
+    "start": 335672,
+    "end": 335692,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 466,
+    "char": "ن",
+    "ayah": 11,
+    "start": 335692,
+    "end": 335712,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 467,
+    "char": "ا",
+    "ayah": 12,
+    "start": 338594,
+    "end": 340297,
+    "duration": 1703,
+    "weight": 1.5
+  },
+  {
+    "idx": 468,
+    "char": "ل",
+    "ayah": 12,
+    "start": 340297,
+    "end": 340317,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 469,
+    "char": "ذ",
+    "ayah": 12,
+    "start": 340317,
+    "end": 340677,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 470,
+    "char": "ي",
+    "ayah": 12,
+    "start": 340677,
+    "end": 340697,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 471,
+    "char": "ن",
+    "ayah": 12,
+    "start": 340697,
+    "end": 340717,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 472,
+    "char": "آ",
+    "ayah": 12,
+    "start": 340737,
+    "end": 341559,
+    "duration": 822,
+    "weight": 1.5
+  },
+  {
+    "idx": 473,
+    "char": "م",
+    "ayah": 12,
+    "start": 341559,
+    "end": 343562,
+    "duration": 2003,
+    "weight": 1.0
+  },
+  {
+    "idx": 474,
+    "char": "ن",
+    "ayah": 12,
+    "start": 343562,
+    "end": 343582,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 475,
+    "char": "و",
+    "ayah": 12,
+    "start": 343582,
+    "end": 343602,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 476,
+    "char": "ا",
+    "ayah": 12,
+    "start": 343602,
+    "end": 343622,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 477,
+    "char": "إ",
+    "ayah": 12,
+    "start": 343722,
+    "end": 344103,
+    "duration": 381,
+    "weight": 1.2
+  },
+  {
+    "idx": 478,
+    "char": "ذ",
+    "ayah": 12,
+    "start": 344103,
+    "end": 344263,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 479,
+    "char": "ا",
+    "ayah": 12,
+    "start": 344263,
+    "end": 345645,
+    "duration": 1382,
+    "weight": 1.5
+  },
+  {
+    "idx": 480,
+    "char": "ن",
+    "ayah": 12,
+    "start": 345745,
+    "end": 345765,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 481,
+    "char": "و",
+    "ayah": 12,
+    "start": 345765,
+    "end": 345785,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 482,
+    "char": "د",
+    "ayah": 12,
+    "start": 345785,
+    "end": 345965,
+    "duration": 180,
+    "weight": 1.0
+  },
+  {
+    "idx": 483,
+    "char": "ي",
+    "ayah": 12,
+    "start": 345965,
+    "end": 346386,
+    "duration": 421,
+    "weight": 1.3
+  },
+  {
+    "idx": 484,
+    "char": "ل",
+    "ayah": 12,
+    "start": 346526,
+    "end": 346807,
+    "duration": 281,
+    "weight": 1.0
+  },
+  {
+    "idx": 485,
+    "char": "ل",
+    "ayah": 12,
+    "start": 346807,
+    "end": 346827,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 486,
+    "char": "ص",
+    "ayah": 12,
+    "start": 346827,
+    "end": 347668,
+    "duration": 841,
+    "weight": 1.0
+  },
+  {
+    "idx": 487,
+    "char": "ل",
+    "ayah": 12,
+    "start": 347668,
+    "end": 347688,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 488,
+    "char": "ا",
+    "ayah": 12,
+    "start": 347688,
+    "end": 348970,
+    "duration": 1282,
+    "weight": 1.5
+  },
+  {
+    "idx": 489,
+    "char": "ة",
+    "ayah": 12,
+    "start": 348970,
+    "end": 348990,
+    "duration": 20,
+    "weight": 0.8
+  },
+  {
+    "idx": 490,
+    "char": "م",
+    "ayah": 12,
+    "start": 349110,
+    "end": 350312,
+    "duration": 1202,
+    "weight": 1.0
+  },
+  {
+    "idx": 491,
+    "char": "ن",
+    "ayah": 12,
+    "start": 350312,
+    "end": 350332,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 492,
+    "char": "ي",
+    "ayah": 12,
+    "start": 350352,
+    "end": 350613,
+    "duration": 261,
+    "weight": 1.3
+  },
+  {
+    "idx": 493,
+    "char": "و",
+    "ayah": 12,
+    "start": 350613,
+    "end": 351214,
+    "duration": 601,
+    "weight": 1.3
+  },
+  {
+    "idx": 494,
+    "char": "م",
+    "ayah": 12,
+    "start": 351214,
+    "end": 353137,
+    "duration": 1923,
+    "weight": 1.0
+  },
+  {
+    "idx": 495,
+    "char": "ا",
+    "ayah": 12,
+    "start": 353157,
+    "end": 353177,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 496,
+    "char": "ل",
+    "ayah": 12,
+    "start": 353177,
+    "end": 353197,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 497,
+    "char": "ج",
+    "ayah": 12,
+    "start": 353197,
+    "end": 353217,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 498,
+    "char": "م",
+    "ayah": 12,
+    "start": 353217,
+    "end": 353237,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 499,
+    "char": "ع",
+    "ayah": 12,
+    "start": 353237,
+    "end": 353257,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 500,
+    "char": "ة",
+    "ayah": 12,
+    "start": 353257,
+    "end": 353517,
+    "duration": 260,
+    "weight": 0.8
+  },
+  {
+    "idx": 501,
+    "char": "ف",
+    "ayah": 12,
+    "start": 353637,
+    "end": 354198,
+    "duration": 561,
+    "weight": 1.0
+  },
+  {
+    "idx": 502,
+    "char": "ا",
+    "ayah": 12,
+    "start": 354198,
+    "end": 354218,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 503,
+    "char": "س",
+    "ayah": 12,
+    "start": 354218,
+    "end": 355320,
+    "duration": 1102,
+    "weight": 1.0
+  },
+  {
+    "idx": 504,
+    "char": "ع",
+    "ayah": 12,
+    "start": 355320,
+    "end": 355340,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 505,
+    "char": "و",
+    "ayah": 12,
+    "start": 355340,
+    "end": 355360,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 506,
+    "char": "ا",
+    "ayah": 12,
+    "start": 355360,
+    "end": 355380,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 507,
+    "char": "إ",
+    "ayah": 12,
+    "start": 355400,
+    "end": 355781,
+    "duration": 381,
+    "weight": 1.2
+  },
+  {
+    "idx": 508,
+    "char": "ل",
+    "ayah": 12,
+    "start": 355781,
+    "end": 356762,
+    "duration": 981,
+    "weight": 1.0
+  },
+  {
+    "idx": 509,
+    "char": "ى",
+    "ayah": 12,
+    "start": 356762,
+    "end": 356782,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 510,
+    "char": "ذ",
+    "ayah": 12,
+    "start": 357243,
+    "end": 357263,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 511,
+    "char": "ك",
+    "ayah": 12,
+    "start": 357263,
+    "end": 357523,
+    "duration": 260,
+    "weight": 1.0
+  },
+  {
+    "idx": 512,
+    "char": "ر",
+    "ayah": 12,
+    "start": 357523,
+    "end": 358545,
+    "duration": 1022,
+    "weight": 1.0
+  },
+  {
+    "idx": 513,
+    "char": "ا",
+    "ayah": 12,
+    "start": 358565,
+    "end": 358585,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 514,
+    "char": "ل",
+    "ayah": 12,
+    "start": 358585,
+    "end": 358605,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 515,
+    "char": "ل",
+    "ayah": 12,
+    "start": 358605,
+    "end": 358625,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 516,
+    "char": "ه",
+    "ayah": 12,
+    "start": 358625,
+    "end": 358645,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 517,
+    "char": "ذ",
+    "ayah": 13,
+    "start": 367552,
+    "end": 368676,
+    "duration": 1124,
+    "weight": 1.0
+  },
+  {
+    "idx": 518,
+    "char": "ل",
+    "ayah": 13,
+    "start": 368676,
+    "end": 368696,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 519,
+    "char": "ك",
+    "ayah": 13,
+    "start": 368696,
+    "end": 368977,
+    "duration": 281,
+    "weight": 1.0
+  },
+  {
+    "idx": 520,
+    "char": "م",
+    "ayah": 13,
+    "start": 368977,
+    "end": 369378,
+    "duration": 401,
+    "weight": 1.0
+  },
+  {
+    "idx": 521,
+    "char": "خ",
+    "ayah": 13,
+    "start": 369398,
+    "end": 370140,
+    "duration": 742,
+    "weight": 1.0
+  },
+  {
+    "idx": 522,
+    "char": "ي",
+    "ayah": 13,
+    "start": 370140,
+    "end": 370321,
+    "duration": 181,
+    "weight": 1.3
+  },
+  {
+    "idx": 523,
+    "char": "ر",
+    "ayah": 13,
+    "start": 370321,
+    "end": 370983,
+    "duration": 662,
+    "weight": 1.0
+  },
+  {
+    "idx": 524,
+    "char": "ل",
+    "ayah": 13,
+    "start": 371103,
+    "end": 372187,
+    "duration": 1084,
+    "weight": 1.0
+  },
+  {
+    "idx": 525,
+    "char": "ك",
+    "ayah": 13,
+    "start": 372187,
+    "end": 372207,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 526,
+    "char": "م",
+    "ayah": 13,
+    "start": 372207,
+    "end": 372227,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 527,
+    "char": "إ",
+    "ayah": 13,
+    "start": 373270,
+    "end": 373290,
+    "duration": 20,
+    "weight": 1.2
+  },
+  {
+    "idx": 528,
+    "char": "ن",
+    "ayah": 13,
+    "start": 373290,
+    "end": 373310,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 529,
+    "char": "ك",
+    "ayah": 13,
+    "start": 373551,
+    "end": 374755,
+    "duration": 1204,
+    "weight": 1.0
+  },
+  {
+    "idx": 530,
+    "char": "ن",
+    "ayah": 13,
+    "start": 374755,
+    "end": 375096,
+    "duration": 341,
+    "weight": 1.0
+  },
+  {
+    "idx": 531,
+    "char": "ت",
+    "ayah": 13,
+    "start": 375096,
+    "end": 375738,
+    "duration": 642,
+    "weight": 1.0
+  },
+  {
+    "idx": 532,
+    "char": "م",
+    "ayah": 13,
+    "start": 375738,
+    "end": 375758,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 533,
+    "char": "ت",
+    "ayah": 13,
+    "start": 375999,
+    "end": 376862,
+    "duration": 863,
+    "weight": 1.0
+  },
+  {
+    "idx": 534,
+    "char": "ع",
+    "ayah": 13,
+    "start": 376862,
+    "end": 376882,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 535,
+    "char": "ل",
+    "ayah": 13,
+    "start": 376882,
+    "end": 377263,
+    "duration": 381,
+    "weight": 1.0
+  },
+  {
+    "idx": 536,
+    "char": "م",
+    "ayah": 13,
+    "start": 377263,
+    "end": 378467,
+    "duration": 1204,
+    "weight": 1.0
+  },
+  {
+    "idx": 537,
+    "char": "و",
+    "ayah": 13,
+    "start": 378467,
+    "end": 378487,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 538,
+    "char": "ن",
+    "ayah": 13,
+    "start": 378487,
+    "end": 378507,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 539,
+    "char": "ف",
+    "ayah": 14,
+    "start": 382891,
+    "end": 384293,
+    "duration": 1402,
+    "weight": 1.0
+  },
+  {
+    "idx": 540,
+    "char": "إ",
+    "ayah": 14,
+    "start": 384293,
+    "end": 384333,
+    "duration": 40,
+    "weight": 1.2
+  },
+  {
+    "idx": 541,
+    "char": "ذ",
+    "ayah": 14,
+    "start": 384333,
+    "end": 384353,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 542,
+    "char": "ا",
+    "ayah": 14,
+    "start": 384353,
+    "end": 384373,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 543,
+    "char": "ق",
+    "ayah": 14,
+    "start": 384533,
+    "end": 384914,
+    "duration": 381,
+    "weight": 1.0
+  },
+  {
+    "idx": 544,
+    "char": "ض",
+    "ayah": 14,
+    "start": 384914,
+    "end": 385334,
+    "duration": 420,
+    "weight": 1.0
+  },
+  {
+    "idx": 545,
+    "char": "ي",
+    "ayah": 14,
+    "start": 385334,
+    "end": 385715,
+    "duration": 381,
+    "weight": 1.3
+  },
+  {
+    "idx": 546,
+    "char": "ت",
+    "ayah": 14,
+    "start": 385715,
+    "end": 385935,
+    "duration": 220,
+    "weight": 1.0
+  },
+  {
+    "idx": 547,
+    "char": "ا",
+    "ayah": 14,
+    "start": 386376,
+    "end": 386396,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 548,
+    "char": "ل",
+    "ayah": 14,
+    "start": 386396,
+    "end": 386556,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 549,
+    "char": "ص",
+    "ayah": 14,
+    "start": 386556,
+    "end": 386936,
+    "duration": 380,
+    "weight": 1.0
+  },
+  {
+    "idx": 550,
+    "char": "ل",
+    "ayah": 14,
+    "start": 386936,
+    "end": 387076,
+    "duration": 140,
+    "weight": 1.0
+  },
+  {
+    "idx": 551,
+    "char": "ا",
+    "ayah": 14,
+    "start": 387076,
+    "end": 387797,
+    "duration": 721,
+    "weight": 1.5
+  },
+  {
+    "idx": 552,
+    "char": "ة",
+    "ayah": 14,
+    "start": 387797,
+    "end": 388078,
+    "duration": 281,
+    "weight": 0.8
+  },
+  {
+    "idx": 553,
+    "char": "ف",
+    "ayah": 14,
+    "start": 388218,
+    "end": 390000,
+    "duration": 1782,
+    "weight": 1.0
+  },
+  {
+    "idx": 554,
+    "char": "ا",
+    "ayah": 14,
+    "start": 390000,
+    "end": 390020,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 555,
+    "char": "ن",
+    "ayah": 14,
+    "start": 390020,
+    "end": 390120,
+    "duration": 100,
+    "weight": 1.0
+  },
+  {
+    "idx": 556,
+    "char": "ت",
+    "ayah": 14,
+    "start": 390120,
+    "end": 390140,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 557,
+    "char": "ش",
+    "ayah": 14,
+    "start": 390140,
+    "end": 390561,
+    "duration": 421,
+    "weight": 1.0
+  },
+  {
+    "idx": 558,
+    "char": "ر",
+    "ayah": 14,
+    "start": 390561,
+    "end": 390581,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 559,
+    "char": "و",
+    "ayah": 14,
+    "start": 390581,
+    "end": 391222,
+    "duration": 641,
+    "weight": 1.3
+  },
+  {
+    "idx": 560,
+    "char": "ا",
+    "ayah": 14,
+    "start": 391222,
+    "end": 391242,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 561,
+    "char": "ف",
+    "ayah": 14,
+    "start": 391382,
+    "end": 391562,
+    "duration": 180,
+    "weight": 1.0
+  },
+  {
+    "idx": 562,
+    "char": "ي",
+    "ayah": 14,
+    "start": 391562,
+    "end": 392984,
+    "duration": 1422,
+    "weight": 1.3
+  },
+  {
+    "idx": 563,
+    "char": "ا",
+    "ayah": 14,
+    "start": 393004,
+    "end": 393024,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 564,
+    "char": "ل",
+    "ayah": 14,
+    "start": 393024,
+    "end": 393044,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 565,
+    "char": "أ",
+    "ayah": 14,
+    "start": 393044,
+    "end": 393064,
+    "duration": 20,
+    "weight": 1.2
+  },
+  {
+    "idx": 566,
+    "char": "ر",
+    "ayah": 14,
+    "start": 393064,
+    "end": 393084,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 567,
+    "char": "ض",
+    "ayah": 14,
+    "start": 393084,
+    "end": 393485,
+    "duration": 401,
+    "weight": 1.0
+  },
+  {
+    "idx": 568,
+    "char": "و",
+    "ayah": 14,
+    "start": 393845,
+    "end": 393865,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 569,
+    "char": "ا",
+    "ayah": 14,
+    "start": 393865,
+    "end": 393885,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 570,
+    "char": "ب",
+    "ayah": 14,
+    "start": 393885,
+    "end": 394486,
+    "duration": 601,
+    "weight": 1.0
+  },
+  {
+    "idx": 571,
+    "char": "ت",
+    "ayah": 14,
+    "start": 394486,
+    "end": 394506,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 572,
+    "char": "غ",
+    "ayah": 14,
+    "start": 394506,
+    "end": 395467,
+    "duration": 961,
+    "weight": 1.0
+  },
+  {
+    "idx": 573,
+    "char": "و",
+    "ayah": 14,
+    "start": 395467,
+    "end": 395487,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 574,
+    "char": "ا",
+    "ayah": 14,
+    "start": 395487,
+    "end": 395507,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 575,
+    "char": "م",
+    "ayah": 14,
+    "start": 395628,
+    "end": 396749,
+    "duration": 1121,
+    "weight": 1.0
+  },
+  {
+    "idx": 576,
+    "char": "ن",
+    "ayah": 14,
+    "start": 396749,
+    "end": 396769,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 577,
+    "char": "ف",
+    "ayah": 14,
+    "start": 396909,
+    "end": 397310,
+    "duration": 401,
+    "weight": 1.0
+  },
+  {
+    "idx": 578,
+    "char": "ض",
+    "ayah": 14,
+    "start": 397310,
+    "end": 397770,
+    "duration": 460,
+    "weight": 1.0
+  },
+  {
+    "idx": 579,
+    "char": "ل",
+    "ayah": 14,
+    "start": 397770,
+    "end": 398652,
+    "duration": 882,
+    "weight": 1.0
+  },
+  {
+    "idx": 580,
+    "char": "ا",
+    "ayah": 14,
+    "start": 398672,
+    "end": 398692,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 581,
+    "char": "ل",
+    "ayah": 14,
+    "start": 398692,
+    "end": 399573,
+    "duration": 881,
+    "weight": 1.0
+  },
+  {
+    "idx": 582,
+    "char": "ل",
+    "ayah": 14,
+    "start": 399573,
+    "end": 399593,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 583,
+    "char": "ه",
+    "ayah": 14,
+    "start": 399593,
+    "end": 399893,
+    "duration": 300,
+    "weight": 1.0
+  },
+  {
+    "idx": 584,
+    "char": "و",
+    "ayah": 14,
+    "start": 400013,
+    "end": 400634,
+    "duration": 621,
+    "weight": 1.3
+  },
+  {
+    "idx": 585,
+    "char": "ا",
+    "ayah": 14,
+    "start": 400634,
+    "end": 400654,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 586,
+    "char": "ذ",
+    "ayah": 14,
+    "start": 400654,
+    "end": 400935,
+    "duration": 281,
+    "weight": 1.0
+  },
+  {
+    "idx": 587,
+    "char": "ك",
+    "ayah": 14,
+    "start": 400935,
+    "end": 402236,
+    "duration": 1301,
+    "weight": 1.0
+  },
+  {
+    "idx": 588,
+    "char": "ر",
+    "ayah": 14,
+    "start": 402236,
+    "end": 402256,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 589,
+    "char": "و",
+    "ayah": 14,
+    "start": 402256,
+    "end": 402276,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 590,
+    "char": "ا",
+    "ayah": 14,
+    "start": 402276,
+    "end": 402837,
+    "duration": 561,
+    "weight": 1.5
+  },
+  {
+    "idx": 591,
+    "char": "ا",
+    "ayah": 14,
+    "start": 402857,
+    "end": 402877,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 592,
+    "char": "ل",
+    "ayah": 14,
+    "start": 402877,
+    "end": 402897,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 593,
+    "char": "ل",
+    "ayah": 14,
+    "start": 402897,
+    "end": 402917,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 594,
+    "char": "ه",
+    "ayah": 14,
+    "start": 402917,
+    "end": 403198,
+    "duration": 281,
+    "weight": 1.0
+  },
+  {
+    "idx": 595,
+    "char": "ك",
+    "ayah": 14,
+    "start": 403358,
+    "end": 404639,
+    "duration": 1281,
+    "weight": 1.0
+  },
+  {
+    "idx": 596,
+    "char": "ث",
+    "ayah": 14,
+    "start": 404639,
+    "end": 404659,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 597,
+    "char": "ي",
+    "ayah": 14,
+    "start": 404659,
+    "end": 405801,
+    "duration": 1142,
+    "weight": 1.3
+  },
+  {
+    "idx": 598,
+    "char": "ر",
+    "ayah": 14,
+    "start": 405801,
+    "end": 405821,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 599,
+    "char": "ا",
+    "ayah": 14,
+    "start": 405821,
+    "end": 405841,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 600,
+    "char": "ً",
+    "ayah": 14,
+    "start": 405841,
+    "end": 405861,
+    "duration": 20,
+    "weight": 0.3
+  },
+  {
+    "idx": 601,
+    "char": "و",
+    "ayah": 15,
+    "start": 408592,
+    "end": 408892,
+    "duration": 300,
+    "weight": 1.3
+  },
+  {
+    "idx": 602,
+    "char": "ا",
+    "ayah": 15,
+    "start": 408892,
+    "end": 408912,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 603,
+    "char": "ذ",
+    "ayah": 15,
+    "start": 408912,
+    "end": 409193,
+    "duration": 281,
+    "weight": 1.0
+  },
+  {
+    "idx": 604,
+    "char": "ك",
+    "ayah": 15,
+    "start": 409193,
+    "end": 409513,
+    "duration": 320,
+    "weight": 1.0
+  },
+  {
+    "idx": 605,
+    "char": "ر",
+    "ayah": 15,
+    "start": 409513,
+    "end": 410494,
+    "duration": 981,
+    "weight": 1.0
+  },
+  {
+    "idx": 606,
+    "char": "و",
+    "ayah": 15,
+    "start": 410494,
+    "end": 410514,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 607,
+    "char": "ا",
+    "ayah": 15,
+    "start": 410514,
+    "end": 411836,
+    "duration": 1322,
+    "weight": 1.5
+  },
+  {
+    "idx": 608,
+    "char": "ا",
+    "ayah": 15,
+    "start": 411856,
+    "end": 411876,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 609,
+    "char": "ل",
+    "ayah": 15,
+    "start": 411876,
+    "end": 411916,
+    "duration": 40,
+    "weight": 1.0
+  },
+  {
+    "idx": 610,
+    "char": "ل",
+    "ayah": 15,
+    "start": 411916,
+    "end": 411936,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 611,
+    "char": "ه",
+    "ayah": 15,
+    "start": 411936,
+    "end": 411956,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 612,
+    "char": "ك",
+    "ayah": 15,
+    "start": 411976,
+    "end": 411996,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 613,
+    "char": "ث",
+    "ayah": 15,
+    "start": 411996,
+    "end": 412256,
+    "duration": 260,
+    "weight": 1.0
+  },
+  {
+    "idx": 614,
+    "char": "ي",
+    "ayah": 15,
+    "start": 412256,
+    "end": 413698,
+    "duration": 1442,
+    "weight": 1.3
+  },
+  {
+    "idx": 615,
+    "char": "ر",
+    "ayah": 15,
+    "start": 413698,
+    "end": 413718,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 616,
+    "char": "ا",
+    "ayah": 15,
+    "start": 413718,
+    "end": 413738,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 617,
+    "char": "ل",
+    "ayah": 15,
+    "start": 413758,
+    "end": 413958,
+    "duration": 200,
+    "weight": 1.0
+  },
+  {
+    "idx": 618,
+    "char": "ع",
+    "ayah": 15,
+    "start": 413958,
+    "end": 415060,
+    "duration": 1102,
+    "weight": 1.3
+  },
+  {
+    "idx": 619,
+    "char": "ل",
+    "ayah": 15,
+    "start": 415060,
+    "end": 415460,
+    "duration": 400,
+    "weight": 1.0
+  },
+  {
+    "idx": 620,
+    "char": "ك",
+    "ayah": 15,
+    "start": 415460,
+    "end": 416361,
+    "duration": 901,
+    "weight": 1.0
+  },
+  {
+    "idx": 621,
+    "char": "م",
+    "ayah": 15,
+    "start": 416361,
+    "end": 416381,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 622,
+    "char": "ت",
+    "ayah": 15,
+    "start": 416401,
+    "end": 416762,
+    "duration": 361,
+    "weight": 1.0
+  },
+  {
+    "idx": 623,
+    "char": "ف",
+    "ayah": 15,
+    "start": 416762,
+    "end": 424991,
+    "duration": 8229,
+    "weight": 1.0
+  },
+  {
+    "idx": 624,
+    "char": "ل",
+    "ayah": 15,
+    "start": 424991,
+    "end": 425012,
+    "duration": 21,
+    "weight": 1.0
+  },
+  {
+    "idx": 625,
+    "char": "ح",
+    "ayah": 15,
+    "start": 425012,
+    "end": 425032,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 626,
+    "char": "و",
+    "ayah": 15,
+    "start": 425032,
+    "end": 425052,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 627,
+    "char": "ن",
+    "ayah": 15,
+    "start": 425052,
+    "end": 425072,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 628,
+    "char": "و",
+    "ayah": 15,
+    "start": 425092,
+    "end": 425352,
+    "duration": 260,
+    "weight": 1.3
+  },
+  {
+    "idx": 629,
+    "char": "إ",
+    "ayah": 15,
+    "start": 425352,
+    "end": 425572,
+    "duration": 220,
+    "weight": 1.2
+  },
+  {
+    "idx": 630,
+    "char": "ذ",
+    "ayah": 15,
+    "start": 425572,
+    "end": 425732,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 631,
+    "char": "ا",
+    "ayah": 15,
+    "start": 425732,
+    "end": 426453,
+    "duration": 721,
+    "weight": 1.5
+  },
+  {
+    "idx": 632,
+    "char": "ر",
+    "ayah": 15,
+    "start": 426533,
+    "end": 426553,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 633,
+    "char": "أ",
+    "ayah": 15,
+    "start": 426553,
+    "end": 427575,
+    "duration": 1022,
+    "weight": 1.2
+  },
+  {
+    "idx": 634,
+    "char": "و",
+    "ayah": 15,
+    "start": 427575,
+    "end": 427595,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 635,
+    "char": "ا",
+    "ayah": 15,
+    "start": 427595,
+    "end": 427615,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 636,
+    "char": "ت",
+    "ayah": 15,
+    "start": 427735,
+    "end": 427895,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 637,
+    "char": "ج",
+    "ayah": 15,
+    "start": 427895,
+    "end": 427915,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 638,
+    "char": "ا",
+    "ayah": 15,
+    "start": 427915,
+    "end": 428516,
+    "duration": 601,
+    "weight": 1.5
+  },
+  {
+    "idx": 639,
+    "char": "ر",
+    "ayah": 15,
+    "start": 428516,
+    "end": 428956,
+    "duration": 440,
+    "weight": 1.0
+  },
+  {
+    "idx": 640,
+    "char": "ة",
+    "ayah": 15,
+    "start": 428956,
+    "end": 429677,
+    "duration": 721,
+    "weight": 0.8
+  },
+  {
+    "idx": 641,
+    "char": "أ",
+    "ayah": 15,
+    "start": 429797,
+    "end": 430598,
+    "duration": 801,
+    "weight": 1.2
+  },
+  {
+    "idx": 642,
+    "char": "و",
+    "ayah": 15,
+    "start": 430598,
+    "end": 430618,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 643,
+    "char": "ل",
+    "ayah": 15,
+    "start": 430638,
+    "end": 430939,
+    "duration": 301,
+    "weight": 1.0
+  },
+  {
+    "idx": 644,
+    "char": "ه",
+    "ayah": 15,
+    "start": 430939,
+    "end": 431519,
+    "duration": 580,
+    "weight": 1.0
+  },
+  {
+    "idx": 645,
+    "char": "و",
+    "ayah": 15,
+    "start": 431519,
+    "end": 431960,
+    "duration": 441,
+    "weight": 1.3
+  },
+  {
+    "idx": 646,
+    "char": "ة",
+    "ayah": 15,
+    "start": 431960,
+    "end": 433121,
+    "duration": 1161,
+    "weight": 0.8
+  },
+  {
+    "idx": 647,
+    "char": "ف",
+    "ayah": 15,
+    "start": 433261,
+    "end": 435444,
+    "duration": 2183,
+    "weight": 1.0
+  },
+  {
+    "idx": 648,
+    "char": "ا",
+    "ayah": 15,
+    "start": 435444,
+    "end": 435464,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 649,
+    "char": "ض",
+    "ayah": 15,
+    "start": 435464,
+    "end": 435484,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 650,
+    "char": "ط",
+    "ayah": 15,
+    "start": 435484,
+    "end": 435504,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 651,
+    "char": "و",
+    "ayah": 15,
+    "start": 435504,
+    "end": 435524,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 652,
+    "char": "ن",
+    "ayah": 15,
+    "start": 435524,
+    "end": 435544,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 653,
+    "char": "ق",
+    "ayah": 16,
+    "start": 439085,
+    "end": 447854,
+    "duration": 8769,
+    "weight": 1.0
+  },
+  {
+    "idx": 654,
+    "char": "ل",
+    "ayah": 16,
+    "start": 447854,
+    "end": 447954,
+    "duration": 100,
+    "weight": 1.0
+  },
+  {
+    "idx": 655,
+    "char": "م",
+    "ayah": 16,
+    "start": 448074,
+    "end": 448234,
+    "duration": 160,
+    "weight": 1.0
+  },
+  {
+    "idx": 656,
+    "char": "ا",
+    "ayah": 16,
+    "start": 448234,
+    "end": 448735,
+    "duration": 501,
+    "weight": 1.5
+  },
+  {
+    "idx": 657,
+    "char": "ع",
+    "ayah": 16,
+    "start": 448755,
+    "end": 449936,
+    "duration": 1181,
+    "weight": 1.3
+  },
+  {
+    "idx": 658,
+    "char": "ن",
+    "ayah": 16,
+    "start": 449936,
+    "end": 449956,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 659,
+    "char": "د",
+    "ayah": 16,
+    "start": 449956,
+    "end": 450497,
+    "duration": 541,
+    "weight": 1.0
+  },
+  {
+    "idx": 660,
+    "char": "ا",
+    "ayah": 16,
+    "start": 450597,
+    "end": 450617,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 661,
+    "char": "ل",
+    "ayah": 16,
+    "start": 450617,
+    "end": 450637,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 662,
+    "char": "ل",
+    "ayah": 16,
+    "start": 450637,
+    "end": 451778,
+    "duration": 1141,
+    "weight": 1.0
+  },
+  {
+    "idx": 663,
+    "char": "ه",
+    "ayah": 16,
+    "start": 451778,
+    "end": 451798,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 664,
+    "char": "خ",
+    "ayah": 16,
+    "start": 451918,
+    "end": 452198,
+    "duration": 280,
+    "weight": 1.0
+  },
+  {
+    "idx": 665,
+    "char": "ي",
+    "ayah": 16,
+    "start": 452198,
+    "end": 454060,
+    "duration": 1862,
+    "weight": 1.3
+  },
+  {
+    "idx": 666,
+    "char": "ر",
+    "ayah": 16,
+    "start": 454060,
+    "end": 454080,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 667,
+    "char": "م",
+    "ayah": 16,
+    "start": 454100,
+    "end": 454441,
+    "duration": 341,
+    "weight": 1.0
+  },
+  {
+    "idx": 668,
+    "char": "ن",
+    "ayah": 16,
+    "start": 454441,
+    "end": 454621,
+    "duration": 180,
+    "weight": 1.0
+  },
+  {
+    "idx": 669,
+    "char": "ا",
+    "ayah": 16,
+    "start": 455161,
+    "end": 455181,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 670,
+    "char": "ل",
+    "ayah": 16,
+    "start": 455181,
+    "end": 456242,
+    "duration": 1061,
+    "weight": 1.0
+  },
+  {
+    "idx": 671,
+    "char": "ل",
+    "ayah": 16,
+    "start": 456242,
+    "end": 456703,
+    "duration": 461,
+    "weight": 1.0
+  },
+  {
+    "idx": 672,
+    "char": "ه",
+    "ayah": 16,
+    "start": 456703,
+    "end": 456723,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 673,
+    "char": "و",
+    "ayah": 16,
+    "start": 456843,
+    "end": 456863,
+    "duration": 20,
+    "weight": 1.3
+  },
+  {
+    "idx": 674,
+    "char": "م",
+    "ayah": 16,
+    "start": 456863,
+    "end": 457223,
+    "duration": 360,
+    "weight": 1.0
+  },
+  {
+    "idx": 675,
+    "char": "ن",
+    "ayah": 16,
+    "start": 457223,
+    "end": 457404,
+    "duration": 181,
+    "weight": 1.0
+  },
+  {
+    "idx": 676,
+    "char": "ا",
+    "ayah": 16,
+    "start": 458104,
+    "end": 458124,
+    "duration": 20,
+    "weight": 1.5
+  },
+  {
+    "idx": 677,
+    "char": "ل",
+    "ayah": 16,
+    "start": 458124,
+    "end": 458144,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 678,
+    "char": "ت",
+    "ayah": 16,
+    "start": 458144,
+    "end": 458545,
+    "duration": 401,
+    "weight": 1.0
+  },
+  {
+    "idx": 679,
+    "char": "ج",
+    "ayah": 16,
+    "start": 458545,
+    "end": 458745,
+    "duration": 200,
+    "weight": 1.0
+  },
+  {
+    "idx": 680,
+    "char": "ا",
+    "ayah": 16,
+    "start": 458745,
+    "end": 459506,
+    "duration": 761,
+    "weight": 1.5
+  },
+  {
+    "idx": 681,
+    "char": "ر",
+    "ayah": 16,
+    "start": 459506,
+    "end": 461468,
+    "duration": 1962,
+    "weight": 1.0
+  },
+  {
+    "idx": 682,
+    "char": "ة",
+    "ayah": 16,
+    "start": 461468,
+    "end": 461488,
+    "duration": 20,
+    "weight": 0.8
+  },
+  {
+    "idx": 683,
+    "char": "و",
+    "ayah": 16,
+    "start": 461508,
+    "end": 461628,
+    "duration": 120,
+    "weight": 1.3
+  },
+  {
+    "idx": 684,
+    "char": "ا",
+    "ayah": 16,
+    "start": 461628,
+    "end": 461708,
+    "duration": 80,
+    "weight": 1.5
+  },
+  {
+    "idx": 685,
+    "char": "ل",
+    "ayah": 16,
+    "start": 461708,
+    "end": 461728,
+    "duration": 20,
+    "weight": 1.0
+  },
+  {
+    "idx": 686,
+    "char": "ل",
+    "ayah": 16,
+    "start": 461728,
+    "end": 463169,
+    "duration": 1441,
+    "weight": 1.0
+  },
+  {
+    "idx": 687,
+    "char": "ه",
+    "ayah": 16,
+    "start": 463169,
+    "end": 463410,
+    "duration": 241,
+    "weight": 1.0
+  },
+  {
+    "idx": 688,
+    "char": "خ",
+    "ayah": 16,
+    "start": 463570,
+    "end": 464210,
+    "duration": 640,
+    "weight": 1.0
+  },
+  {
+    "idx": 689,
+    "char": "ي",
+    "ayah": 16,
+    "start": 464210,
+    "end": 464371,
+    "duration": 161,
+    "weight": 1.3
+  },
+  {
+    "idx": 690,
+    "char": "ر",
+    "ayah": 16,
+    "start": 464371,
+    "end": 465051,
+    "duration": 680,
+    "weight": 1.0
+  },
+  {
+    "idx": 691,
+    "char": "ر",
+    "ayah": 16,
+    "start": 465251,
+    "end": 465432,
+    "duration": 181,
+    "weight": 1.0
+  },
+  {
+    "idx": 692,
+    "char": "ا",
+    "ayah": 16,
+    "start": 465432,
+    "end": 466212,
+    "duration": 780,
+    "weight": 1.5
+  },
+  {
+    "idx": 693,
+    "char": "ز",
+    "ayah": 16,
+    "start": 466212,
+    "end": 466513,
+    "duration": 301,
+    "weight": 1.0
+  },
+  {
+    "idx": 694,
+    "char": "ق",
+    "ayah": 16,
+    "start": 466513,
+    "end": 466813,
+    "duration": 300,
+    "weight": 1.0
+  }
+]
