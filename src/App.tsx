@@ -123,7 +123,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showDebug, setShowDebug] = useState(false);
-  const [showWordCards, setShowWordCards] = useState(false);
+  const [showWordCards, setShowWordCards] = useState(true);
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const syncState = useLetterSync(audioRef, letterTiming);
@@ -314,9 +314,10 @@ function App() {
                       // Map to global word index
                       const globalWordIdx = wordsInVerse[wIdx]?.wordIdx ?? -1;
                       const isActive = globalWordIdx === syncState.currentWordIdx;
+                      const isPast = globalWordIdx >= 0 && globalWordIdx < syncState.currentWordIdx;
 
                       return (
-                        <div key={wIdx} className={`word-card ${isActive ? 'active' : ''}`}>
+                        <div key={wIdx} className={`word-card ${isActive ? 'active' : ''} ${isPast ? 'past' : ''}`}>
                           <span className="word-arabic">{word.arabic}</span>
                           <span className="word-translit">{word.translit}</span>
                         </div>
