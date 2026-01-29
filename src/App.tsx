@@ -13,6 +13,7 @@ const RECITERS = [
 const SURAHS_BY_RECITER: Record<string, { number: number; name: string; arabicName: string }[]> = {
   mah: [
     { number: 1, name: 'Al-Fatiha', arabicName: 'الفاتحة' },
+    { number: 2, name: 'Al-Baqarah', arabicName: 'البقرة' },
     { number: 18, name: 'Al-Kahf', arabicName: 'الكهف' },
     { number: 36, name: 'Ya-Sin', arabicName: 'يس' },
     { number: 55, name: 'Ar-Rahman', arabicName: 'الرحمن' },
@@ -21,6 +22,10 @@ const SURAHS_BY_RECITER: Record<string, { number: number; name: string; arabicNa
   ],
   abdul_basit: [
     { number: 1, name: 'Al-Fatiha', arabicName: 'الفاتحة' },
+    { number: 2, name: 'Al-Baqarah', arabicName: 'البقرة' },
+    { number: 3, name: 'Al-Imran', arabicName: 'آل عمران' },
+    { number: 4, name: 'An-Nisa', arabicName: 'النساء' },
+    { number: 5, name: 'Al-Maidah', arabicName: 'المائدة' },
   ],
 };
 
@@ -215,7 +220,7 @@ function App() {
         fontSize: '0.8rem',
         opacity: 0.7
       }}>
-        v1.0 (Lisan Wave-Tajweed)
+        v1.1 (Al-Baqarah)
       </div>
 
       {showDebug && (
