@@ -1,1 +1,998 @@
-[{"wordIdx": 0, "charIdx": 0, "char": "و", "start": 3540, "end": 3740, "duration": 200}, {"wordIdx": 0, "charIdx": 1, "char": "ا", "start": 3740, "end": 3940, "duration": 200}, {"wordIdx": 0, "charIdx": 2, "char": "ل", "start": 3940, "end": 4140, "duration": 200}, {"wordIdx": 0, "charIdx": 3, "char": "ض", "start": 4140, "end": 4340, "duration": 200}, {"wordIdx": 0, "charIdx": 4, "char": "ح", "start": 4340, "end": 4540, "duration": 200}, {"wordIdx": 0, "charIdx": 5, "char": "ى", "start": 4540, "end": 4740, "duration": 200}, {"wordIdx": 1, "charIdx": 0, "char": "و", "start": 4740, "end": 4943, "duration": 203}, {"wordIdx": 1, "charIdx": 1, "char": "ا", "start": 4943, "end": 5146, "duration": 203}, {"wordIdx": 1, "charIdx": 2, "char": "ل", "start": 5146, "end": 5350, "duration": 204}, {"wordIdx": 1, "charIdx": 3, "char": "ل", "start": 5350, "end": 5553, "duration": 203}, {"wordIdx": 1, "charIdx": 4, "char": "ي", "start": 5553, "end": 5756, "duration": 203}, {"wordIdx": 1, "charIdx": 5, "char": "ل", "start": 5756, "end": 5960, "duration": 204}, {"wordIdx": 2, "charIdx": 0, "char": "إ", "start": 5960, "end": 6166, "duration": 206}, {"wordIdx": 2, "charIdx": 1, "char": "ذ", "start": 6166, "end": 6373, "duration": 207}, {"wordIdx": 2, "charIdx": 2, "char": "ا", "start": 6373, "end": 6580, "duration": 207}, {"wordIdx": 3, "charIdx": 0, "char": "س", "start": 6580, "end": 6880, "duration": 300}, {"wordIdx": 3, "charIdx": 1, "char": "ج", "start": 6880, "end": 7180, "duration": 300}, {"wordIdx": 3, "charIdx": 2, "char": "ي", "start": 7180, "end": 7480, "duration": 300}, {"wordIdx": 4, "charIdx": 0, "char": "م", "start": 7480, "end": 7710, "duration": 230}, {"wordIdx": 4, "charIdx": 1, "char": "ا", "start": 7710, "end": 7940, "duration": 230}, {"wordIdx": 5, "charIdx": 0, "char": "و", "start": 7940, "end": 8250, "duration": 310}, {"wordIdx": 5, "charIdx": 1, "char": "د", "start": 8250, "end": 8560, "duration": 310}, {"wordIdx": 5, "charIdx": 2, "char": "ع", "start": 8560, "end": 8870, "duration": 310}, {"wordIdx": 5, "charIdx": 3, "char": "ك", "start": 8870, "end": 9180, "duration": 310}, {"wordIdx": 6, "charIdx": 0, "char": "ر", "start": 9180, "end": 9500, "duration": 320}, {"wordIdx": 6, "charIdx": 1, "char": "ب", "start": 9500, "end": 9820, "duration": 320}, {"wordIdx": 6, "charIdx": 2, "char": "ك", "start": 9820, "end": 10140, "duration": 320}, {"wordIdx": 7, "charIdx": 0, "char": "و", "start": 10140, "end": 10393, "duration": 253}, {"wordIdx": 7, "charIdx": 1, "char": "م", "start": 10393, "end": 10646, "duration": 253}, {"wordIdx": 7, "charIdx": 2, "char": "ا", "start": 10646, "end": 10900, "duration": 254}, {"wordIdx": 8, "charIdx": 0, "char": "ق", "start": 10900, "end": 11250, "duration": 350}, {"wordIdx": 8, "charIdx": 1, "char": "ل", "start": 11266, "end": 11616, "duration": 350}, {"wordIdx": 8, "charIdx": 2, "char": "ى", "start": 11633, "end": 12000, "duration": 367}, {"wordIdx": 9, "charIdx": 0, "char": "و", "start": 12000, "end": 12382, "duration": 382}, {"wordIdx": 9, "charIdx": 1, "char": "ل", "start": 12382, "end": 12732, "duration": 350}, {"wordIdx": 9, "charIdx": 2, "char": "ل", "start": 12765, "end": 13115, "duration": 350}, {"wordIdx": 9, "charIdx": 3, "char": "آ", "start": 13148, "end": 13531, "duration": 383}, {"wordIdx": 9, "charIdx": 4, "char": "خ", "start": 13531, "end": 13881, "duration": 350}, {"wordIdx": 9, "charIdx": 5, "char": "ر", "start": 13914, "end": 14264, "duration": 350}, {"wordIdx": 9, "charIdx": 6, "char": "ة", "start": 14297, "end": 14647, "duration": 350}, {"wordIdx": 10, "charIdx": 0, "char": "خ", "start": 14680, "end": 14920, "duration": 240}, {"wordIdx": 10, "charIdx": 1, "char": "ي", "start": 14920, "end": 15160, "duration": 240}, {"wordIdx": 10, "charIdx": 2, "char": "ر", "start": 15160, "end": 15400, "duration": 240}, {"wordIdx": 11, "charIdx": 0, "char": "ل", "start": 15400, "end": 15750, "duration": 350}, {"wordIdx": 11, "charIdx": 1, "char": "ك", "start": 15810, "end": 16160, "duration": 350}, {"wordIdx": 12, "charIdx": 0, "char": "م", "start": 16220, "end": 16420, "duration": 200}, {"wordIdx": 12, "charIdx": 1, "char": "ن", "start": 16420, "end": 16620, "duration": 200}, {"wordIdx": 13, "charIdx": 0, "char": "ا", "start": 16620, "end": 16873, "duration": 253}, {"wordIdx": 13, "charIdx": 1, "char": "ل", "start": 16873, "end": 17126, "duration": 253}, {"wordIdx": 13, "charIdx": 2, "char": "أ", "start": 17126, "end": 17380, "duration": 254}, {"wordIdx": 13, "charIdx": 3, "char": "و", "start": 17380, "end": 17633, "duration": 253}, {"wordIdx": 13, "charIdx": 4, "char": "ل", "start": 17633, "end": 17886, "duration": 253}, {"wordIdx": 13, "charIdx": 5, "char": "ى", "start": 17886, "end": 18140, "duration": 254}, {"wordIdx": 14, "charIdx": 0, "char": "و", "start": 18140, "end": 18246, "duration": 106}, {"wordIdx": 14, "charIdx": 1, "char": "ل", "start": 18246, "end": 18353, "duration": 107}, {"wordIdx": 14, "charIdx": 2, "char": "ا", "start": 18353, "end": 18460, "duration": 107}, {"wordIdx": 15, "charIdx": 0, "char": "س", "start": 18460, "end": 18720, "duration": 260}, {"wordIdx": 15, "charIdx": 1, "char": "و", "start": 18720, "end": 18980, "duration": 260}, {"wordIdx": 15, "charIdx": 2, "char": "ف", "start": 18980, "end": 19240, "duration": 260}, {"wordIdx": 16, "charIdx": 0, "char": "ي", "start": 19240, "end": 19504, "duration": 264}, {"wordIdx": 16, "charIdx": 2, "char": "ع", "start": 19504, "end": 19768, "duration": 264}, {"wordIdx": 16, "charIdx": 3, "char": "ر", "start": 19768, "end": 20032, "duration": 264}, {"wordIdx": 16, "charIdx": 4, "char": "ي", "start": 20032, "end": 20296, "duration": 264}, {"wordIdx": 16, "charIdx": 5, "char": "ك", "start": 20296, "end": 20560, "duration": 264}, {"wordIdx": 17, "charIdx": 0, "char": "ر", "start": 20560, "end": 20873, "duration": 313}, {"wordIdx": 17, "charIdx": 1, "char": "ب", "start": 20873, "end": 21186, "duration": 313}, {"wordIdx": 17, "charIdx": 2, "char": "ك", "start": 21186, "end": 21500, "duration": 314}, {"wordIdx": 18, "charIdx": 0, "char": "ف", "start": 21500, "end": 21850, "duration": 350}, {"wordIdx": 18, "charIdx": 1, "char": "ت", "start": 21936, "end": 22286, "duration": 350}, {"wordIdx": 18, "charIdx": 2, "char": "ر", "start": 22372, "end": 22722, "duration": 350}, {"wordIdx": 18, "charIdx": 3, "char": "ض", "start": 22808, "end": 23158, "duration": 350}, {"wordIdx": 18, "charIdx": 4, "char": "ى", "start": 23244, "end": 23680, "duration": 436}, {"wordIdx": 19, "charIdx": 0, "char": "أ", "start": 23680, "end": 23860, "duration": 180}, {"wordIdx": 19, "charIdx": 1, "char": "ل", "start": 23860, "end": 24040, "duration": 180}, {"wordIdx": 19, "charIdx": 2, "char": "م", "start": 24040, "end": 24220, "duration": 180}, {"wordIdx": 20, "charIdx": 0, "char": "ي", "start": 24220, "end": 24440, "duration": 220}, {"wordIdx": 20, "charIdx": 1, "char": "ج", "start": 24440, "end": 24660, "duration": 220}, {"wordIdx": 20, "charIdx": 2, "char": "د", "start": 24660, "end": 24880, "duration": 220}, {"wordIdx": 20, "charIdx": 3, "char": "ك", "start": 24880, "end": 25100, "duration": 220}, {"wordIdx": 21, "charIdx": 0, "char": "ي", "start": 25100, "end": 25344, "duration": 244}, {"wordIdx": 21, "charIdx": 1, "char": "ت", "start": 25344, "end": 25588, "duration": 244}, {"wordIdx": 21, "charIdx": 2, "char": "ي", "start": 25588, "end": 25832, "duration": 244}, {"wordIdx": 21, "charIdx": 3, "char": "م", "start": 25832, "end": 26076, "duration": 244}, {"wordIdx": 21, "charIdx": 4, "char": "ا", "start": 26076, "end": 26320, "duration": 244}, {"wordIdx": 22, "charIdx": 0, "char": "ف", "start": 26320, "end": 26670, "duration": 350}, {"wordIdx": 22, "charIdx": 1, "char": "آ", "start": 26770, "end": 27220, "duration": 450}, {"wordIdx": 22, "charIdx": 2, "char": "و", "start": 27220, "end": 27670, "duration": 450}, {"wordIdx": 22, "charIdx": 3, "char": "ي", "start": 27670, "end": 28120, "duration": 450}, {"wordIdx": 23, "charIdx": 0, "char": "و", "start": 28120, "end": 28508, "duration": 388}, {"wordIdx": 23, "charIdx": 1, "char": "و", "start": 28508, "end": 28896, "duration": 388}, {"wordIdx": 23, "charIdx": 2, "char": "ج", "start": 28896, "end": 29246, "duration": 350}, {"wordIdx": 23, "charIdx": 3, "char": "د", "start": 29284, "end": 29634, "duration": 350}, {"wordIdx": 23, "charIdx": 4, "char": "ك", "start": 29672, "end": 30022, "duration": 350}, {"wordIdx": 24, "charIdx": 0, "char": "ض", "start": 30060, "end": 30410, "duration": 350}, {"wordIdx": 24, "charIdx": 1, "char": "ا", "start": 30800, "end": 31540, "duration": 740}, {"wordIdx": 24, "charIdx": 2, "char": "د", "start": 31540, "end": 31890, "duration": 350}, {"wordIdx": 24, "charIdx": 3, "char": "ل", "start": 32280, "end": 32630, "duration": 350}, {"wordIdx": 24, "charIdx": 4, "char": "ا", "start": 33020, "end": 33760, "duration": 740}, {"wordIdx": 25, "charIdx": 0, "char": "ف", "start": 33760, "end": 34110, "duration": 350}, {"wordIdx": 25, "charIdx": 1, "char": "ه", "start": 34130, "end": 34480, "duration": 350}, {"wordIdx": 25, "charIdx": 2, "char": "د", "start": 34500, "end": 34850, "duration": 350}, {"wordIdx": 25, "charIdx": 3, "char": "ي", "start": 34870, "end": 35240, "duration": 370}, {"wordIdx": 26, "charIdx": 0, "char": "و", "start": 35240, "end": 35532, "duration": 292}, {"wordIdx": 26, "charIdx": 1, "char": "و", "start": 35532, "end": 35824, "duration": 292}, {"wordIdx": 26, "charIdx": 2, "char": "ج", "start": 35824, "end": 36116, "duration": 292}, {"wordIdx": 26, "charIdx": 3, "char": "د", "start": 36116, "end": 36408, "duration": 292}, {"wordIdx": 26, "charIdx": 4, "char": "ك", "start": 36408, "end": 36700, "duration": 292}, {"wordIdx": 27, "charIdx": 0, "char": "ع", "start": 36700, "end": 37050, "duration": 350}, {"wordIdx": 27, "charIdx": 1, "char": "ا", "start": 37084, "end": 37468, "duration": 384}, {"wordIdx": 27, "charIdx": 2, "char": "ئ", "start": 37468, "end": 37818, "duration": 350}, {"wordIdx": 27, "charIdx": 3, "char": "ل", "start": 37852, "end": 38202, "duration": 350}, {"wordIdx": 27, "charIdx": 4, "char": "ا", "start": 38236, "end": 38620, "duration": 384}, {"wordIdx": 28, "charIdx": 0, "char": "ف", "start": 38620, "end": 38970, "duration": 350}, {"wordIdx": 28, "charIdx": 1, "char": "أ", "start": 38988, "end": 39338, "duration": 350}, {"wordIdx": 28, "charIdx": 2, "char": "غ", "start": 39356, "end": 39706, "duration": 350}, {"wordIdx": 28, "charIdx": 3, "char": "ن", "start": 39724, "end": 40074, "duration": 350}, {"wordIdx": 28, "charIdx": 4, "char": "ي", "start": 40092, "end": 40460, "duration": 368}, {"wordIdx": 29, "charIdx": 0, "char": "ف", "start": 40460, "end": 40810, "duration": 350}, {"wordIdx": 29, "charIdx": 1, "char": "أ", "start": 41050, "end": 41400, "duration": 350}, {"wordIdx": 29, "charIdx": 2, "char": "م", "start": 41640, "end": 41990, "duration": 350}, {"wordIdx": 29, "charIdx": 3, "char": "ا", "start": 42230, "end": 42820, "duration": 590}, {"wordIdx": 30, "charIdx": 0, "char": "ل", "start": 42820, "end": 43030, "duration": 210}, {"wordIdx": 30, "charIdx": 1, "char": "ي", "start": 43030, "end": 43240, "duration": 210}, {"wordIdx": 30, "charIdx": 2, "char": "ت", "start": 43240, "end": 43450, "duration": 210}, {"wordIdx": 30, "charIdx": 3, "char": "ي", "start": 43450, "end": 43660, "duration": 210}, {"wordIdx": 30, "charIdx": 4, "char": "م", "start": 43660, "end": 43870, "duration": 210}, {"wordIdx": 30, "charIdx": 5, "char": "ا", "start": 43870, "end": 44080, "duration": 210}, {"wordIdx": 31, "charIdx": 0, "char": "ف", "start": 44080, "end": 44313, "duration": 233}, {"wordIdx": 31, "charIdx": 1, "char": "ل", "start": 44313, "end": 44546, "duration": 233}, {"wordIdx": 31, "charIdx": 2, "char": "ا", "start": 44546, "end": 44780, "duration": 234}, {"wordIdx": 32, "charIdx": 0, "char": "ت", "start": 44780, "end": 45070, "duration": 290}, {"wordIdx": 32, "charIdx": 1, "char": "ق", "start": 45070, "end": 45360, "duration": 290}, {"wordIdx": 32, "charIdx": 2, "char": "ه", "start": 45360, "end": 45650, "duration": 290}, {"wordIdx": 32, "charIdx": 3, "char": "ر", "start": 45650, "end": 45940, "duration": 290}, {"wordIdx": 33, "charIdx": 0, "char": "و", "start": 45940, "end": 46330, "duration": 390}, {"wordIdx": 33, "charIdx": 1, "char": "أ", "start": 46330, "end": 46680, "duration": 350}, {"wordIdx": 33, "charIdx": 2, "char": "م", "start": 46720, "end": 47070, "duration": 350}, {"wordIdx": 33, "charIdx": 3, "char": "ا", "start": 47110, "end": 47500, "duration": 390}, {"wordIdx": 34, "charIdx": 0, "char": "ا", "start": 47500, "end": 47810, "duration": 310}, {"wordIdx": 34, "charIdx": 1, "char": "ل", "start": 47810, "end": 48120, "duration": 310}, {"wordIdx": 34, "charIdx": 2, "char": "س", "start": 48120, "end": 48430, "duration": 310}, {"wordIdx": 34, "charIdx": 3, "char": "ا", "start": 48430, "end": 48740, "duration": 310}, {"wordIdx": 34, "charIdx": 4, "char": "ئ", "start": 48740, "end": 49050, "duration": 310}, {"wordIdx": 34, "charIdx": 5, "char": "ل", "start": 49050, "end": 49360, "duration": 310}, {"wordIdx": 35, "charIdx": 0, "char": "ف", "start": 49360, "end": 49633, "duration": 273}, {"wordIdx": 35, "charIdx": 1, "char": "ل", "start": 49633, "end": 49906, "duration": 273}, {"wordIdx": 35, "charIdx": 2, "char": "ا", "start": 49906, "end": 50180, "duration": 274}, {"wordIdx": 36, "charIdx": 0, "char": "ت", "start": 50180, "end": 50530, "duration": 350}, {"wordIdx": 36, "charIdx": 1, "char": "ن", "start": 50535, "end": 50885, "duration": 350}, {"wordIdx": 36, "charIdx": 2, "char": "ه", "start": 50890, "end": 51240, "duration": 350}, {"wordIdx": 36, "charIdx": 3, "char": "ر", "start": 51245, "end": 51595, "duration": 350}, {"wordIdx": 37, "charIdx": 0, "char": "و", "start": 51600, "end": 52010, "duration": 410}, {"wordIdx": 37, "charIdx": 1, "char": "أ", "start": 52010, "end": 52360, "duration": 350}, {"wordIdx": 37, "charIdx": 2, "char": "م", "start": 52420, "end": 52770, "duration": 350}, {"wordIdx": 37, "charIdx": 3, "char": "ا", "start": 52830, "end": 53240, "duration": 410}, {"wordIdx": 38, "charIdx": 0, "char": "ب", "start": 53240, "end": 53544, "duration": 304}, {"wordIdx": 38, "charIdx": 1, "char": "ن", "start": 53544, "end": 53848, "duration": 304}, {"wordIdx": 38, "charIdx": 2, "char": "ع", "start": 53848, "end": 54152, "duration": 304}, {"wordIdx": 38, "charIdx": 3, "char": "م", "start": 54152, "end": 54456, "duration": 304}, {"wordIdx": 38, "charIdx": 4, "char": "ة", "start": 54456, "end": 54760, "duration": 304}, {"wordIdx": 39, "charIdx": 0, "char": "ر", "start": 54760, "end": 55100, "duration": 340}, {"wordIdx": 39, "charIdx": 1, "char": "ب", "start": 55100, "end": 55440, "duration": 340}, {"wordIdx": 39, "charIdx": 2, "char": "ك", "start": 55440, "end": 55780, "duration": 340}, {"wordIdx": 40, "charIdx": 0, "char": "ف", "start": 55780, "end": 55955, "duration": 175}, {"wordIdx": 40, "charIdx": 1, "char": "ح", "start": 55955, "end": 56130, "duration": 175}, {"wordIdx": 40, "charIdx": 2, "char": "د", "start": 56130, "end": 56305, "duration": 175}, {"wordIdx": 40, "charIdx": 3, "char": "ف", "start": 56305, "end": 56480, "duration": 175}]
+[
+  {
+    "char": "وَ",
+    "start": 3.72,
+    "end": 3.744,
+    "idx": 0
+  },
+  {
+    "char": "ٱ",
+    "start": 3.744,
+    "end": 4.144,
+    "idx": 1
+  },
+  {
+    "char": "ل",
+    "start": 4.144,
+    "end": 4.368,
+    "idx": 2
+  },
+  {
+    "char": "ضُّ",
+    "start": 4.368,
+    "end": 4.448,
+    "idx": 3
+  },
+  {
+    "char": "حَ",
+    "start": 4.448,
+    "end": 4.624,
+    "idx": 4
+  },
+  {
+    "char": "ىٰ",
+    "start": 4.624,
+    "end": 4.7,
+    "idx": 5
+  },
+  {
+    "char": "وَ",
+    "start": 4.9,
+    "end": 5.08,
+    "idx": 6
+  },
+  {
+    "char": "ٱ",
+    "start": 5.08,
+    "end": 5.26,
+    "idx": 7
+  },
+  {
+    "char": "لَّ",
+    "start": 5.26,
+    "end": 5.4399999999999995,
+    "idx": 8
+  },
+  {
+    "char": "يْ",
+    "start": 5.4399999999999995,
+    "end": 5.62,
+    "idx": 9
+  },
+  {
+    "char": "لِ",
+    "start": 5.62,
+    "end": 5.8,
+    "idx": 10
+  },
+  {
+    "char": "إِ",
+    "start": 6.12,
+    "end": 6.144,
+    "idx": 11
+  },
+  {
+    "char": "ذَ",
+    "start": 6.144,
+    "end": 6.32,
+    "idx": 12
+  },
+  {
+    "char": "ا",
+    "start": 6.32,
+    "end": 6.42,
+    "idx": 13
+  },
+  {
+    "char": "سَ",
+    "start": 6.74,
+    "end": 6.880000000000001,
+    "idx": 14
+  },
+  {
+    "char": "جَ",
+    "start": 6.88,
+    "end": 7.312,
+    "idx": 15
+  },
+  {
+    "char": "ىٰ",
+    "start": 7.312,
+    "end": 7.44,
+    "idx": 16
+  },
+  {
+    "char": "مَ",
+    "start": 7.66,
+    "end": 7.696,
+    "idx": 17
+  },
+  {
+    "char": "ا",
+    "start": 7.696,
+    "end": 7.76,
+    "idx": 18
+  },
+  {
+    "char": "وَ",
+    "start": 8.16,
+    "end": 8.576,
+    "idx": 19
+  },
+  {
+    "char": "دَّ",
+    "start": 8.576,
+    "end": 8.768,
+    "idx": 20
+  },
+  {
+    "char": "عَ",
+    "start": 8.768,
+    "end": 8.784,
+    "idx": 21
+  },
+  {
+    "char": "كَ",
+    "start": 8.784,
+    "end": 9.08,
+    "idx": 22
+  },
+  {
+    "char": "رَ",
+    "start": 9.34,
+    "end": 9.471999999999998,
+    "idx": 23
+  },
+  {
+    "char": "بُّ",
+    "start": 9.472,
+    "end": 9.888,
+    "idx": 24
+  },
+  {
+    "char": "كَ",
+    "start": 9.888,
+    "end": 10.04,
+    "idx": 25
+  },
+  {
+    "char": "وَ",
+    "start": 10.32,
+    "end": 10.352,
+    "idx": 26
+  },
+  {
+    "char": "مَ",
+    "start": 10.352,
+    "end": 10.608,
+    "idx": 27
+  },
+  {
+    "char": "ا",
+    "start": 10.608,
+    "end": 10.68,
+    "idx": 28
+  },
+  {
+    "char": "قَ",
+    "start": 11.14,
+    "end": 11.311999999999998,
+    "idx": 29
+  },
+  {
+    "char": "لَ",
+    "start": 11.312,
+    "end": 11.6,
+    "idx": 30
+  },
+  {
+    "char": "ىٰ",
+    "start": 11.6,
+    "end": 11.72,
+    "idx": 31
+  },
+  {
+    "char": "وَ",
+    "start": 13.12,
+    "end": 13.328,
+    "idx": 32
+  },
+  {
+    "char": "لَ",
+    "start": 13.328,
+    "end": 13.68,
+    "idx": 33
+  },
+  {
+    "char": "لْ",
+    "start": 13.68,
+    "end": 13.968,
+    "idx": 34
+  },
+  {
+    "char": "ءَ",
+    "start": 13.968,
+    "end": 14.304,
+    "idx": 35
+  },
+  {
+    "char": "ا",
+    "start": 14.304,
+    "end": 14.416,
+    "idx": 36
+  },
+  {
+    "char": "خِ",
+    "start": 14.416,
+    "end": 14.464,
+    "idx": 37
+  },
+  {
+    "char": "رَ",
+    "start": 14.464,
+    "end": 14.544,
+    "idx": 38
+  },
+  {
+    "char": "ةُ",
+    "start": 14.544,
+    "end": 14.64,
+    "idx": 39
+  },
+  {
+    "char": "خَ",
+    "start": 14.88,
+    "end": 14.992,
+    "idx": 40
+  },
+  {
+    "char": "يْ",
+    "start": 14.992,
+    "end": 15.055999999999997,
+    "idx": 41
+  },
+  {
+    "char": "رٌ",
+    "start": 15.056,
+    "end": 15.42,
+    "idx": 42
+  },
+  {
+    "char": "لَّ",
+    "start": 15.86,
+    "end": 16.128000000000004,
+    "idx": 43
+  },
+  {
+    "char": "كَ",
+    "start": 16.128,
+    "end": 16.159999999999997,
+    "idx": 44
+  },
+  {
+    "char": "مِ",
+    "start": 16.4,
+    "end": 16.490000000000002,
+    "idx": 45
+  },
+  {
+    "char": "نَ",
+    "start": 16.49,
+    "end": 16.58,
+    "idx": 46
+  },
+  {
+    "char": "ٱ",
+    "start": 16.74,
+    "end": 16.96,
+    "idx": 47
+  },
+  {
+    "char": "لْ",
+    "start": 16.96,
+    "end": 17.104,
+    "idx": 48
+  },
+  {
+    "char": "أُ",
+    "start": 17.104,
+    "end": 17.647999999999996,
+    "idx": 49
+  },
+  {
+    "char": "و",
+    "start": 17.648,
+    "end": 17.76,
+    "idx": 50
+  },
+  {
+    "char": "لَ",
+    "start": 17.76,
+    "end": 17.888,
+    "idx": 51
+  },
+  {
+    "char": "ىٰ",
+    "start": 17.888,
+    "end": 17.9,
+    "idx": 52
+  },
+  {
+    "char": "وَ",
+    "start": 18.16,
+    "end": 18.304,
+    "idx": 53
+  },
+  {
+    "char": "لَ",
+    "start": 18.304,
+    "end": 18.448,
+    "idx": 54
+  },
+  {
+    "char": "سَ",
+    "start": 18.448,
+    "end": 18.592,
+    "idx": 55
+  },
+  {
+    "char": "وْ",
+    "start": 18.592,
+    "end": 18.863999999999997,
+    "idx": 56
+  },
+  {
+    "char": "فَ",
+    "start": 18.864,
+    "end": 19.22,
+    "idx": 57
+  },
+  {
+    "char": "يُ",
+    "start": 19.5,
+    "end": 19.692,
+    "idx": 58
+  },
+  {
+    "char": "عْ",
+    "start": 19.692,
+    "end": 19.884,
+    "idx": 59
+  },
+  {
+    "char": "طِ",
+    "start": 19.884,
+    "end": 20.076,
+    "idx": 60
+  },
+  {
+    "char": "ي",
+    "start": 20.076,
+    "end": 20.268,
+    "idx": 61
+  },
+  {
+    "char": "كَ",
+    "start": 20.268,
+    "end": 20.46,
+    "idx": 62
+  },
+  {
+    "char": "رَ",
+    "start": 20.72,
+    "end": 20.96,
+    "idx": 63
+  },
+  {
+    "char": "بُّ",
+    "start": 20.96,
+    "end": 21.2,
+    "idx": 64
+  },
+  {
+    "char": "كَ",
+    "start": 21.2,
+    "end": 21.44,
+    "idx": 65
+  },
+  {
+    "char": "فَ",
+    "start": 21.66,
+    "end": 21.744,
+    "idx": 66
+  },
+  {
+    "char": "تَ",
+    "start": 21.744,
+    "end": 21.968000000000004,
+    "idx": 67
+  },
+  {
+    "char": "رْ",
+    "start": 21.968,
+    "end": 22.896,
+    "idx": 68
+  },
+  {
+    "char": "ضَ",
+    "start": 22.896,
+    "end": 23.728,
+    "idx": 69
+  },
+  {
+    "char": "ىٰٓ",
+    "start": 23.728,
+    "end": 23.780000000000005,
+    "idx": 70
+  },
+  {
+    "char": "أَ",
+    "start": 23.82,
+    "end": 23.967999999999996,
+    "idx": 71
+  },
+  {
+    "char": "لَ",
+    "start": 23.968,
+    "end": 24.032,
+    "idx": 72
+  },
+  {
+    "char": "مْ",
+    "start": 24.032,
+    "end": 24.14,
+    "idx": 73
+  },
+  {
+    "char": "يَ",
+    "start": 24.3,
+    "end": 24.352,
+    "idx": 74
+  },
+  {
+    "char": "جِ",
+    "start": 24.352,
+    "end": 24.768,
+    "idx": 75
+  },
+  {
+    "char": "دْ",
+    "start": 24.768,
+    "end": 24.896,
+    "idx": 76
+  },
+  {
+    "char": "كَ",
+    "start": 24.896,
+    "end": 25.019999999999996,
+    "idx": 77
+  },
+  {
+    "char": "يَ",
+    "start": 25.22,
+    "end": 25.28,
+    "idx": 78
+  },
+  {
+    "char": "تِ",
+    "start": 25.28,
+    "end": 25.552,
+    "idx": 79
+  },
+  {
+    "char": "ي",
+    "start": 25.552,
+    "end": 25.824,
+    "idx": 80
+  },
+  {
+    "char": "مً",
+    "start": 25.824,
+    "end": 26.128,
+    "idx": 81
+  },
+  {
+    "char": "ا",
+    "start": 26.128,
+    "end": 26.14,
+    "idx": 82
+  },
+  {
+    "char": "فَ",
+    "start": 26.9,
+    "end": 27.04,
+    "idx": 83
+  },
+  {
+    "char": "ـَٔ",
+    "start": 27.04,
+    "end": 27.247999999999998,
+    "idx": 84
+  },
+  {
+    "char": "ا",
+    "start": 27.248,
+    "end": 27.344,
+    "idx": 85
+  },
+  {
+    "char": "وَ",
+    "start": 27.344,
+    "end": 27.632,
+    "idx": 86
+  },
+  {
+    "char": "ىٰ",
+    "start": 27.632,
+    "end": 28.2,
+    "idx": 87
+  },
+  {
+    "char": "وَ",
+    "start": 29.0,
+    "end": 29.232,
+    "idx": 88
+  },
+  {
+    "char": "وَ",
+    "start": 29.232,
+    "end": 29.296,
+    "idx": 89
+  },
+  {
+    "char": "جَ",
+    "start": 29.296,
+    "end": 29.728,
+    "idx": 90
+  },
+  {
+    "char": "دَ",
+    "start": 29.728,
+    "end": 29.936,
+    "idx": 91
+  },
+  {
+    "char": "كَ",
+    "start": 29.936,
+    "end": 29.979999999999997,
+    "idx": 92
+  },
+  {
+    "char": "ضَ",
+    "start": 33.12,
+    "end": 33.205,
+    "idx": 93
+  },
+  {
+    "char": "آ",
+    "start": 33.205,
+    "end": 33.29,
+    "idx": 94
+  },
+  {
+    "char": "لًّ",
+    "start": 33.29,
+    "end": 33.375,
+    "idx": 95
+  },
+  {
+    "char": "ا",
+    "start": 33.375,
+    "end": 33.46,
+    "idx": 96
+  },
+  {
+    "char": "فَ",
+    "start": 34.44,
+    "end": 34.73599999999999,
+    "idx": 97
+  },
+  {
+    "char": "هَ",
+    "start": 34.736,
+    "end": 34.896,
+    "idx": 98
+  },
+  {
+    "char": "دَ",
+    "start": 34.896,
+    "end": 35.056,
+    "idx": 99
+  },
+  {
+    "char": "ىٰ",
+    "start": 35.056,
+    "end": 35.34,
+    "idx": 100
+  },
+  {
+    "char": "وَ",
+    "start": 35.52,
+    "end": 35.552,
+    "idx": 101
+  },
+  {
+    "char": "وَ",
+    "start": 35.552,
+    "end": 35.808,
+    "idx": 102
+  },
+  {
+    "char": "جَ",
+    "start": 35.808,
+    "end": 36.048,
+    "idx": 103
+  },
+  {
+    "char": "دَ",
+    "start": 36.048,
+    "end": 36.304,
+    "idx": 104
+  },
+  {
+    "char": "كَ",
+    "start": 36.304,
+    "end": 36.56,
+    "idx": 105
+  },
+  {
+    "char": "عَ",
+    "start": 36.86,
+    "end": 37.008,
+    "idx": 106
+  },
+  {
+    "char": "آ",
+    "start": 37.008,
+    "end": 37.376,
+    "idx": 107
+  },
+  {
+    "char": "ئِ",
+    "start": 37.376,
+    "end": 37.952,
+    "idx": 108
+  },
+  {
+    "char": "لً",
+    "start": 37.952,
+    "end": 38.27199999999999,
+    "idx": 109
+  },
+  {
+    "char": "ا",
+    "start": 38.272,
+    "end": 38.6,
+    "idx": 110
+  },
+  {
+    "char": "فَ",
+    "start": 39.32,
+    "end": 39.52,
+    "idx": 111
+  },
+  {
+    "char": "أَ",
+    "start": 39.52,
+    "end": 39.76,
+    "idx": 112
+  },
+  {
+    "char": "غْ",
+    "start": 39.76,
+    "end": 40.016,
+    "idx": 113
+  },
+  {
+    "char": "نَ",
+    "start": 40.016,
+    "end": 40.224,
+    "idx": 114
+  },
+  {
+    "char": "ىٰ",
+    "start": 40.224,
+    "end": 40.3,
+    "idx": 115
+  },
+  {
+    "char": "فَ",
+    "start": 41.62,
+    "end": 41.872,
+    "idx": 116
+  },
+  {
+    "char": "أَ",
+    "start": 41.872,
+    "end": 42.16,
+    "idx": 117
+  },
+  {
+    "char": "مَّ",
+    "start": 42.16,
+    "end": 42.672,
+    "idx": 118
+  },
+  {
+    "char": "ا",
+    "start": 42.672,
+    "end": 42.82,
+    "idx": 119
+  },
+  {
+    "char": "ٱ",
+    "start": 42.92,
+    "end": 43.008,
+    "idx": 120
+  },
+  {
+    "char": "لْ",
+    "start": 43.008,
+    "end": 43.216,
+    "idx": 121
+  },
+  {
+    "char": "يَ",
+    "start": 43.216,
+    "end": 43.552,
+    "idx": 122
+  },
+  {
+    "char": "تِ",
+    "start": 43.552,
+    "end": 43.616,
+    "idx": 123
+  },
+  {
+    "char": "ي",
+    "start": 43.616,
+    "end": 43.728,
+    "idx": 124
+  },
+  {
+    "char": "مَ",
+    "start": 43.728,
+    "end": 43.96,
+    "idx": 125
+  },
+  {
+    "char": "فَ",
+    "start": 44.2,
+    "end": 44.239999999999995,
+    "idx": 126
+  },
+  {
+    "char": "لَ",
+    "start": 44.24,
+    "end": 44.544,
+    "idx": 127
+  },
+  {
+    "char": "ا",
+    "start": 44.544,
+    "end": 44.58,
+    "idx": 128
+  },
+  {
+    "char": "تَ",
+    "start": 45.02,
+    "end": 45.056,
+    "idx": 129
+  },
+  {
+    "char": "قْ",
+    "start": 45.056,
+    "end": 45.28,
+    "idx": 130
+  },
+  {
+    "char": "هَ",
+    "start": 45.28,
+    "end": 45.552,
+    "idx": 131
+  },
+  {
+    "char": "رْ",
+    "start": 45.552,
+    "end": 45.72,
+    "idx": 132
+  },
+  {
+    "char": "وَ",
+    "start": 46.52,
+    "end": 46.765,
+    "idx": 133
+  },
+  {
+    "char": "أَ",
+    "start": 46.765,
+    "end": 47.010000000000005,
+    "idx": 134
+  },
+  {
+    "char": "مَّ",
+    "start": 47.010000000000005,
+    "end": 47.255,
+    "idx": 135
+  },
+  {
+    "char": "ا",
+    "start": 47.255,
+    "end": 47.5,
+    "idx": 136
+  },
+  {
+    "char": "ٱ",
+    "start": 47.58,
+    "end": 48.144,
+    "idx": 137
+  },
+  {
+    "char": "ل",
+    "start": 48.144,
+    "end": 48.368,
+    "idx": 138
+  },
+  {
+    "char": "سَّ",
+    "start": 48.368,
+    "end": 48.448,
+    "idx": 139
+  },
+  {
+    "char": "آ",
+    "start": 48.448,
+    "end": 48.592,
+    "idx": 140
+  },
+  {
+    "char": "ئِ",
+    "start": 48.592,
+    "end": 48.816,
+    "idx": 141
+  },
+  {
+    "char": "لَ",
+    "start": 48.816,
+    "end": 49.28,
+    "idx": 142
+  },
+  {
+    "char": "فَ",
+    "start": 49.54,
+    "end": 49.68,
+    "idx": 143
+  },
+  {
+    "char": "لَ",
+    "start": 49.68,
+    "end": 49.872,
+    "idx": 144
+  },
+  {
+    "char": "ا",
+    "start": 49.872,
+    "end": 49.94,
+    "idx": 145
+  },
+  {
+    "char": "تَ",
+    "start": 50.36,
+    "end": 50.384,
+    "idx": 146
+  },
+  {
+    "char": "نْ",
+    "start": 50.384,
+    "end": 50.512,
+    "idx": 147
+  },
+  {
+    "char": "هَ",
+    "start": 50.512,
+    "end": 50.976,
+    "idx": 148
+  },
+  {
+    "char": "رْ",
+    "start": 50.976,
+    "end": 51.12,
+    "idx": 149
+  },
+  {
+    "char": "وَ",
+    "start": 52.02,
+    "end": 52.304,
+    "idx": 150
+  },
+  {
+    "char": "أَ",
+    "start": 52.304,
+    "end": 52.768,
+    "idx": 151
+  },
+  {
+    "char": "مَّ",
+    "start": 52.768,
+    "end": 52.944,
+    "idx": 152
+  },
+  {
+    "char": "ا",
+    "start": 52.944,
+    "end": 53.32,
+    "idx": 153
+  },
+  {
+    "char": "بِ",
+    "start": 53.7,
+    "end": 53.983999999999995,
+    "idx": 154
+  },
+  {
+    "char": "نِ",
+    "start": 53.984,
+    "end": 54.08,
+    "idx": 155
+  },
+  {
+    "char": "عْ",
+    "start": 54.08,
+    "end": 54.128,
+    "idx": 156
+  },
+  {
+    "char": "مَ",
+    "start": 54.128,
+    "end": 54.44799999999999,
+    "idx": 157
+  },
+  {
+    "char": "ةِ",
+    "start": 54.448,
+    "end": 54.5,
+    "idx": 158
+  },
+  {
+    "char": "رَ",
+    "start": 54.96,
+    "end": 55.04,
+    "idx": 159
+  },
+  {
+    "char": "بِّ",
+    "start": 55.04,
+    "end": 55.456,
+    "idx": 160
+  },
+  {
+    "char": "كَ",
+    "start": 55.456,
+    "end": 55.72,
+    "idx": 161
+  },
+  {
+    "char": "فَ",
+    "start": 55.96,
+    "end": 56.032,
+    "idx": 162
+  },
+  {
+    "char": "حَ",
+    "start": 56.032,
+    "end": 56.288,
+    "idx": 163
+  },
+  {
+    "char": "دِّ",
+    "start": 56.288,
+    "end": 56.784,
+    "idx": 164
+  },
+  {
+    "char": "ثْ",
+    "start": 56.784,
+    "end": 57.4,
+    "idx": 165
+  }
+]
