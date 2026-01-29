@@ -123,6 +123,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showDebug, setShowDebug] = useState(false);
+  const [showWordCards, setShowWordCards] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const syncState = useLetterSync(audioRef, letterTiming);
@@ -208,6 +209,14 @@ function App() {
           ))}
         </select>
 
+        <label className="debug-toggle">
+          <input
+            type="checkbox"
+            checked={showWordCards}
+            onChange={(e) => setShowWordCards(e.target.checked)}
+          />
+          Word Cards
+        </label>
         <label className="debug-toggle">
           <input
             type="checkbox"
@@ -298,8 +307,8 @@ function App() {
                   })}
                 </div>
 
-                {/* Word Cards with Transliteration */}
-                {verse.words && verse.words.length > 0 && (
+                {/* Word Cards with Transliteration (optional) */}
+                {showWordCards && verse.words && verse.words.length > 0 && (
                   <div className="word-cards-row">
                     {verse.words.map((word, wIdx) => {
                       // Map to global word index
