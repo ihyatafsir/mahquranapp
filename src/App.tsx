@@ -7,12 +7,6 @@ import './index.css';
 // Available Reciters (Sheikh Mohammad Ahmad Hassan as default primary)
 const RECITERS = [
   {
-    id: "minshawi_mujawwad",
-    name: "Sheikh Mohamed Siddiq Al-Minshawi (Mujawwad)",
-    shortName: "Al-Minshawi (Mujawwad)",
-    description: "Egyptian Master Reciter • Classical Tahqeeq & Long Melodic Style",
-  },
-  {
     id: 'mah',
     name: 'Sheikh Mohammad Ahmad Hassan',
     shortName: 'Mohammad Ahmad Hassan (MAH)',
@@ -62,181 +56,95 @@ const ABDUL_BASIT_SURAHS = [
   { number: 5, name: 'Al-Ma\'idah', arabicName: 'المائدة', meaning: 'The Table Spread', versesCount: 120 },
 ];
 
-const MINSHAWI_SURAHS = [
-  { number: 112, name: "Al-Ikhlas", arabicName: "الإخلاص", meaning: "The Sincerity", versesCount: 4 },
-  { number: 1, name: "Al-Fatiha", arabicName: "الفاتحة", meaning: "The Opening", versesCount: 7 },
-  { number: 36, name: "Ya-Sin", arabicName: "يس", meaning: "Ya-Sin", versesCount: 83 },
-];
-
 const SURAHS_BY_RECITER: Record<string, typeof MAH_SURAHS> = {
-  minshawi_mujawwad: MINSHAWI_SURAHS,
   mah: MAH_SURAHS,
   abdul_basit: ABDUL_BASIT_SURAHS,
 };
 
-// Decompose an Arabic string into base letters + diacritics
-function splitArabicIntoLetters(text: string): string[] {
-  const DIACRITICS = new Set([
-    "\u064B", "\u064C", "\u064D", "\u064E", "\u064F", "\u0650", "\u0651", "\u0652",
-    "\u0653", "\u0654", "\u0655", "\u0656", "\u0657", "\u0658", "\u065C", "\u065D",
-    "\u065E", "\u065F", "\u0670", "\u06E1", "\u06DF", "\u06E0", "\u06E2", "\u06E3"
-  ]);
-  const chunks: string[] = [];
-  let curr = "";
-  for (const char of text) {
-    if (DIACRITICS.has(char)) {
-      curr += char;
-    } else {
-      if (curr) chunks.push(curr);
-      curr = char;
-    }
-  }
-  if (curr) chunks.push(curr);
-  return chunks;
-}
+// Group timing letters into TimedWord structures
+function groupLettersIntoWords(timing: LetterTiming[], verses: Verse[]): TimedWord[] {
+  if (!timing || timing.length === 0) return [];
 
-// Robust mapping of flat or indexed letter timing into Verse -> Word -> Letters
-function distributeTimingToVerses(timing: LetterTiming[], verses: Verse[]): Map<number, TimedWord[]> {
-  const verseMap = new Map<number, TimedWord[]>();
-  verses.forEach((_, vIdx) => verseMap.set(vIdx, []));
+  const wordsMap = new Map<number, TimedWord>();
 
-  if (!verses || verses.length === 0) return verseMap;
-
-  // If timing is empty, generate placeholder structure from verses
-  if (!timing || timing.length === 0) {
-    let globalWIdx = 0;
-    let globalLIdx = 0;
-    verses.forEach((verse, vIdx) => {
-      const wordsList = verse.words && verse.words.length > 0
-        ? verse.words
-        : verse.text.trim().split(/\s+/).map(w => ({ arabic: w }));
-
-      const timedWordsForVerse: TimedWord[] = [];
-      wordsList.forEach(w => {
-        const letters = splitArabicIntoLetters(w.arabic);
-        const timedLetters: TimedLetter[] = letters.map(c => ({
-          char: c,
-          globalIdx: globalLIdx++,
-          start: 0,
-          end: 0,
-        }));
-        timedWordsForVerse.push({
-          globalWordIdx: globalWIdx++,
+  // Map of verse word data for transliteration and roots
+  const verseWordMeta: { arabic: string; translit?: string; root?: string; verseIdx: number; ayah: number }[] = [];
+  verses.forEach((verse, vIdx) => {
+    if (verse.words && verse.words.length > 0) {
+      verse.words.forEach(w => {
+        verseWordMeta.push({
+          arabic: w.arabic,
+          translit: w.translit,
+          root: w.root,
           verseIdx: vIdx,
           ayah: verse.ayah,
-          letters: timedLetters,
-          text: w.arabic,
-          start: 0,
-          end: 0,
-          arabic: w.arabic,
-          translit: (w as any).translit,
-          root: (w as any).root,
         });
       });
-      verseMap.set(vIdx, timedWordsForVerse);
-    });
-    return verseMap;
-  }
-
-  // Check if timing has explicit verseIdx / ayah fields
-  const hasExplicitVerseInfo = timing.some(t => typeof t.verseIdx !== "undefined" || typeof t.ayah !== "undefined");
-
-  if (hasExplicitVerseInfo) {
-    const wordsMap = new Map<number, TimedWord>();
-    timing.forEach((letter, globalIdx) => {
-      const vIdx = typeof letter.verseIdx !== "undefined" 
-        ? letter.verseIdx 
-        : (letter.ayah ? letter.ayah - 1 : 0);
-      const ayah = letter.ayah ?? (vIdx + 1);
-      const wIdx = letter.wordIdx ?? globalIdx;
-
-      if (!wordsMap.has(wIdx)) {
-        wordsMap.set(wIdx, {
-          globalWordIdx: wIdx,
+    } else {
+      const rawWords = verse.text.trim().split(/\s+/).filter(Boolean);
+      rawWords.forEach(wText => {
+        verseWordMeta.push({
+          arabic: wText,
           verseIdx: vIdx,
-          ayah: ayah,
-          letters: [],
-          text: "",
-          start: letter.start,
-          end: letter.end,
+          ayah: verse.ayah,
         });
-      }
+      });
+    }
+  });
 
-      const curWord = wordsMap.get(wIdx)!;
-      curWord.letters.push({
-        char: letter.char,
-        globalIdx,
+  timing.forEach((letter, globalIdx) => {
+    const wIdx = letter.wordIdx ?? 0;
+    const vIdx = (typeof letter.verseIdx !== 'undefined') ? letter.verseIdx : ((letter.ayah ?? 1) - 1);
+    const ayah = letter.ayah ?? (vIdx + 1);
+
+    if (!wordsMap.has(wIdx)) {
+      const meta = verseWordMeta[wIdx];
+      wordsMap.set(wIdx, {
+        globalWordIdx: wIdx,
+        verseIdx: vIdx,
+        ayah: ayah,
+        letters: [],
+        text: '',
         start: letter.start,
         end: letter.end,
+        arabic: meta?.arabic,
+        translit: meta?.translit,
+        root: meta?.root,
       });
-      curWord.text += letter.char;
-      curWord.start = Math.min(curWord.start, letter.start);
-      curWord.end = Math.max(curWord.end, letter.end);
-    });
+    }
 
-    wordsMap.forEach(word => {
-      const vIdx = word.verseIdx;
-      if (!verseMap.has(vIdx)) verseMap.set(vIdx, []);
+    const currentWord = wordsMap.get(wIdx)!;
+    const timedLetter: TimedLetter = {
+      char: letter.char,
+      globalIdx,
+      start: letter.start,
+      end: letter.end,
+    };
+
+    currentWord.letters.push(timedLetter);
+    currentWord.text += letter.char;
+    currentWord.end = Math.max(currentWord.end, letter.end);
+    currentWord.start = Math.min(currentWord.start, letter.start);
+  });
+
+  return Array.from(wordsMap.values()).sort((a, b) => a.globalWordIdx - b.globalWordIdx);
+}
+
+// Distribute TimedWords into verse buckets
+function distributeToVerses(timedWords: TimedWord[], verses: Verse[]): Map<number, TimedWord[]> {
+  const verseMap = new Map<number, TimedWord[]>();
+
+  verses.forEach((_, vIdx) => {
+    verseMap.set(vIdx, []);
+  });
+
+  timedWords.forEach(word => {
+    const vIdx = word.verseIdx;
+    if (verseMap.has(vIdx)) {
       verseMap.get(vIdx)!.push(word);
-    });
-
-    return verseMap;
-  }
-
-  // Fallback for flat timing (e.g. Abdul Basit): map timing letters sequentially onto verse words
-  let tCursor = 0;
-  let globalWordIdx = 0;
-
-  verses.forEach((verse, vIdx) => {
-    const wordsList = verse.words && verse.words.length > 0
-      ? verse.words
-      : verse.text.trim().split(/\s+/).map(w => ({ arabic: w }));
-
-    const timedWordsForVerse: TimedWord[] = [];
-
-    wordsList.forEach(w => {
-      const wordLetters = splitArabicIntoLetters(w.arabic);
-      const matchedLetters: TimedLetter[] = [];
-      let wStart = Infinity;
-      let wEnd = -Infinity;
-
-      for (let i = 0; i < wordLetters.length; i++) {
-        if (tCursor < timing.length) {
-          const tLetter = timing[tCursor];
-          matchedLetters.push({
-            char: tLetter.char || wordLetters[i],
-            globalIdx: tCursor,
-            start: tLetter.start,
-            end: tLetter.end,
-          });
-          wStart = Math.min(wStart, tLetter.start);
-          wEnd = Math.max(wEnd, tLetter.end);
-          tCursor++;
-        } else {
-          matchedLetters.push({
-            char: wordLetters[i],
-            globalIdx: tCursor++,
-            start: wEnd > 0 ? wEnd : 0,
-            end: wEnd > 0 ? wEnd + 0.1 : 0.1,
-          });
-        }
-      }
-
-      timedWordsForVerse.push({
-        globalWordIdx: globalWordIdx++,
-        verseIdx: vIdx,
-        ayah: verse.ayah,
-        letters: matchedLetters,
-        text: w.arabic,
-        start: wStart === Infinity ? 0 : wStart,
-        end: wEnd === -Infinity ? 0 : wEnd,
-        arabic: w.arabic,
-        translit: (w as any).translit,
-        root: (w as any).root,
-      });
-    });
-
-    verseMap.set(vIdx, timedWordsForVerse);
+    } else {
+      verseMap.set(vIdx, [word]);
+    }
   });
 
   return verseMap;
@@ -251,7 +159,7 @@ function formatTime(seconds: number): string {
 }
 
 export default function App() {
-  const [selectedReciter, setSelectedReciter] = useState('minshawi_mujawwad');
+  const [selectedReciter, setSelectedReciter] = useState('mah');
   const [selectedSurah, setSelectedSurah] = useState(36); // Default to Surah 36 (Ya-Sin) or 1
   const [verses, setVerses] = useState<Verse[]>([]);
   const [letterTiming, setLetterTiming] = useState<LetterTiming[]>([]);
@@ -276,7 +184,16 @@ export default function App() {
   const currentSurahInfo = availableSurahs.find(s => s.number === selectedSurah) || availableSurahs[0];
 
   // Group timing data into words
-  const verseTimedWords = useMemo(() => distributeTimingToVerses(letterTiming, verses), [letterTiming, verses]);
+  const timedWords = useMemo(
+    () => groupLettersIntoWords(letterTiming, verses),
+    [letterTiming, verses]
+  );
+
+  // Group words into verses
+  const verseTimedWords = useMemo(
+    () => distributeToVerses(timedWords, verses),
+    [timedWords, verses]
+  );
 
   // Load Quranic data and letter timing
   useEffect(() => {
@@ -393,12 +310,7 @@ export default function App() {
   };
 
   const currentLetter = syncState.currentLetterIdx >= 0 ? letterTiming[syncState.currentLetterIdx] : null;
-  const allWords = useMemo(() => {
-    const list: TimedWord[] = [];
-    verseTimedWords.forEach(words => list.push(...words));
-    return list;
-  }, [verseTimedWords]);
-  const currentWord = allWords.find(w => w.globalWordIdx === syncState.currentWordIdx);
+  const currentWord = timedWords.find(w => w.globalWordIdx === syncState.currentWordIdx);
 
   // Audio source URL
   const audioSrc = useMemo(() => {
