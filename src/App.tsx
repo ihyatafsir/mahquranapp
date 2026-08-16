@@ -7,6 +7,12 @@ import './index.css';
 // Available Reciters (Sheikh Mohammad Ahmad Hassan as default primary)
 const RECITERS = [
   {
+    id: "minshawi_mujawwad",
+    name: "Sheikh Mohamed Siddiq Al-Minshawi (Mujawwad)",
+    shortName: "Al-Minshawi (Mujawwad)",
+    description: "Egyptian Master Reciter • Classical Tahqeeq & Long Melodic Style",
+  },
+  {
     id: 'mah',
     name: 'Sheikh Mohammad Ahmad Hassan',
     shortName: 'Mohammad Ahmad Hassan (MAH)',
@@ -56,7 +62,14 @@ const ABDUL_BASIT_SURAHS = [
   { number: 5, name: 'Al-Ma\'idah', arabicName: 'المائدة', meaning: 'The Table Spread', versesCount: 120 },
 ];
 
+const MINSHAWI_SURAHS = [
+  { number: 112, name: "Al-Ikhlas", arabicName: "الإخلاص", meaning: "The Sincerity", versesCount: 4 },
+  { number: 1, name: "Al-Fatiha", arabicName: "الفاتحة", meaning: "The Opening", versesCount: 7 },
+  { number: 36, name: "Ya-Sin", arabicName: "يس", meaning: "Ya-Sin", versesCount: 83 },
+];
+
 const SURAHS_BY_RECITER: Record<string, typeof MAH_SURAHS> = {
+  minshawi_mujawwad: MINSHAWI_SURAHS,
   mah: MAH_SURAHS,
   abdul_basit: ABDUL_BASIT_SURAHS,
 };
