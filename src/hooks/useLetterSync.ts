@@ -2,16 +2,16 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import type { LetterTiming, SyncState } from '../types/quran';
 
 // Binary search to find current letter index based on audio time
-// A letter stays "active" until the NEXT letter starts (not just until its own end time)
-// This eliminates visual gaps during silence between letters
-function findCurrentLetterIdx(timing: LetterTiming[], currentTime: number): number {
-    if (timing.length === 0) return -1;
+// A letter stays "active" until the NEXT letter starts
+export function findCurrentLetterIdx(timing: LetterTiming[], currentTime: number): number {
+    if (!timing || timing.length === 0) return -1;
 
     // Before first letter starts
     if (currentTime < timing[0].start) return -1;
 
     // After or at last letter's start - return last letter
     if (currentTime >= timing[timing.length - 1].start) {
+        // If currentTime is far beyond the last letter's end + 2s, keep or reset
         return timing.length - 1;
     }
 
@@ -37,6 +37,7 @@ export function useLetterSync(
 ) {
     const [syncState, setSyncState] = useState<SyncState>({
         currentTime: 0,
+        duration: 0,
         currentLetterIdx: -1,
         currentWordIdx: -1,
         currentVerseIdx: 0,
@@ -47,18 +48,36 @@ export function useLetterSync(
 
     const updateSync = useCallback(() => {
         const audio = audioRef.current;
-        if (!audio || letterTiming.length === 0) return;
+        if (!audio) return;
 
         const currentTime = audio.currentTime;
-        const letterIdx = findCurrentLetterIdx(letterTiming, currentTime);
+        const duration = audio.duration || 0;
 
-        const wordIdx = letterIdx >= 0 ? letterTiming[letterIdx]?.wordIdx ?? -1 : -1;
+        if (letterTiming.length === 0) {
+            setSyncState(prev => ({
+                ...prev,
+                currentTime,
+                duration,
+                isPlaying: !audio.paused,
+            }));
+            if (!audio.paused) {
+                animationFrameRef.current = requestAnimationFrame(updateSync);
+            }
+            return;
+        }
+
+        const letterIdx = findCurrentLetterIdx(letterTiming, currentTime);
+        const letter = letterIdx >= 0 ? letterTiming[letterIdx] : null;
+        const wordIdx = letter ? (letter.wordIdx ?? -1) : -1;
+        const verseIdx = letter ? (letter.verseIdx ?? 0) : 0;
 
         setSyncState(prev => ({
             ...prev,
             currentTime,
+            duration,
             currentLetterIdx: letterIdx,
             currentWordIdx: wordIdx,
+            currentVerseIdx: verseIdx,
             isPlaying: !audio.paused,
         }));
 
@@ -93,16 +112,25 @@ export function useLetterSync(
             updateSync();
         };
 
+        const handleLoadedMetadata = () => {
+            setSyncState(prev => ({
+                ...prev,
+                duration: audio.duration || 0,
+            }));
+        };
+
         audio.addEventListener('play', handlePlay);
         audio.addEventListener('pause', handlePause);
         audio.addEventListener('timeupdate', handleTimeUpdate);
         audio.addEventListener('seeked', handleSeeked);
+        audio.addEventListener('loadedmetadata', handleLoadedMetadata);
 
         return () => {
             audio.removeEventListener('play', handlePlay);
             audio.removeEventListener('pause', handlePause);
             audio.removeEventListener('timeupdate', handleTimeUpdate);
             audio.removeEventListener('seeked', handleSeeked);
+            audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
 
             if (animationFrameRef.current) {
                 cancelAnimationFrame(animationFrameRef.current);

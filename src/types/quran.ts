@@ -12,21 +12,24 @@ export interface Verse {
     text: string;
     translation: string;
     words: Word[];
-    hasIhya: boolean;
+    hasIhya?: boolean;
 }
 
 export interface SurahData {
     [surahNumber: string]: Verse[];
 }
 
-// Letter timing from MAH audio
+// Letter timing from audio alignment
 export interface LetterTiming {
     charIdx: number;
     char: string;
     start: number;
     end: number;
-    duration: number;
+    duration?: number;
     wordIdx: number;
+    verseIdx?: number;
+    ayah?: number;
+    idx?: number;
 }
 
 // Verse timing
@@ -41,6 +44,7 @@ export interface SurahInfo {
     number: number;
     name: string;
     arabicName: string;
+    meaning?: string;
     hasAudio: boolean;
     hasLetterTiming: boolean;
 }
@@ -48,8 +52,30 @@ export interface SurahInfo {
 // Audio sync state
 export interface SyncState {
     currentTime: number;
+    duration: number;
     currentLetterIdx: number;
     currentWordIdx: number;
     currentVerseIdx: number;
     isPlaying: boolean;
+}
+
+// Grouped word representation for karaoke
+export interface TimedLetter {
+    char: string;
+    globalIdx: number;
+    start: number;
+    end: number;
+}
+
+export interface TimedWord {
+    globalWordIdx: number;
+    verseIdx: number;
+    ayah: number;
+    letters: TimedLetter[];
+    text: string;
+    start: number;
+    end: number;
+    arabic?: string;
+    translit?: string;
+    root?: string;
 }
