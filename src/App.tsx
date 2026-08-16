@@ -10,7 +10,7 @@ const RECITERS = [
     id: 'mah',
     name: 'Sheikh Mohammad Ahmad Hassan',
     shortName: 'Mohammad Ahmad Hassan (MAH)',
-    description: 'High-Precision Acoustic Alignment',
+    description: 'Acoustic Alignment & Tajweed Guided Physics',
   },
   {
     id: 'abdul_basit',
@@ -61,115 +61,13 @@ const SURAHS_BY_RECITER: Record<string, typeof MAH_SURAHS> = {
   abdul_basit: ABDUL_BASIT_SURAHS,
 };
 
-// Normalize timing to seconds if in ms
-function normalizeTimingToSeconds(timing: LetterTiming[]): LetterTiming[] {
-  if (timing.length === 0) return timing;
-  const firstStart = timing[0].start;
-  const isMilliseconds = firstStart > 100;
-  if (isMilliseconds) {
-    return timing.map((t, idx) => ({
-      ...t,
-      charIdx: idx,
-      start: t.start / 1000,
-      end: t.end / 1000,
-      duration: t.duration ? t.duration / 1000 : (t.end - t.start) / 1000,
-    }));
-  }
-  return timing.map((t, idx) => ({
-    ...t,
-    charIdx: idx,
-  }));
-}
-
-function cleanText(t: string): string {
-  return t.replace(/[\s\u200c\u200d\u200e\u200f]/g, '');
-}
-
-// Align and enrich timing entries with verse and word indices
-function alignTimingToVerses(timing: LetterTiming[], verses: Verse[]): LetterTiming[] {
-  if (!timing || timing.length === 0 || !verses || verses.length === 0) return timing;
-
-  // Build target words list from verses
-  const targetWords: {
-    globalWordIdx: number;
-    verseIdx: number;
-    wordInVerse: number;
-    ayah: number;
-    text: string;
-    cleanText: string;
-  }[] = [];
-
-  let wordCount = 0;
-  verses.forEach((verse, vIdx) => {
-    const rawWords = verse.text.trim().split(/\s+/).filter(Boolean);
-    rawWords.forEach((wText, wInV) => {
-      targetWords.push({
-        globalWordIdx: wordCount++,
-        verseIdx: vIdx,
-        wordInVerse: wInV,
-        ayah: verse.ayah,
-        text: wText,
-        cleanText: cleanText(wText),
-      });
-    });
-  });
-
-  if (targetWords.length === 0) return timing;
-
-  const timingWords = new Set(timing.map(t => t.wordIdx));
-  // If timing already has pre-aligned distinct word indices matching word count
-  if (timingWords.size > 1 && Math.abs(timingWords.size - targetWords.length) <= 6) {
-    return timing.map((t, i) => {
-      const wIdx = t.wordIdx ?? 0;
-      const matchedWord = targetWords[wIdx] || targetWords[targetWords.length - 1];
-      return {
-        ...t,
-        charIdx: i,
-        verseIdx: matchedWord ? matchedWord.verseIdx : 0,
-        ayah: matchedWord ? matchedWord.ayah : 1,
-      };
-    });
-  }
-
-  // Fallback / alignment for phonetic timing streams
-  let currentWordCursor = 0;
-  let accumulatedInWord = '';
-  const enriched: LetterTiming[] = [];
-
-  for (let i = 0; i < timing.length; i++) {
-    const entry = timing[i];
-    const targetWord = targetWords[currentWordCursor] || targetWords[targetWords.length - 1];
-    const cleanEntryChar = cleanText(entry.char || '');
-
-    accumulatedInWord += cleanEntryChar;
-
-    enriched.push({
-      ...entry,
-      charIdx: i,
-      wordIdx: targetWord.globalWordIdx,
-      verseIdx: targetWord.verseIdx,
-      ayah: targetWord.ayah,
-    });
-
-    if (
-      accumulatedInWord.length >= targetWord.cleanText.length &&
-      currentWordCursor < targetWords.length - 1
-    ) {
-      currentWordCursor++;
-      accumulatedInWord = '';
-    }
-  }
-
-  return enriched;
-}
-
 // Group timing letters into TimedWord structures
 function groupLettersIntoWords(timing: LetterTiming[], verses: Verse[]): TimedWord[] {
-  if (timing.length === 0) return [];
+  if (!timing || timing.length === 0) return [];
 
   const wordsMap = new Map<number, TimedWord>();
 
-  // Map of verse word data for roots/transliteration
+  // Map of verse word data for transliteration and roots
   const verseWordMeta: { arabic: string; translit?: string; root?: string; verseIdx: number; ayah: number }[] = [];
   verses.forEach((verse, vIdx) => {
     if (verse.words && verse.words.length > 0) {
@@ -196,7 +94,7 @@ function groupLettersIntoWords(timing: LetterTiming[], verses: Verse[]): TimedWo
 
   timing.forEach((letter, globalIdx) => {
     const wIdx = letter.wordIdx ?? 0;
-    const vIdx = letter.verseIdx ?? 0;
+    const vIdx = (typeof letter.verseIdx !== 'undefined') ? letter.verseIdx : ((letter.ayah ?? 1) - 1);
     const ayah = letter.ayah ?? (vIdx + 1);
 
     if (!wordsMap.has(wIdx)) {
@@ -226,6 +124,7 @@ function groupLettersIntoWords(timing: LetterTiming[], verses: Verse[]): TimedWo
     currentWord.letters.push(timedLetter);
     currentWord.text += letter.char;
     currentWord.end = Math.max(currentWord.end, letter.end);
+    currentWord.start = Math.min(currentWord.start, letter.start);
   });
 
   return Array.from(wordsMap.values()).sort((a, b) => a.globalWordIdx - b.globalWordIdx);
@@ -261,7 +160,7 @@ function formatTime(seconds: number): string {
 
 export default function App() {
   const [selectedReciter, setSelectedReciter] = useState('mah');
-  const [selectedSurah, setSelectedSurah] = useState(1);
+  const [selectedSurah, setSelectedSurah] = useState(36); // Default to Surah 36 (Ya-Sin) or 1
   const [verses, setVerses] = useState<Verse[]>([]);
   const [letterTiming, setLetterTiming] = useState<LetterTiming[]>([]);
   const [loading, setLoading] = useState(true);
@@ -321,10 +220,8 @@ export default function App() {
 
         const timingRes = await fetch(timingPath);
         if (timingRes.ok) {
-          let rawTiming: LetterTiming[] = await timingRes.json();
-          rawTiming = normalizeTimingToSeconds(rawTiming);
-          const enriched = alignTimingToVerses(rawTiming, loadedVerses);
-          if (!isCancelled) setLetterTiming(enriched);
+          const rawTiming: LetterTiming[] = await timingRes.json();
+          if (!isCancelled) setLetterTiming(rawTiming);
         } else {
           if (!isCancelled) setLetterTiming([]);
         }
@@ -433,14 +330,14 @@ export default function App() {
         <header className="header-card">
           <div className="header-badge">
             <span className="live-indicator" />
-            LETTER-PRECISION RECITATION KARAOKE
+            HIGH-PRECISION LETTER-BY-LETTER RECITATION KARAOKE
           </div>
           <h1 className="header-title">
             <span className="glow-text">القرآن الكريم</span>
-            <span className="title-sub">MAH Precision Alignment</span>
+            <span className="title-sub">MAH Letter Timing Precision</span>
           </h1>
           <p className="reciter-subtitle">
-            Recitation by{' '}
+            Reciter:{' '}
             <strong>{RECITERS.find(r => r.id === selectedReciter)?.name}</strong>
           </p>
         </header>
@@ -629,7 +526,7 @@ export default function App() {
             <div className="debug-item">
               <span className="debug-label">Active Letter:</span>
               <span className="debug-val">
-                {syncState.currentLetterIdx >= 0 ? `#${syncState.currentLetterIdx} (${currentLetter?.char})` : 'Idle'}
+                {syncState.currentLetterIdx >= 0 ? `#${syncState.currentLetterIdx} ("${currentLetter?.char}")` : 'Idle'}
               </span>
             </div>
             <div className="debug-item">
@@ -683,44 +580,48 @@ export default function App() {
 
                     {/* Arabic Text with Letter Karaoke Glowing */}
                     <div className="arabic-karaoke-block" dir="rtl">
-                      {wordsInVerse.map(word => {
-                        const isWordActive = word.globalWordIdx === syncState.currentWordIdx;
-                        const isWordPast =
-                          syncState.currentWordIdx >= 0 && word.globalWordIdx < syncState.currentWordIdx;
+                      {wordsInVerse.length > 0 ? (
+                        wordsInVerse.map(word => {
+                          const isWordActive = word.globalWordIdx === syncState.currentWordIdx;
+                          const isWordPast =
+                            syncState.currentWordIdx >= 0 && word.globalWordIdx < syncState.currentWordIdx;
 
-                        return (
-                          <span
-                            key={word.globalWordIdx}
-                            ref={isWordActive ? activeWordRef : undefined}
-                            className={`word-span ${isWordActive ? 'word-active' : ''} ${
-                              isWordPast ? 'word-past' : ''
-                            }`}
-                            onClick={e => {
-                              e.stopPropagation();
-                              handleWordClick(word);
-                            }}
-                            title={`Word #${word.globalWordIdx + 1} (${word.start.toFixed(2)}s - ${word.end.toFixed(2)}s)`}
-                          >
-                            {word.letters.map(letter => {
-                              const isLetterActive = letter.globalIdx === syncState.currentLetterIdx;
-                              const isLetterPast =
-                                syncState.currentLetterIdx >= 0 &&
-                                letter.globalIdx < syncState.currentLetterIdx;
+                          return (
+                            <span
+                              key={word.globalWordIdx}
+                              ref={isWordActive ? activeWordRef : undefined}
+                              className={`word-span ${isWordActive ? 'word-active' : ''} ${
+                                isWordPast ? 'word-past' : ''
+                              }`}
+                              onClick={e => {
+                                e.stopPropagation();
+                                handleWordClick(word);
+                              }}
+                              title={`Word #${word.globalWordIdx + 1} (${word.start.toFixed(2)}s - ${word.end.toFixed(2)}s)`}
+                            >
+                              {word.letters.map(letter => {
+                                const isLetterActive = letter.globalIdx === syncState.currentLetterIdx;
+                                const isLetterPast =
+                                  syncState.currentLetterIdx >= 0 &&
+                                  letter.globalIdx < syncState.currentLetterIdx;
 
-                              return (
-                                <span
-                                  key={letter.globalIdx}
-                                  className={`letter-span ${isLetterActive ? 'letter-active' : ''} ${
-                                    isLetterPast ? 'letter-past' : ''
-                                  }`}
-                                >
-                                  {letter.char}
-                                </span>
-                              );
-                            })}
-                          </span>
-                        );
-                      })}
+                                return (
+                                  <span
+                                    key={letter.globalIdx}
+                                    className={`letter-span ${isLetterActive ? 'letter-active' : ''} ${
+                                      isLetterPast ? 'letter-past' : ''
+                                    }`}
+                                  >
+                                    {letter.char}
+                                  </span>
+                                );
+                              })}
+                            </span>
+                          );
+                        })
+                      ) : (
+                        <span className="verse-fallback-text">{verse.text}</span>
+                      )}
                       <span className="ayah-end-symbol"> ﴿{verse.ayah}﴾ </span>
                     </div>
 
