@@ -7,6 +7,12 @@ import './index.css';
 // Available Reciters (Sheikh Mohammad Ahmad Hassan as default primary)
 const RECITERS = [
   {
+    id: "minshawi_mujawwad",
+    name: "Sheikh Mohamed Siddiq Al-Minshawi",
+    shortName: "Al-Minshawi (Mujawwad)",
+    description: "Egyptian Master Reciter • Classical Tahqeeq Style",
+  },
+  {
     id: 'mah',
     name: 'Sheikh Mohammad Ahmad Hassan',
     shortName: 'Mohammad Ahmad Hassan (MAH)',
@@ -56,7 +62,13 @@ const ABDUL_BASIT_SURAHS = [
   { number: 5, name: 'Al-Ma\'idah', arabicName: 'المائدة', meaning: 'The Table Spread', versesCount: 120 },
 ];
 
+const MINSHAWI_SURAHS = [
+  { number: 1, name: "Al-Fatiha", arabicName: "الفاتحة", meaning: "The Opening", versesCount: 7 },
+  { number: 112, name: "Al-Ikhlas", arabicName: "الإخلاص", meaning: "The Sincerity", versesCount: 4 },
+];
+
 const SURAHS_BY_RECITER: Record<string, typeof MAH_SURAHS> = {
+  minshawi_mujawwad: MINSHAWI_SURAHS,
   mah: MAH_SURAHS,
   abdul_basit: ABDUL_BASIT_SURAHS,
 };
@@ -214,7 +226,7 @@ export default function App() {
 
         // Load timing from reciter-specific path
         const timingPath =
-          selectedReciter === 'mah'
+          selectedReciter === "mah"
             ? `/data/letter_timing_${selectedSurah}.json`
             : `/data/${selectedReciter}/letter_timing_${selectedSurah}.json`;
 
@@ -314,8 +326,8 @@ export default function App() {
 
   // Audio source URL
   const audioSrc = useMemo(() => {
-    const padNum = selectedSurah.toString().padStart(3, '0');
-    return selectedReciter === 'mah'
+    const padNum = selectedSurah.toString().padStart(3, "0");
+    return selectedReciter === "mah"
       ? `/audio/surah_${padNum}.mp3`
       : `/audio/${selectedReciter}/surah_${padNum}.mp3`;
   }, [selectedReciter, selectedSurah]);
