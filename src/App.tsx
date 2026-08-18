@@ -74,79 +74,81 @@ const SURAHS_BY_RECITER: Record<string, typeof MAH_SURAHS> = {
   abdul_basit: ABDUL_BASIT_SURAHS,
 };
 
-// Group timing letters into TimedWord structures
-function groupLettersIntoWords(timing: LetterTiming[], verses: Verse[]): TimedWord[] {
-  if (!timing || timing.length === 0) return [];
-
-  const wordsMap = new Map<number, TimedWord>();
-
-  // Map of verse word data for transliteration and roots
-  const verseWordMeta: { arabic: string; translit?: string; root?: string; verseIdx: number; ayah: number }[] = [];
-  verses.forEach((verse, vIdx) => {
-    if (verse.words && verse.words.length > 0) {
-      verse.words.forEach(w => {
-        verseWordMeta.push({
-          arabic: w.arabic,
-          translit: w.translit,
-          root: w.root,
-          verseIdx: vIdx,
-          ayah: verse.ayah,
-        });
-      });
+// Decompose an Arabic string into base letters + diacritics
+function splitArabicIntoLetters(text: string): string[] {
+  const DIACRITICS = new Set([
+    "\u064B", "\u064C", "\u064D", "\u064E", "\u064F", "\u0650", "\u0651", "\u0652",
+    "\u0653", "\u0654", "\u0655", "\u0656", "\u0657", "\u0658", "\u065C", "\u065D",
+    "\u065E", "\u065F", "\u0670", "\u06E1", "\u06DF", "\u06E0", "\u06E2", "\u06E3"
+  ]);
+  const chunks: string[] = [];
+  let curr = "";
+  for (const char of text) {
+    if (DIACRITICS.has(char)) {
+      curr += char;
     } else {
-      const rawWords = verse.text.trim().split(/\s+/).filter(Boolean);
-      rawWords.forEach(wText => {
-        verseWordMeta.push({
-          arabic: wText,
-          verseIdx: vIdx,
-          ayah: verse.ayah,
-        });
-      });
+      if (curr) chunks.push(curr);
+      curr = char;
     }
-  });
+  }
+  if (curr) chunks.push(curr);
+  return chunks;
+}
 
-  timing.forEach((letter, globalIdx) => {
-    const wIdx = letter.wordIdx ?? 0;
-    const vIdx = (typeof letter.verseIdx !== 'undefined') ? letter.verseIdx : ((letter.ayah ?? 1) - 1);
-    const ayah = letter.ayah ?? (vIdx + 1);
+// Group canonical Quran words with letter timing
+function groupLettersIntoWords(timing: LetterTiming[], verses: Verse[]): TimedWord[] {
+  if (!verses || verses.length === 0) return [];
 
-    if (!wordsMap.has(wIdx)) {
-      const meta = verseWordMeta[wIdx];
-      wordsMap.set(wIdx, {
-        globalWordIdx: wIdx,
+  const words: TimedWord[] = [];
+  let globalWIdx = 0;
+
+  verses.forEach((verse, vIdx) => {
+    const wordList = verse.words && verse.words.length > 0
+      ? verse.words
+      : verse.text.trim().split(/\s+/).map(w => ({ arabic: w }));
+
+    wordList.forEach(w => {
+      const chunks = splitArabicIntoLetters(w.arabic);
+      const timedLetters: TimedLetter[] = chunks.map((c, lIdx) => ({
+        char: c,
+        globalIdx: -1,
+        charIdxInWord: lIdx,
+        start: 0,
+        end: 0,
+      }));
+
+      // Find timing matching this word
+      const matchingLetterTimings = timing.filter(t => t.wordIdx === globalWIdx);
+      let wStart = 0;
+      let wEnd = 0;
+      if (matchingLetterTimings.length > 0) {
+        wStart = matchingLetterTimings[0].start;
+        wEnd = matchingLetterTimings[matchingLetterTimings.length - 1].end;
+      }
+
+      words.push({
+        globalWordIdx: globalWIdx,
         verseIdx: vIdx,
-        ayah: ayah,
-        letters: [],
-        text: '',
-        start: letter.start,
-        end: letter.end,
-        arabic: meta?.arabic,
-        translit: meta?.translit,
-        root: meta?.root,
+        ayah: verse.ayah,
+        letters: timedLetters,
+        text: w.arabic,
+        start: wStart,
+        end: wEnd,
+        arabic: w.arabic,
+        translit: (w as any).translit,
+        root: (w as any).root,
       });
-    }
 
-    const currentWord = wordsMap.get(wIdx)!;
-    const timedLetter: TimedLetter = {
-      char: letter.char,
-      globalIdx,
-      start: letter.start,
-      end: letter.end,
-    };
-
-    currentWord.letters.push(timedLetter);
-    currentWord.text += letter.char;
-    currentWord.end = Math.max(currentWord.end, letter.end);
-    currentWord.start = Math.min(currentWord.start, letter.start);
+      globalWIdx++;
+    });
   });
 
-  return Array.from(wordsMap.values()).sort((a, b) => a.globalWordIdx - b.globalWordIdx);
+  return words;
 }
 
 // Distribute TimedWords into verse buckets
 function distributeToVerses(timedWords: TimedWord[], verses: Verse[]): Map<number, TimedWord[]> {
   const verseMap = new Map<number, TimedWord[]>();
-
   verses.forEach((_, vIdx) => {
     verseMap.set(vIdx, []);
   });
@@ -630,19 +632,28 @@ export default function App() {
                               }}
                               title={`Word #${word.globalWordIdx + 1} (${word.start.toFixed(2)}s - ${word.end.toFixed(2)}s)`}
                             >
-                              {word.letters.map(letter => {
+                              {word.letters.map((letter, letterIdxInWord) => {
                                 const isLetterActive =
-    letter.globalIdx === syncState.currentLetterIdx ||
-    (isWordActive && currentLetter?.wordIdx === word.globalWordIdx && currentLetter?.char === letter.char);
+                                  isWordActive &&
+                                  currentLetter &&
+                                  currentLetter.wordIdx === word.globalWordIdx &&
+                                  (typeof (currentLetter as any).charIdxInWord !== "undefined"
+                                    ? (currentLetter as any).charIdxInWord === letterIdxInWord
+                                    : currentLetter.char === letter.char);
+
                                 const isLetterPast =
-                                  syncState.currentLetterIdx >= 0 &&
-                                  letter.globalIdx < syncState.currentLetterIdx;
+                                  (syncState.currentWordIdx >= 0 && word.globalWordIdx < syncState.currentWordIdx) ||
+                                  (isWordActive && currentLetter && (
+                                    typeof (currentLetter as any).charIdxInWord !== "undefined"
+                                      ? letterIdxInWord < (currentLetter as any).charIdxInWord
+                                      : false
+                                  ));
 
                                 return (
                                   <span
-                                    key={letter.globalIdx}
-                                    className={`letter-span ${isLetterActive ? 'letter-active' : ''} ${
-                                      isLetterPast ? 'letter-past' : ''
+                                    key={letterIdxInWord}
+                                    className={`letter-span ${isLetterActive ? "letter-active" : ""} ${
+                                      isLetterPast ? "letter-past" : ""
                                     }`}
                                   >
                                     {letter.char}

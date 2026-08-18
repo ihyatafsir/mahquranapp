@@ -24,9 +24,6 @@ import os
 import numpy as np
 import librosa
 import soundfile as sf
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 
 from sibawayh_acoustic_aligner import chunk_arabic_word
 
@@ -35,7 +32,6 @@ with open("/home/absolut7/Documents/mahquranapp/public/data/verses_v4.json", 'r'
     verses_data = json.load(f)["1"]
 
 # Mapping of every physical recitation event across the 7 raw audio files
-# Format: (ayah_file_num, [(target_ayah_num, target_word_start, target_word_end, voice_start_s, voice_end_s)])
 RAW_AUDIO_EVENTS = [
     # File 1: Ayah 1
     (1, [(1, 0, 4, 4.40, 11.70)]),
@@ -65,7 +61,6 @@ raw_audio_clips = []
 final_letters = []
 cur_file_offset = 0.0
 
-# Calculate canonical global word index offsets per Ayah
 ayah_word_offsets = {}
 w_count = 0
 for v_idx, v in enumerate(verses_data):
@@ -100,7 +95,6 @@ for file_num, events in RAW_AUDIO_EVENTS:
         event_dur = v_e - v_s
         ayah_base_w_idx = ayah_word_offsets[target_ayah]
 
-        # Calculate word weights
         event_word_weights = []
         for w in target_words:
             chunks = chunk_arabic_word(w['arabic'])
@@ -133,6 +127,7 @@ for file_num, events in RAW_AUDIO_EVENTS:
 
                 final_letters.append({
                     'charIdx': len(final_letters),
+                    'charIdxInWord': l_idx,
                     'char': chunk,
                     'start': round(cur_l_start, 3),
                     'end': round(l_e, 3),
@@ -149,7 +144,6 @@ for file_num, events in RAW_AUDIO_EVENTS:
     raw_audio_clips.append(y_raw)
     cur_file_offset += raw_dur
 
-# Save 100% untouched continuous master audio
 y_master = np.concatenate(raw_audio_clips)
 master_audio_path = "/home/absolut7/Documents/mahquranapp/public/audio/minshawi_mujawwad/surah_001.mp3"
 sf.write(master_audio_path, y_master, sr)
@@ -159,32 +153,3 @@ output_json = "/home/absolut7/Documents/mahquranapp/public/data/minshawi_mujawwa
 with open(output_json, 'w', encoding='utf-8') as f:
     json.dump(final_letters, f, ensure_ascii=False, indent=2)
 print(f"[Timing JSON] Exported {len(final_letters)} letter instances to: {output_json}")
-
-# Visual Spectrogram Plot
-fig, axes = plt.subplots(2, 1, figsize=(28, 10), sharex=True, gridspec_kw={'height_ratios': [2, 1.2]})
-S = librosa.feature.melspectrogram(y=y_master, sr=sr, n_mels=128, fmax=8000, hop_length=256)
-S_dB = librosa.power_to_db(S, ref=np.max)
-img = librosa.display.specshow(S_dB, x_axis='time', y_axis='mel', sr=sr, fmax=8000, 
-                              hop_length=256, ax=axes[0], cmap='inferno')
-axes[0].set_title("Sheikh Al-Minshawi (Surah 1: Al-Fatiha) - 100% Uncut Audio with Takrar-Aware Highlighting", fontsize=14, fontweight='bold')
-fig.colorbar(img, ax=axes[0], format='%+2.0f dB')
-
-axes[1].set_ylim(0, 1)
-axes[1].set_yticks([])
-axes[1].set_title("Multi-Take Synchronized Letter Stream (Highlight Rewinds on Repetition)", fontsize=12, fontweight='bold')
-axes[1].set_xlabel("Time (Seconds)", fontsize=12, fontweight='bold')
-
-colors = ['#1e293b', '#0f172a', '#1e3a8a', '#14532d', '#701a75', '#7c2d12', '#064e3b']
-for l in final_letters:
-    dur = l['end'] - l['start']
-    if dur <= 0: continue
-    col = colors[l['wordIdx'] % len(colors)]
-    rect = plt.Rectangle((l['start'], 0.1), dur, 0.8, color=col, alpha=0.85, ec='#38bdf8', lw=1.2)
-    axes[1].add_patch(rect)
-    mid_x = (l['start'] + l['end']) / 2
-    axes[1].text(mid_x, 0.5, l['char'], fontsize=8, color='#ffffff', ha='center', va='center', fontweight='bold', fontname='DejaVu Sans')
-
-plt.tight_layout()
-out_plot = "/home/absolut7/.gemini/antigravity-ide/brain/d332038a-56ae-4ed1-9536-939058acd218/minshawi_001_uncut_takrar.png"
-plt.savefig(out_plot, dpi=200)
-print(f"[Visualizer] Plot saved to: {out_plot}")

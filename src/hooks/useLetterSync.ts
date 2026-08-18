@@ -2,33 +2,41 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import type { LetterTiming, SyncState } from '../types/quran';
 
 // Binary search to find current letter index based on audio time
-// A letter stays "active" until the NEXT letter starts
+// Returns -1 if playback is in a long breath pause / silence gap
 export function findCurrentLetterIdx(timing: LetterTiming[], currentTime: number): number {
     if (!timing || timing.length === 0) return -1;
-
-    // Before first letter starts
     if (currentTime < timing[0].start) return -1;
 
-    // After or at last letter's start - return last letter
-    if (currentTime >= timing[timing.length - 1].start) {
-        // If currentTime is far beyond the last letter's end + 2s, keep or reset
-        return timing.length - 1;
-    }
-
-    // Binary search: find the letter whose start <= currentTime < next letter's start
     let left = 0;
     let right = timing.length - 1;
 
-    while (left < right) {
-        const mid = Math.floor((left + right + 1) / 2);
-        if (timing[mid].start <= currentTime) {
-            left = mid;
-        } else {
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        const letter = timing[mid];
+
+        if (currentTime >= letter.start && currentTime < letter.end) {
+            return mid;
+        }
+
+        if (currentTime < letter.start) {
             right = mid - 1;
+        } else {
+            left = mid + 1;
         }
     }
 
-    return left;
+    // If currentTime falls slightly past the letter end but before a new letter starts
+    if (right >= 0 && right < timing.length) {
+        const prev = timing[right];
+        const next = right + 1 < timing.length ? timing[right + 1] : null;
+        
+        // If next letter is within 0.15s, keep prev active for smooth visual legato
+        if (currentTime >= prev.start && (next ? currentTime < next.start : currentTime < prev.end + 0.3)) {
+            return right;
+        }
+    }
+
+    return -1;
 }
 
 export function useLetterSync(
@@ -45,6 +53,9 @@ export function useLetterSync(
     });
 
     const animationFrameRef = useRef<number | null>(null);
+    const lastLetterIdxRef = useRef<number>(-1);
+    const lastWordIdxRef = useRef<number>(-1);
+    const lastVerseIdxRef = useRef<number>(-1);
 
     const updateSync = useCallback(() => {
         const audio = audioRef.current;
@@ -60,83 +71,59 @@ export function useLetterSync(
                 duration,
                 isPlaying: !audio.paused,
             }));
-            if (!audio.paused) {
-                animationFrameRef.current = requestAnimationFrame(updateSync);
-            }
             return;
         }
 
         const letterIdx = findCurrentLetterIdx(letterTiming, currentTime);
-        const letter = letterIdx >= 0 ? letterTiming[letterIdx] : null;
-        const wordIdx = letter ? (letter.wordIdx ?? -1) : -1;
-        const verseIdx = letter ? (letter.verseIdx ?? 0) : 0;
+        let wordIdx = -1;
+        let verseIdx = 0;
 
-        setSyncState(prev => ({
-            ...prev,
-            currentTime,
-            duration,
-            currentLetterIdx: letterIdx,
-            currentWordIdx: wordIdx,
-            currentVerseIdx: verseIdx,
-            isPlaying: !audio.paused,
-        }));
+        if (letterIdx >= 0 && letterIdx < letterTiming.length) {
+            const letter = letterTiming[letterIdx];
+            wordIdx = letter.wordIdx ?? -1;
+            verseIdx = typeof letter.verseIdx !== 'undefined'
+                ? letter.verseIdx
+                : (letter.ayah ? letter.ayah - 1 : 0);
+        } else if (lastWordIdxRef.current >= 0) {
+            // In a pause, keep current verse
+            verseIdx = lastVerseIdxRef.current >= 0 ? lastVerseIdxRef.current : 0;
+        }
 
-        if (!audio.paused) {
-            animationFrameRef.current = requestAnimationFrame(updateSync);
+        // Only trigger React state updates when indices change or audio time moves
+        if (
+            letterIdx !== lastLetterIdxRef.current ||
+            wordIdx !== lastWordIdxRef.current ||
+            verseIdx !== lastVerseIdxRef.current
+        ) {
+            lastLetterIdxRef.current = letterIdx;
+            lastWordIdxRef.current = wordIdx;
+            lastVerseIdxRef.current = verseIdx;
+
+            setSyncState({
+                currentTime,
+                duration,
+                currentLetterIdx: letterIdx,
+                currentWordIdx: wordIdx,
+                currentVerseIdx: verseIdx,
+                isPlaying: !audio.paused,
+            });
         }
     }, [audioRef, letterTiming]);
 
     useEffect(() => {
-        const audio = audioRef.current;
-        if (!audio) return;
-
-        const handlePlay = () => {
-            setSyncState(prev => ({ ...prev, isPlaying: true }));
-            animationFrameRef.current = requestAnimationFrame(updateSync);
-        };
-
-        const handlePause = () => {
-            setSyncState(prev => ({ ...prev, isPlaying: false }));
-            if (animationFrameRef.current) {
-                cancelAnimationFrame(animationFrameRef.current);
-            }
-        };
-
-        const handleTimeUpdate = () => {
-            if (audio.paused) {
-                updateSync();
-            }
-        };
-
-        const handleSeeked = () => {
+        const loop = () => {
             updateSync();
+            animationFrameRef.current = requestAnimationFrame(loop);
         };
 
-        const handleLoadedMetadata = () => {
-            setSyncState(prev => ({
-                ...prev,
-                duration: audio.duration || 0,
-            }));
-        };
-
-        audio.addEventListener('play', handlePlay);
-        audio.addEventListener('pause', handlePause);
-        audio.addEventListener('timeupdate', handleTimeUpdate);
-        audio.addEventListener('seeked', handleSeeked);
-        audio.addEventListener('loadedmetadata', handleLoadedMetadata);
+        animationFrameRef.current = requestAnimationFrame(loop);
 
         return () => {
-            audio.removeEventListener('play', handlePlay);
-            audio.removeEventListener('pause', handlePause);
-            audio.removeEventListener('timeupdate', handleTimeUpdate);
-            audio.removeEventListener('seeked', handleSeeked);
-            audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
-
             if (animationFrameRef.current) {
                 cancelAnimationFrame(animationFrameRef.current);
             }
         };
-    }, [audioRef, updateSync]);
+    }, [updateSync]);
 
     return syncState;
 }
