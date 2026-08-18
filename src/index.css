@@ -748,3 +748,253 @@ body {
     font-size: 1rem;
   }
 }
+
+/* ==========================================================================
+   Waveform & Tajweed Studio Modal
+   ========================================================================== */
+.waveform-studio-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.waveform-studio-modal {
+  background: #080f1d;
+  border: 1px solid var(--border-glass-active);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 255, 136, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.studio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 12px;
+}
+
+.studio-badge {
+  font-size: 0.7rem;
+  background: rgba(0, 255, 136, 0.15);
+  color: var(--neon-green);
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.studio-title-group h2 {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.studio-close-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.studio-close-btn:hover {
+  background: rgba(255, 0, 80, 0.3);
+  border-color: #ff0055;
+}
+
+.studio-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.studio-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.studio-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--neon-cyan);
+}
+
+.studio-btn.primary {
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-green));
+  color: #050b14;
+  border: none;
+  font-weight: 700;
+}
+
+.studio-btn.success {
+  background: rgba(0, 255, 136, 0.2);
+  border-color: var(--neon-green);
+  color: var(--neon-green);
+}
+
+.zoom-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.zoom-group input {
+  accent-color: var(--neon-green);
+}
+
+.canvas-wrapper {
+  background: #050b14;
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.studio-canvas {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+/* Letter Inspector Card */
+.letter-inspector-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgba(13, 21, 39, 0.8);
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+
+.inspector-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.active-char-box {
+  font-family: var(--font-arabic);
+  font-size: 2.2rem;
+  color: var(--neon-green);
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid var(--neon-green);
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(0, 255, 136, 0.3);
+}
+
+.char-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8rem;
+}
+
+.meta-row {
+  display: flex;
+  gap: 8px;
+}
+
+.meta-row .label {
+  color: var(--text-muted);
+}
+
+.meta-row .val {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.inspector-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.nudge-cluster {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nudge-title {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.btn-group {
+  display: flex;
+  gap: 4px;
+}
+
+.nudge-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nudge-btn:hover {
+  background: rgba(0, 240, 255, 0.2);
+  border-color: var(--neon-cyan);
+}
+
+.nav-cluster {
+  display: flex;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.studio-status-banner {
+  background: rgba(0, 255, 136, 0.15);
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  text-align: center;
+}

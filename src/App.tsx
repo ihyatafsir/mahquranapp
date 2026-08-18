@@ -1,3 +1,4 @@
+import { WaveformStudio } from "./components/WaveformStudio";
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import { useLetterSync } from './hooks/useLetterSync';
 import ThreeBackground from './components/ThreeBackground';
@@ -177,6 +178,7 @@ export default function App() {
   const [letterTiming, setLetterTiming] = useState<LetterTiming[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isStudioOpen, setIsStudioOpen] = useState<boolean>(false);
 
   // UI View Preferences
   const [showWordCards, setShowWordCards] = useState(true);
@@ -340,7 +342,8 @@ export default function App() {
       <div className="app-container">
         {/* Header */}
         <header className="header-card">
-          <div className="header-badge">
+          <button className="control-btn" style={{ borderColor: "#00ff88", color: "#00ff88" }} onClick={() => setIsStudioOpen(true)}>🎙️ Tajweed Studio</button>
+        <div className="header-badge">
             <span className="live-indicator" />
             HIGH-PRECISION LETTER-BY-LETTER RECITATION KARAOKE
           </div>
@@ -527,6 +530,22 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        {/* Tajweed Wave Studio Modal */}
+      <WaveformStudio
+        isOpen={isStudioOpen}
+        onClose={() => setIsStudioOpen(false)}
+        audioSrc={audioSrc}
+        letterTiming={letterTiming}
+                reciterName={RECITERS.find(r => r.id === selectedReciter)?.shortName || ""}
+        surahName={currentSurahInfo?.name || ""}
+        onSaveTiming={(newTiming) => {
+          setLetterTiming(newTiming);
+          try {
+            localStorage.setItem(`custom_timing_${selectedReciter}_${selectedSurah}`, JSON.stringify(newTiming));
+          } catch(e) {}
+        }}
+      />
 
         {/* Live Debug HUD */}
         {showDebug && (
