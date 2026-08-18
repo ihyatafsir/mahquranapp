@@ -65,7 +65,13 @@ const ABDUL_BASIT_SURAHS = [
 
 const MINSHAWI_SURAHS = [
   { number: 1, name: "Al-Fatiha", arabicName: "الفاتحة", meaning: "The Opening", versesCount: 7 },
+  { number: 108, name: "Al-Kawthar", arabicName: "الكوثر", meaning: "The Abundance", versesCount: 3 },
+  { number: 109, name: "Al-Kafirun", arabicName: "الكافرون", meaning: "The Disbelievers", versesCount: 6 },
+  { number: 110, name: "An-Nasr", arabicName: "النصر", meaning: "The Help", versesCount: 3 },
+  { number: 111, name: "Al-Masad", arabicName: "المسد", meaning: "The Palm Fiber", versesCount: 5 },
   { number: 112, name: "Al-Ikhlas", arabicName: "الإخلاص", meaning: "The Sincerity", versesCount: 4 },
+  { number: 113, name: "Al-Falaq", arabicName: "الفلق", meaning: "The Daybreak", versesCount: 5 },
+  { number: 114, name: "An-Nas", arabicName: "الناس", meaning: "Mankind", versesCount: 6 },
 ];
 
 const SURAHS_BY_RECITER: Record<string, typeof MAH_SURAHS> = {
