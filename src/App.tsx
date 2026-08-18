@@ -631,7 +631,9 @@ export default function App() {
                               title={`Word #${word.globalWordIdx + 1} (${word.start.toFixed(2)}s - ${word.end.toFixed(2)}s)`}
                             >
                               {word.letters.map(letter => {
-                                const isLetterActive = letter.globalIdx === syncState.currentLetterIdx;
+                                const isLetterActive =
+    letter.globalIdx === syncState.currentLetterIdx ||
+    (isWordActive && currentLetter?.wordIdx === word.globalWordIdx && currentLetter?.char === letter.char);
                                 const isLetterPast =
                                   syncState.currentLetterIdx >= 0 &&
                                   letter.globalIdx < syncState.currentLetterIdx;
