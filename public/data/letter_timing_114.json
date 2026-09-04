@@ -7,7 +7,8 @@
     "duration": 0.153,
     "wordIdx": 0,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 1,
@@ -17,7 +18,8 @@
     "duration": 0.107,
     "wordIdx": 0,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 2,
@@ -27,7 +29,8 @@
     "duration": 0.118,
     "wordIdx": 1,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 3,
@@ -37,7 +40,8 @@
     "duration": 0.147,
     "wordIdx": 1,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 4,
@@ -47,7 +51,8 @@
     "duration": 0.259,
     "wordIdx": 1,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 5,
@@ -57,7 +62,8 @@
     "duration": 0.118,
     "wordIdx": 1,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 6,
@@ -67,7 +73,8 @@
     "duration": 0.18,
     "wordIdx": 2,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 7,
@@ -77,7 +84,8 @@
     "duration": 0.18,
     "wordIdx": 2,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 8,
@@ -87,7 +95,8 @@
     "duration": 0.361,
     "wordIdx": 2,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 9,
@@ -97,7 +106,8 @@
     "duration": 0.325,
     "wordIdx": 3,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 10,
@@ -107,7 +117,8 @@
     "duration": 0.325,
     "wordIdx": 3,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 11,
@@ -117,7 +128,8 @@
     "duration": 0.812,
     "wordIdx": 3,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 12,
@@ -127,7 +139,8 @@
     "duration": 0.715,
     "wordIdx": 3,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 13,
@@ -137,7 +150,8 @@
     "duration": 0.325,
     "wordIdx": 3,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 4
   },
   {
     "charIdx": 14,
@@ -147,7 +161,8 @@
     "duration": 0.18,
     "wordIdx": 4,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 15,
@@ -157,7 +172,8 @@
     "duration": 0.18,
     "wordIdx": 4,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 16,
@@ -167,7 +183,8 @@
     "duration": 0.18,
     "wordIdx": 4,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 17,
@@ -177,7 +194,8 @@
     "duration": 0.299,
     "wordIdx": 5,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 18,
@@ -187,7 +205,8 @@
     "duration": 0.299,
     "wordIdx": 5,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 19,
@@ -197,7 +216,8 @@
     "duration": 0.747,
     "wordIdx": 5,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 20,
@@ -207,7 +227,8 @@
     "duration": 0.658,
     "wordIdx": 5,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 21,
@@ -217,7 +238,8 @@
     "duration": 0.299,
     "wordIdx": 5,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 4
   },
   {
     "charIdx": 22,
@@ -227,7 +249,8 @@
     "duration": 0.18,
     "wordIdx": 6,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 23,
@@ -237,7 +260,8 @@
     "duration": 0.396,
     "wordIdx": 6,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 24,
@@ -247,7 +271,8 @@
     "duration": 0.225,
     "wordIdx": 6,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 25,
@@ -257,7 +282,8 @@
     "duration": 0.406,
     "wordIdx": 7,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 26,
@@ -267,7 +293,8 @@
     "duration": 0.406,
     "wordIdx": 7,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 27,
@@ -277,7 +304,8 @@
     "duration": 1.014,
     "wordIdx": 7,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 28,
@@ -287,7 +315,8 @@
     "duration": 0.892,
     "wordIdx": 7,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 29,
@@ -297,7 +326,8 @@
     "duration": 0.406,
     "wordIdx": 7,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 4
   },
   {
     "charIdx": 30,
@@ -307,7 +337,8 @@
     "duration": 0.4,
     "wordIdx": 8,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 31,
@@ -317,7 +348,8 @@
     "duration": 0.401,
     "wordIdx": 8,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 32,
@@ -327,7 +359,8 @@
     "duration": 0.18,
     "wordIdx": 9,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 33,
@@ -337,7 +370,8 @@
     "duration": 0.361,
     "wordIdx": 9,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 34,
@@ -347,7 +381,8 @@
     "duration": 0.153,
     "wordIdx": 10,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 35,
@@ -357,7 +392,8 @@
     "duration": 0.107,
     "wordIdx": 10,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 36,
@@ -367,7 +403,8 @@
     "duration": 0.153,
     "wordIdx": 10,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 37,
@@ -377,7 +414,8 @@
     "duration": 0.107,
     "wordIdx": 10,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 38,
@@ -387,7 +425,8 @@
     "duration": 0.153,
     "wordIdx": 10,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 4
   },
   {
     "charIdx": 39,
@@ -397,7 +436,8 @@
     "duration": 0.336,
     "wordIdx": 10,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 5
   },
   {
     "charIdx": 40,
@@ -407,7 +447,8 @@
     "duration": 0.153,
     "wordIdx": 10,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 6
   },
   {
     "charIdx": 41,
@@ -417,7 +458,8 @@
     "duration": 0.366,
     "wordIdx": 11,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 42,
@@ -427,7 +469,8 @@
     "duration": 0.256,
     "wordIdx": 11,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 43,
@@ -437,7 +480,8 @@
     "duration": 0.457,
     "wordIdx": 11,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 44,
@@ -447,7 +491,8 @@
     "duration": 0.914,
     "wordIdx": 11,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 45,
@@ -457,7 +502,8 @@
     "duration": 0.804,
     "wordIdx": 11,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 4
   },
   {
     "charIdx": 46,
@@ -467,7 +513,8 @@
     "duration": 0.366,
     "wordIdx": 11,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 5
   },
   {
     "charIdx": 47,
@@ -477,7 +524,8 @@
     "duration": 0.103,
     "wordIdx": 12,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 48,
@@ -487,7 +535,8 @@
     "duration": 0.207,
     "wordIdx": 12,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 49,
@@ -497,7 +546,8 @@
     "duration": 0.103,
     "wordIdx": 12,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 50,
@@ -507,7 +557,8 @@
     "duration": 0.227,
     "wordIdx": 12,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 51,
@@ -517,7 +568,8 @@
     "duration": 0.166,
     "wordIdx": 13,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 52,
@@ -527,7 +579,8 @@
     "duration": 0.166,
     "wordIdx": 13,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 53,
@@ -537,7 +590,8 @@
     "duration": 0.116,
     "wordIdx": 13,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 54,
@@ -547,7 +601,8 @@
     "duration": 0.166,
     "wordIdx": 13,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 55,
@@ -557,7 +612,8 @@
     "duration": 0.166,
     "wordIdx": 13,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 4
   },
   {
     "charIdx": 56,
@@ -567,7 +623,8 @@
     "duration": 0.063,
     "wordIdx": 14,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 57,
@@ -577,7 +634,8 @@
     "duration": 0.137,
     "wordIdx": 14,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 58,
@@ -587,7 +645,8 @@
     "duration": 0.162,
     "wordIdx": 15,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 59,
@@ -597,7 +656,8 @@
     "duration": 0.162,
     "wordIdx": 15,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 60,
@@ -607,7 +667,8 @@
     "duration": 0.356,
     "wordIdx": 15,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 61,
@@ -617,7 +678,8 @@
     "duration": 0.162,
     "wordIdx": 15,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 62,
@@ -627,7 +689,8 @@
     "duration": 0.343,
     "wordIdx": 16,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 63,
@@ -637,7 +700,8 @@
     "duration": 0.343,
     "wordIdx": 16,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 64,
@@ -647,7 +711,8 @@
     "duration": 0.858,
     "wordIdx": 16,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 65,
@@ -657,7 +722,8 @@
     "duration": 0.755,
     "wordIdx": 16,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 66,
@@ -667,17 +733,19 @@
     "duration": 0.343,
     "wordIdx": 16,
     "ayah": 5,
-    "verseIdx": 4
+    "verseIdx": 4,
+    "charIdxInWord": 4
   },
   {
     "charIdx": 67,
     "char": "مِ",
-    "start": 26.558,
+    "start": 26.578,
     "end": 26.83,
-    "duration": 0.272,
+    "duration": 0.252,
     "wordIdx": 17,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 68,
@@ -687,7 +755,8 @@
     "duration": 0.272,
     "wordIdx": 17,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 69,
@@ -697,7 +766,8 @@
     "duration": 0.296,
     "wordIdx": 18,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 70,
@@ -707,7 +777,8 @@
     "duration": 0.207,
     "wordIdx": 18,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 71,
@@ -717,7 +788,8 @@
     "duration": 0.296,
     "wordIdx": 18,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 72,
@@ -727,7 +799,8 @@
     "duration": 0.74,
     "wordIdx": 18,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 73,
@@ -737,7 +810,8 @@
     "duration": 0.296,
     "wordIdx": 18,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 4
   },
   {
     "charIdx": 74,
@@ -747,7 +821,8 @@
     "duration": 0.389,
     "wordIdx": 19,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 75,
@@ -757,7 +832,8 @@
     "duration": 0.389,
     "wordIdx": 19,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 76,
@@ -767,7 +843,8 @@
     "duration": 0.389,
     "wordIdx": 19,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 77,
@@ -777,7 +854,8 @@
     "duration": 0.973,
     "wordIdx": 19,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 78,
@@ -787,7 +865,8 @@
     "duration": 0.856,
     "wordIdx": 19,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 4
   },
   {
     "charIdx": 79,
@@ -797,6 +876,7 @@
     "duration": 0.389,
     "wordIdx": 19,
     "ayah": 6,
-    "verseIdx": 5
+    "verseIdx": 5,
+    "charIdxInWord": 5
   }
 ]

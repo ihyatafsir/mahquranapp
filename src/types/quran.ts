@@ -56,6 +56,7 @@ export interface SyncState {
     currentLetterIdx: number;
     currentWordIdx: number;
     currentVerseIdx: number;
+    letterProgress: number; // 0.0 to 1.0 intra-letter progression
     isPlaying: boolean;
 }
 

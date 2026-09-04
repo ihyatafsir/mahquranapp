@@ -1,105 +1,19 @@
-import { WaveformStudio } from "./components/WaveformStudio";
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
-import { useLetterSync } from './hooks/useLetterSync';
+import { FluidMushafCanvas } from './components/FluidMushafCanvas';
+import { WaveformStudio } from "./components/WaveformStudio";
+import { MakhrajVisualizer } from "./components/MakhrajVisualizer";
+import { BiomechanicalVocalHUD } from "./components/BiomechanicalVocalHUD";
+import { AudioWaveformSyncCanvas } from "./components/AudioWaveformSyncCanvas";
+import { WordWaveformPill } from "./components/WordWaveformPill";
+import { MobileTajweedInspectorHUD } from "./components/MobileTajweedInspectorHUD";
 import ThreeBackground from './components/ThreeBackground';
+import { useLetterSync } from './hooks/useLetterSync';
+import { RECITERS } from './constants/reciters';
+import { SURAHS_BY_RECITER, MAH_SURAHS } from './constants/surahs';
+import { toArabicNumerals, splitIntoGraphemes as splitArabicIntoLetters } from './utils/arabic';
+import { fetchWithCache, preloadSurahTiming } from './utils/quranCache';
 import type { LetterTiming, Verse, TimedWord, TimedLetter } from './types/quran';
 import './index.css';
-
-// Available Reciters (Sheikh Mohammad Ahmad Hassan as default primary)
-const RECITERS = [
-  {
-    id: "minshawi_mujawwad",
-    name: "Sheikh Mohamed Siddiq Al-Minshawi",
-    shortName: "Al-Minshawi (Mujawwad)",
-    description: "Egyptian Master Reciter • Classical Tahqeeq Style",
-  },
-  {
-    id: 'mah',
-    name: 'Sheikh Mohammad Ahmad Hassan',
-    shortName: 'Mohammad Ahmad Hassan (MAH)',
-    description: 'Acoustic Alignment & Tajweed Guided Physics',
-  },
-  {
-    id: 'abdul_basit',
-    name: 'Sheikh AbdulBaset AbdulSamad',
-    shortName: 'Abdul Basit (Mujawwad)',
-    description: 'Egyptian Master Reciter',
-  },
-];
-
-// All 24 Surahs available with full audio + timing for MAH
-const MAH_SURAHS = [
-  { number: 1, name: 'Al-Fatiha', arabicName: 'الفاتحة', meaning: 'The Opening', versesCount: 7 },
-  { number: 2, name: 'Al-Baqarah', arabicName: 'البقرة', meaning: 'The Cow', versesCount: 286 },
-  { number: 18, name: 'Al-Kahf', arabicName: 'الكهف', meaning: 'The Cave', versesCount: 110 },
-  { number: 36, name: 'Ya-Sin', arabicName: 'يس', meaning: 'Ya-Sin', versesCount: 83 },
-  { number: 47, name: 'Muhammad', arabicName: 'محمد', meaning: 'Muhammad', versesCount: 38 },
-  { number: 53, name: 'An-Najm', arabicName: 'النجم', meaning: 'The Star', versesCount: 62 },
-  { number: 55, name: 'Ar-Rahman', arabicName: 'الرحمن', meaning: 'The Beneficent', versesCount: 78 },
-  { number: 56, name: 'Al-Waqi\'ah', arabicName: 'الواقعة', meaning: 'The Inevitable', versesCount: 96 },
-  { number: 67, name: 'Al-Mulk', arabicName: 'الملك', meaning: 'The Sovereignty', versesCount: 30 },
-  { number: 71, name: 'Nuh', arabicName: 'نوح', meaning: 'Noah', versesCount: 28 },
-  { number: 75, name: 'Al-Qiyamah', arabicName: 'القيامة', meaning: 'The Resurrection', versesCount: 40 },
-  { number: 80, name: 'Abasa', arabicName: 'عبس', meaning: 'He Frowned', versesCount: 42 },
-  { number: 82, name: 'Al-Infitar', arabicName: 'الانفطار', meaning: 'The Cleaving', versesCount: 19 },
-  { number: 85, name: 'Al-Buruj', arabicName: 'البروج', meaning: 'The Mansions of the Stars', versesCount: 22 },
-  { number: 87, name: 'Al-A\'la', arabicName: 'الأعلى', meaning: 'The Most High', versesCount: 19 },
-  { number: 89, name: 'Al-Fajr', arabicName: 'الفجر', meaning: 'The Dawn', versesCount: 30 },
-  { number: 90, name: 'Al-Balad', arabicName: 'البلد', meaning: 'The City', versesCount: 20 },
-  { number: 91, name: 'Ash-Shams', arabicName: 'الشمس', meaning: 'The Sun', versesCount: 15 },
-  { number: 92, name: 'Al-Layl', arabicName: 'الليل', meaning: 'The Night', versesCount: 21 },
-  { number: 93, name: 'Ad-Duha', arabicName: 'الضحى', meaning: 'The Morning Hours', versesCount: 11 },
-  { number: 109, name: 'Al-Kafirun', arabicName: 'الكافرون', meaning: 'The Disbelievers', versesCount: 6 },
-  { number: 112, name: 'Al-Ikhlas', arabicName: 'الإخلاص', meaning: 'The Sincerity', versesCount: 4 },
-  { number: 113, name: 'Al-Falaq', arabicName: 'الفلق', meaning: 'The Daybreak', versesCount: 5 },
-  { number: 114, name: 'An-Nas', arabicName: 'الناس', meaning: 'Mankind', versesCount: 6 },
-];
-
-const ABDUL_BASIT_SURAHS = [
-  { number: 1, name: 'Al-Fatiha', arabicName: 'الفاتحة', meaning: 'The Opening', versesCount: 7 },
-  { number: 2, name: 'Al-Baqarah', arabicName: 'البقرة', meaning: 'The Cow', versesCount: 286 },
-  { number: 3, name: 'Al-Imran', arabicName: 'آل عمران', meaning: 'Family of Imran', versesCount: 200 },
-  { number: 4, name: 'An-Nisa', arabicName: 'النساء', meaning: 'The Women', versesCount: 176 },
-  { number: 5, name: 'Al-Ma\'idah', arabicName: 'المائدة', meaning: 'The Table Spread', versesCount: 120 },
-];
-
-const MINSHAWI_SURAHS = [
-  { number: 1, name: "Al-Fatiha", arabicName: "الفاتحة", meaning: "The Opening", versesCount: 7 },
-  { number: 108, name: "Al-Kawthar", arabicName: "الكوثر", meaning: "The Abundance", versesCount: 3 },
-  { number: 109, name: "Al-Kafirun", arabicName: "الكافرون", meaning: "The Disbelievers", versesCount: 6 },
-  { number: 110, name: "An-Nasr", arabicName: "النصر", meaning: "The Help", versesCount: 3 },
-  { number: 111, name: "Al-Masad", arabicName: "المسد", meaning: "The Palm Fiber", versesCount: 5 },
-  { number: 112, name: "Al-Ikhlas", arabicName: "الإخلاص", meaning: "The Sincerity", versesCount: 4 },
-  { number: 113, name: "Al-Falaq", arabicName: "الفلق", meaning: "The Daybreak", versesCount: 5 },
-  { number: 114, name: "An-Nas", arabicName: "الناس", meaning: "Mankind", versesCount: 6 },
-];
-
-const SURAHS_BY_RECITER: Record<string, typeof MAH_SURAHS> = {
-  minshawi_mujawwad: MINSHAWI_SURAHS,
-  mah: MAH_SURAHS,
-  abdul_basit: ABDUL_BASIT_SURAHS,
-};
-
-// Decompose an Arabic string into base letters + diacritics
-function splitArabicIntoLetters(text: string): string[] {
-  const DIACRITICS = new Set([
-    "\u064B", "\u064C", "\u064D", "\u064E", "\u064F", "\u0650", "\u0651", "\u0652",
-    "\u0653", "\u0654", "\u0655", "\u0656", "\u0657", "\u0658", "\u065C", "\u065D",
-    "\u065E", "\u065F", "\u0670", "\u06E1", "\u06DF", "\u06E0", "\u06E2", "\u06E3"
-  ]);
-  const chunks: string[] = [];
-  let curr = "";
-  for (const char of text) {
-    if (DIACRITICS.has(char)) {
-      curr += char;
-    } else {
-      if (curr) chunks.push(curr);
-      curr = char;
-    }
-  }
-  if (curr) chunks.push(curr);
-  return chunks;
-}
 
 // Group canonical Quran words with letter timing
 function groupLettersIntoWords(timing: LetterTiming[], verses: Verse[]): TimedWord[] {
@@ -180,8 +94,8 @@ function formatTime(seconds: number): string {
 }
 
 export default function App() {
-  const [selectedReciter, setSelectedReciter] = useState('mah');
-  const [selectedSurah, setSelectedSurah] = useState(36); // Default to Surah 36 (Ya-Sin) or 1
+  const [selectedReciter, setSelectedReciter] = useState('abdul_basit_murattal');
+  const [selectedSurah, setSelectedSurah] = useState(1); // Default to Surah 36 (Ya-Sin) or 1
   const [verses, setVerses] = useState<Verse[]>([]);
   const [letterTiming, setLetterTiming] = useState<LetterTiming[]>([]);
   const [loading, setLoading] = useState(true);
@@ -189,18 +103,32 @@ export default function App() {
   const [isStudioOpen, setIsStudioOpen] = useState<boolean>(false);
 
   // UI View Preferences
-  const [showWordCards, setShowWordCards] = useState(true);
-  const [showTranslation, setShowTranslation] = useState(true);
-  const [showThreeBg, setShowThreeBg] = useState(true);
+  const [viewMode, setViewMode] = useState<'mushaf' | 'flow'>('mushaf');
+  const [auditioningWordIdx, setAuditioningWordIdx] = useState<number | null>(null);
+  const stopAtTimeRef = useRef<number | null>(null);
+
+  const [showWordCards, setShowWordCards] = useState(false);
+  const [showTranslation, setShowTranslation] = useState(false);
+  const [showThreeBg, setShowThreeBg] = useState(false);
   const [autoScroll, setAutoScroll] = useState(true);
   const [showDebug, setShowDebug] = useState(false);
+  const [showSettingsDrawer, setShowSettingsDrawer] = useState(false);
+  const [showMakhraj, setShowMakhraj] = useState(false);
+  const [enableTajweedColors, setEnableTajweedColors] = useState(true);
+  const [showTajweedLegend, setShowTajweedLegend] = useState(false);
+  const [hoveredWordText, setHoveredWordText] = useState<string | null>(null);
+  const [hoveredTajweed, setHoveredTajweed] = useState<any>(null);
   const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const verseRefs = useRef<Map<number, HTMLElement>>(new Map());
-  const activeWordRef = useRef<HTMLSpanElement | null>(null);
+  // const activeWordRef = useRef<HTMLSpanElement | null>(null);
 
-  const syncState = useLetterSync(audioRef, letterTiming);
+  const handleStopReached = useCallback(() => {
+    setAuditioningWordIdx(null);
+  }, []);
+
+  const syncState = useLetterSync(audioRef, letterTiming, 0, stopAtTimeRef, handleStopReached);
 
   const availableSurahs = SURAHS_BY_RECITER[selectedReciter] || MAH_SURAHS;
   const currentSurahInfo = availableSurahs.find(s => s.number === selectedSurah) || availableSurahs[0];
@@ -226,26 +154,29 @@ export default function App() {
       setError(null);
 
       try {
-        const versesRes = await fetch('/data/verses_v4.json');
-        if (!versesRes.ok) throw new Error('Could not load verse definitions');
-        const allVerses = await versesRes.json();
+        const allVerses = await fetchWithCache<Record<string, Verse[]>>('/data/verses_v4.json');
         const loadedVerses: Verse[] = allVerses[selectedSurah.toString()] || [];
 
         if (isCancelled) return;
         setVerses(loadedVerses);
 
-        // Load timing from reciter-specific path
+        // Load timing from reciter-specific path via multi-layer cache
         const timingPath =
           selectedReciter === "mah"
             ? `/data/letter_timing_${selectedSurah}.json`
             : `/data/${selectedReciter}/letter_timing_${selectedSurah}.json`;
 
-        const timingRes = await fetch(timingPath);
-        if (timingRes.ok) {
-          const rawTiming: LetterTiming[] = await timingRes.json();
+        try {
+          const rawTiming = await fetchWithCache<LetterTiming[]>(timingPath);
           if (!isCancelled) setLetterTiming(rawTiming);
-        } else {
+        } catch {
           if (!isCancelled) setLetterTiming([]);
+        }
+
+        // Predictive pre-warming of adjacent surahs in background
+        preloadSurahTiming(selectedSurah + 1, selectedReciter);
+        if (selectedSurah > 1) {
+          preloadSurahTiming(selectedSurah - 1, selectedReciter);
         }
       } catch (err: unknown) {
         if (!isCancelled) {
@@ -283,8 +214,29 @@ export default function App() {
     }
   }, [syncState.currentVerseIdx, autoScroll, syncState.isPlaying]);
 
-  // Seek and Play handlers
+  // Play only a single word's audio (WhisperX precision alignment boundary)
+  const playSingleWord = useCallback((word: TimedWord) => {
+    if (!audioRef.current) return;
+    if (word.start === 0 && word.end === 0) return;
+
+    // Add +35ms psychoacoustic padding so trailing acoustic releases aren't clipped
+    const stopTime = word.end > word.start ? word.end + 0.035 : word.start + 0.6;
+    stopAtTimeRef.current = stopTime;
+    setAuditioningWordIdx(word.globalWordIdx);
+
+    audioRef.current.currentTime = Math.max(0, word.start);
+    audioRef.current.play().catch(e => console.warn('Word audition playback error:', e));
+  }, []);
+
+  // When clicking a word in Flow Mode: play ONLY that word audio!
+  const handleWordClickInFlow = useCallback((word: TimedWord) => {
+    playSingleWord(word);
+  }, [playSingleWord]);
+
+  // Seek and Play handlers (clears isolated word audition bounds for continuous recitation)
   const handleSeek = (time: number) => {
+    stopAtTimeRef.current = null;
+    setAuditioningWordIdx(null);
     if (audioRef.current) {
       audioRef.current.currentTime = Math.max(0, time);
       if (audioRef.current.paused) {
@@ -293,43 +245,78 @@ export default function App() {
     }
   };
 
-  const handleWordClick = useCallback((word: TimedWord) => {
-    handleSeek(word.start);
-  }, []);
-
   const handleVerseClick = (verseIdx: number) => {
+    stopAtTimeRef.current = null;
+    setAuditioningWordIdx(null);
     const wordsForVerse = verseTimedWords.get(verseIdx) || [];
     if (wordsForVerse.length > 0) {
       handleSeek(wordsForVerse[0].start);
     }
   };
 
-  const handlePlayPause = () => {
+  const handlePlayPause = useCallback(() => {
+    stopAtTimeRef.current = null;
+    setAuditioningWordIdx(null);
     if (!audioRef.current) return;
     if (audioRef.current.paused) {
       audioRef.current.play().catch(e => console.warn('Playback error:', e));
     } else {
       audioRef.current.pause();
     }
-  };
+  }, []);
 
-  const handleSkip = (seconds: number) => {
+  const handleSkip = useCallback((seconds: number) => {
+    stopAtTimeRef.current = null;
+    setAuditioningWordIdx(null);
     if (!audioRef.current) return;
     audioRef.current.currentTime = Math.max(
       0,
       Math.min(audioRef.current.currentTime + seconds, audioRef.current.duration || 0)
     );
-  };
+  }, []);
 
-  const handlePrevVerse = () => {
+  const handlePrevVerse = useCallback(() => {
     const targetIdx = Math.max(0, syncState.currentVerseIdx - 1);
     handleVerseClick(targetIdx);
-  };
+  }, [syncState.currentVerseIdx, handleVerseClick]);
 
-  const handleNextVerse = () => {
+  const handleNextVerse = useCallback(() => {
     const targetIdx = Math.min(verses.length - 1, syncState.currentVerseIdx + 1);
     handleVerseClick(targetIdx);
-  };
+  }, [verses.length, syncState.currentVerseIdx, handleVerseClick]);
+
+  // Global Keyboard Shortcuts (Space: Play/Pause, Arrows: Seek & Ayah)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (
+        e.target instanceof HTMLInputElement ||
+        e.target instanceof HTMLSelectElement ||
+        e.target instanceof HTMLTextAreaElement
+      ) {
+        return;
+      }
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        handlePlayPause();
+      } else if (e.code === 'ArrowLeft') {
+        e.preventDefault();
+        handleSkip(-5);
+      } else if (e.code === 'ArrowRight') {
+        e.preventDefault();
+        handleSkip(5);
+      } else if (e.code === 'ArrowUp') {
+        e.preventDefault();
+        handlePrevVerse();
+      } else if (e.code === 'ArrowDown') {
+        e.preventDefault();
+        handleNextVerse();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handlePlayPause, handleSkip, handlePrevVerse, handleNextVerse]);
 
   const currentLetter = syncState.currentLetterIdx >= 0 ? letterTiming[syncState.currentLetterIdx] : null;
   const currentWord = timedWords.find(w => w.globalWordIdx === syncState.currentWordIdx);
@@ -348,25 +335,93 @@ export default function App() {
       {showThreeBg && <ThreeBackground isPlaying={syncState.isPlaying} />}
 
       <div className="app-container">
-        {/* Header */}
+        {/* Luxury Sacred Top Navigation Bar */}
+        <nav className="luxury-top-nav">
+          <div className="nav-brand">
+            <span className="brand-dot" />
+            <span className="brand-title">LIQUID LISAN</span>
+            <span className="brand-badge">TajweedSST v2.0</span>
+          </div>
+
+          <div className="nav-actions">
+            <button
+              className={`nav-action-btn ${isStudioOpen ? 'active' : ''}`}
+              onClick={() => setIsStudioOpen(true)}
+              title="Open Waveform & Alignment Studio"
+            >
+              🎙️ Studio
+            </button>
+            <button
+              className={`nav-action-btn ${showMakhraj ? 'active' : ''}`}
+              onClick={() => setShowMakhraj(!showMakhraj)}
+              title="Toggle Vocal Tract Biomechanics & Makhraj"
+            >
+              👄 Vocal Tract
+            </button>
+            <button
+              className={`nav-action-btn ${showThreeBg ? 'active' : ''}`}
+              onClick={() => setShowThreeBg(!showThreeBg)}
+              title="Toggle 3D Particle Universe"
+            >
+              🌌 3D Space
+            </button>
+            <button
+              className={`nav-action-btn ${showSettingsDrawer ? 'active' : ''}`}
+              onClick={() => setShowSettingsDrawer(!showSettingsDrawer)}
+              title="Toggle Display Settings"
+            >
+              ⚙️ Settings
+            </button>
+          </div>
+        </nav>
+
+        {/* Centerpiece Header Card */}
         <header className="header-card">
-          <button className="control-btn" style={{ borderColor: "#00ff88", color: "#00ff88" }} onClick={() => setIsStudioOpen(true)}>🎙️ Tajweed Studio</button>
-        <div className="header-badge">
+          <div className="header-badge">
             <span className="live-indicator" />
-            HIGH-PRECISION LETTER-BY-LETTER RECITATION KARAOKE
+            HIGH-PRECISION PHONEME & LETTER KARAOKE
           </div>
           <h1 className="header-title">
             <span className="glow-text">القرآن الكريم</span>
-            <span className="title-sub">MAH Letter Timing Precision</span>
+            <span className="title-sub">{currentSurahInfo.arabicName} • {currentSurahInfo.name} ({currentSurahInfo.meaning})</span>
           </h1>
           <p className="reciter-subtitle">
-            Reciter:{' '}
-            <strong>{RECITERS.find(r => r.id === selectedReciter)?.name}</strong>
+            Reciter: <strong>{RECITERS.find(r => r.id === selectedReciter)?.name}</strong>
           </p>
         </header>
 
         {/* Navigation & Selection Controls */}
         <section className="controls-card">
+          {/* View Mode Switcher: Sacred Mushaf Canvas vs Interactive Flow Mode */}
+          <div className="view-mode-selector-row">
+            <button
+              type="button"
+              className={`view-mode-tab-btn ${viewMode === 'mushaf' ? 'active' : ''}`}
+              onClick={() => {
+                stopAtTimeRef.current = null;
+                setAuditioningWordIdx(null);
+                setViewMode('mushaf');
+              }}
+            >
+              <span className="tab-icon">📖</span>
+              <span className="tab-label">Mushaf Canvas</span>
+              <span className="tab-badge">120 FPS</span>
+            </button>
+            <button
+              type="button"
+              className={`view-mode-tab-btn ${viewMode === 'flow' ? 'active' : ''}`}
+              onClick={() => {
+                stopAtTimeRef.current = null;
+                setAuditioningWordIdx(null);
+                setViewMode('flow');
+              }}
+            >
+              <span className="tab-icon">🌊</span>
+              <span className="tab-label">Interactive Flow Mode</span>
+              <span className="tab-badge">Word Audio</span>
+            </button>
+          </div>
+
           <div className="select-row">
             <div className="select-group">
               <label htmlFor="reciter-select">Reciter</label>
@@ -404,49 +459,133 @@ export default function App() {
             </div>
           </div>
 
-          {/* Quick Toggles */}
-          <div className="toggles-row">
-            <label className="pill-toggle">
-              <input
-                type="checkbox"
-                checked={showWordCards}
-                onChange={e => setShowWordCards(e.target.checked)}
-              />
-              <span>Word Cards & Roots</span>
-            </label>
-            <label className="pill-toggle">
-              <input
-                type="checkbox"
-                checked={showTranslation}
-                onChange={e => setShowTranslation(e.target.checked)}
-              />
-              <span>Translation</span>
-            </label>
-            <label className="pill-toggle">
-              <input
-                type="checkbox"
-                checked={autoScroll}
-                onChange={e => setAutoScroll(e.target.checked)}
-              />
-              <span>Auto-Scroll</span>
-            </label>
-            <label className="pill-toggle">
-              <input
-                type="checkbox"
-                checked={showThreeBg}
-                onChange={e => setShowThreeBg(e.target.checked)}
-              />
-              <span>3D Universe</span>
-            </label>
-            <label className="pill-toggle">
-              <input
-                type="checkbox"
-                checked={showDebug}
-                onChange={e => setShowDebug(e.target.checked)}
-              />
-              <span>Debug HUD</span>
-            </label>
+          {/* Collapsible Mobile-First Quick Settings */}
+          <div className="settings-drawer-toggle-row">
+            <button
+              className="settings-toggle-btn"
+              onClick={() => setShowSettingsDrawer(!showSettingsDrawer)}
+            >
+              ⚙️ {showSettingsDrawer ? "Hide Display Settings" : "Display & Visual Settings"}
+            </button>
           </div>
+
+          {showSettingsDrawer && (
+            <div className="toggles-row">
+              <label className="pill-toggle">
+                <input
+                  type="checkbox"
+                  checked={enableTajweedColors}
+                  onChange={e => setEnableTajweedColors(e.target.checked)}
+                />
+                <span>🎨 Tajweed Color Rules</span>
+              </label>
+              <label className="pill-toggle">
+                <input
+                  type="checkbox"
+                  checked={showTajweedLegend}
+                  onChange={e => setShowTajweedLegend(e.target.checked)}
+                />
+                <span>📖 Tajweed Legend</span>
+              </label>
+              <label className="pill-toggle">
+                <input
+                  type="checkbox"
+                  checked={showWordCards}
+                  onChange={e => setShowWordCards(e.target.checked)}
+                />
+                <span>Word Cards & Roots</span>
+              </label>
+              <label className="pill-toggle">
+                <input
+                  type="checkbox"
+                  checked={showMakhraj}
+                  onChange={e => setShowMakhraj(e.target.checked)}
+                />
+                <span>👄 Makhraj & Lips</span>
+              </label>
+              <label className="pill-toggle">
+                <input
+                  type="checkbox"
+                  checked={showTranslation}
+                  onChange={e => setShowTranslation(e.target.checked)}
+                />
+                <span>Translation</span>
+              </label>
+              <label className="pill-toggle">
+                <input
+                  type="checkbox"
+                  checked={autoScroll}
+                  onChange={e => setAutoScroll(e.target.checked)}
+                />
+                <span>Auto-Scroll</span>
+              </label>
+              <label className="pill-toggle">
+                <input
+                  type="checkbox"
+                  checked={showThreeBg}
+                  onChange={e => setShowThreeBg(e.target.checked)}
+                />
+                <span>3D Universe</span>
+              </label>
+              <label className="pill-toggle">
+                <input
+                  type="checkbox"
+                  checked={showDebug}
+                  onChange={e => setShowDebug(e.target.checked)}
+                />
+                <span>Debug HUD</span>
+              </label>
+            </div>
+          )}
+
+          {/* Collapsible Tajweed Color Legend Guide */}
+          {showTajweedLegend && (
+            <div className="tajweed-legend-card" dir="rtl">
+              <div className="legend-title">قواعد وألوان التجويد المعيارية (Standard Mushaf Rules):</div>
+              <div className="legend-grid">
+                <div className="legend-item" style={{ borderColor: "#f43f5e" }}>
+                  <span className="legend-color-dot" style={{ backgroundColor: "#f43f5e" }} />
+                  <span className="legend-name">مد لازم (6 حركات)</span>
+                  <span className="legend-symbol">ٓ (ضَّآلِّينَ)</span>
+                </div>
+                <div className="legend-item" style={{ borderColor: "#fb923c" }}>
+                  <span className="legend-color-dot" style={{ backgroundColor: "#fb923c" }} />
+                  <span className="legend-name">مد واجب/جائز (4-5 حركات)</span>
+                  <span className="legend-symbol">ٓ (جَآءَ)</span>
+                </div>
+                <div className="legend-item" style={{ borderColor: "#10b981" }}>
+                  <span className="legend-color-dot" style={{ backgroundColor: "#10b981" }} />
+                  <span className="legend-name">غنة الحرف المشدد (2 ح)</span>
+                  <span className="legend-symbol">نّ / مّ</span>
+                </div>
+                <div className="legend-item" style={{ borderColor: "#34d399" }}>
+                  <span className="legend-color-dot" style={{ backgroundColor: "#34d399" }} />
+                  <span className="legend-name">إقلاب</span>
+                  <span className="legend-symbol">ۢ (مِنۢ بَعْدِ)</span>
+                </div>
+                <div className="legend-item" style={{ borderColor: "#06b6d4" }}>
+                  <span className="legend-color-dot" style={{ backgroundColor: "#06b6d4" }} />
+                  <span className="legend-name">قلقلة (قطب جد ساكن)</span>
+                  <span className="legend-symbol">ْ (يَخْرُجُ)</span>
+                </div>
+                <div className="legend-item" style={{ borderColor: "#818cf8" }}>
+                  <span className="legend-color-dot" style={{ backgroundColor: "#818cf8" }} />
+                  <span className="legend-name">تفخيم واستعلاء</span>
+                  <span className="legend-symbol">خص ضغط قظ</span>
+                </div>
+                <div className="legend-item" style={{ borderColor: "#f59e0b" }}>
+                  <span className="legend-color-dot" style={{ backgroundColor: "#f59e0b" }} />
+                  <span className="legend-name">مد طبيعي (2 حركة)</span>
+                  <span className="legend-symbol">ٰ (الألف الخنجرية)</span>
+                </div>
+                <div className="legend-item" style={{ borderColor: "#94a3b8" }}>
+                  <span className="legend-color-dot" style={{ backgroundColor: "#94a3b8" }} />
+                  <span className="legend-name">همزة وصل / لا يُنطق</span>
+                  <span className="legend-symbol">ٱ / ۟</span>
+                </div>
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Master Glassmorphic Audio Player Bar */}
@@ -581,7 +720,27 @@ export default function App() {
           </aside>
         )}
 
-        {/* Quran Text & Karaoke Display */}
+        {/* RTL Waveform & Live Tajweed Inspector (Immediate Top Focus) */}
+        <AudioWaveformSyncCanvas
+          currentTime={syncState.currentTime}
+          duration={audioRef.current?.duration || 41.5}
+          isPlaying={syncState.isPlaying}
+          activeWord={currentWord}
+          activeLetter={currentLetter}
+          letterTiming={letterTiming}
+          reciterId={selectedReciter}
+          surahNumber={selectedSurah}
+          onSeek={handleSeek}
+        />
+
+        <MobileTajweedInspectorHUD
+          activeWord={currentWord || null}
+          activeLetter={currentLetter || null}
+          isPlaying={syncState.isPlaying}
+          hoveredTajweed={hoveredTajweed}
+          hoveredWordText={hoveredWordText}
+        />
+
         <main className="quran-content-card">
           {loading ? (
             <div className="loading-state">
@@ -593,132 +752,140 @@ export default function App() {
               <span className="error-icon">⚠️</span>
               <p>{error}</p>
             </div>
+          ) : viewMode === 'mushaf' ? (
+            <FluidMushafCanvas
+              verses={verses}
+              letterTiming={letterTiming}
+              currentTime={syncState.currentTime}
+              isPlaying={syncState.isPlaying}
+              activeVerseIdx={syncState.currentVerseIdx}
+              enableTajweedColors={enableTajweedColors}
+              autoScroll={autoScroll}
+              onSeek={handleSeek}
+              onWordHover={(wordText, tajweed) => {
+                setHoveredWordText(wordText);
+                setHoveredTajweed(tajweed || null);
+              }}
+            />
           ) : (
-            <div className="verses-list">
-              {verses.map((verse, verseIdx) => {
-                const wordsInVerse = verseTimedWords.get(verseIdx) || [];
-                const isVerseActive = verseIdx === syncState.currentVerseIdx;
+            <div className="flow-mode-container">
+              {/* Flow Mode Helper Banner */}
+              <div className="flow-mode-helper-banner">
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <span className="banner-icon">🎧</span>
+                  <span><strong>Flow Mode:</strong> Tap any word to play <em>only that word</em> (WhisperX precision). Tap ۝ Ayah or ▶ for continuous recitation.</span>
+                </div>
+                <span className="banner-tag">WhisperX Aligned</span>
+              </div>
 
-                return (
-                  <article
-                    key={verse.ayah}
-                    ref={el => {
-                      if (el) verseRefs.current.set(verseIdx, el);
-                      else verseRefs.current.delete(verseIdx);
-                    }}
-                    className={`verse-item ${isVerseActive ? 'verse-active' : ''}`}
-                    onClick={() => handleVerseClick(verseIdx)}
-                  >
-                    {/* Verse Header */}
-                    <div className="verse-meta-bar">
-                      <span className="ayah-chip" title={`Surah ${selectedSurah}, Ayah ${verse.ayah}`}>
-                        {selectedSurah}:{verse.ayah}
-                      </span>
-                      <span className="ayah-hint">Click anywhere in Ayah to jump</span>
-                    </div>
+              <div className="verses-list">
+                {verses.map((verse, verseIdx) => {
+                  const wordsInVerse = verseTimedWords.get(verseIdx) || [];
+                  const isVerseActive = verseIdx === syncState.currentVerseIdx;
 
-                    {/* Arabic Text with Letter Karaoke Glowing */}
-                    <div className="arabic-karaoke-block" dir="rtl">
-                      {wordsInVerse.length > 0 ? (
-                        wordsInVerse.map(word => {
-                          const isWordActive = word.globalWordIdx === syncState.currentWordIdx;
-                          const isWordPast =
-                            syncState.currentWordIdx >= 0 && word.globalWordIdx < syncState.currentWordIdx;
+                  return (
+                    <article
+                      key={verse.ayah}
+                      ref={el => {
+                        if (el) verseRefs.current.set(verseIdx, el);
+                        else verseRefs.current.delete(verseIdx);
+                      }}
+                      className={`verse-item ${isVerseActive ? 'verse-active' : ''}`}
+                    >
+                      {/* Arabic Text with Letter Karaoke Glowing & Precision Word Audition */}
+                      <div className="arabic-karaoke-block" dir="rtl">
+                        {wordsInVerse.length > 0 ? (
+                          wordsInVerse.map(word => {
+                            const isWordActive = word.globalWordIdx === syncState.currentWordIdx;
+                            const isWordPast =
+                              syncState.currentWordIdx >= 0 && word.globalWordIdx < syncState.currentWordIdx;
+                            const isAuditioning = auditioningWordIdx === word.globalWordIdx;
 
-                          return (
-                            <span
-                              key={word.globalWordIdx}
-                              ref={isWordActive ? activeWordRef : undefined}
-                              className={`word-span ${isWordActive ? 'word-active' : ''} ${
-                                isWordPast ? 'word-past' : ''
-                              }`}
-                              onClick={e => {
-                                e.stopPropagation();
-                                handleWordClick(word);
-                              }}
-                              title={`Word #${word.globalWordIdx + 1} (${word.start.toFixed(2)}s - ${word.end.toFixed(2)}s)`}
-                            >
-                              {word.letters.map((letter, letterIdxInWord) => {
-                                const isLetterActive =
-                                  isWordActive &&
-                                  currentLetter &&
-                                  currentLetter.wordIdx === word.globalWordIdx &&
-                                  (typeof (currentLetter as any).charIdxInWord !== "undefined"
-                                    ? (currentLetter as any).charIdxInWord === letterIdxInWord
-                                    : currentLetter.char === letter.char);
+                            return (
+                              <WordWaveformPill
+                                key={word.globalWordIdx}
+                                word={word}
+                                isWordActive={isWordActive}
+                                isWordPast={isWordPast}
+                                isAuditioning={isAuditioning}
+                                enableTajweedColors={enableTajweedColors}
+                                currentTime={syncState.currentTime}
+                                activeLetter={currentLetter as any}
+                                onWordClick={handleWordClickInFlow}
+                                onWordHover={(wordText, tajweed) => {
+                                  setHoveredWordText(wordText);
+                                  setHoveredTajweed(tajweed || null);
+                                }}
+                              />
+                            );
+                          })
+                        ) : (
+                          <span className="verse-fallback-text">{verse.text}</span>
+                        )}
+                        <span
+                          className="inline-ayah-marker"
+                          title={`Ayah ${verse.ayah} • Tap to recite Ayah`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleVerseClick(verseIdx);
+                          }}
+                          style={{ cursor: 'pointer' }}
+                        >
+                          {' '}۝{toArabicNumerals(verse.ayah)}{' '}
+                        </span>
+                      </div>
 
-                                const isLetterPast =
-                                  (syncState.currentWordIdx >= 0 && word.globalWordIdx < syncState.currentWordIdx) ||
-                                  (isWordActive && currentLetter && (
-                                    typeof (currentLetter as any).charIdxInWord !== "undefined"
-                                      ? letterIdxInWord < (currentLetter as any).charIdxInWord
-                                      : false
-                                  ));
+                      {/* Word Cards Row with Transliteration & Roots */}
+                      {showWordCards && verse.words && verse.words.length > 0 && (
+                        <div className="word-cards-flow" dir="rtl">
+                          {verse.words.map((w, wIdx) => {
+                            const matchedWord = wordsInVerse[wIdx];
+                            const isActive =
+                              matchedWord && matchedWord.globalWordIdx === syncState.currentWordIdx;
+                            const isPast =
+                              matchedWord &&
+                              syncState.currentWordIdx >= 0 &&
+                              matchedWord.globalWordIdx < syncState.currentWordIdx;
+                            const isAuditioning = matchedWord && auditioningWordIdx === matchedWord.globalWordIdx;
 
-                                return (
-                                  <span
-                                    key={letterIdxInWord}
-                                    className={`letter-span ${isLetterActive ? "letter-active" : ""} ${
-                                      isLetterPast ? "letter-past" : ""
-                                    }`}
-                                  >
-                                    {letter.char}
-                                  </span>
-                                );
-                              })}
-                            </span>
-                          );
-                        })
-                      ) : (
-                        <span className="verse-fallback-text">{verse.text}</span>
+                            return (
+                              <div
+                                key={w.id || wIdx}
+                                className={`word-card-chip ${isActive ? 'active' : ''} ${
+                                  isPast ? 'past' : ''
+                                } ${isAuditioning ? 'auditioning' : ''}`}
+                                title={`Play word: ${w.arabic}`}
+                                onClick={e => {
+                                  e.stopPropagation();
+                                  if (matchedWord) handleWordClickInFlow(matchedWord);
+                                }}
+                              >
+                                <span className="card-arabic">{w.arabic}</span>
+                                {w.translit && <span className="card-translit">{w.translit}</span>}
+                                {w.root && <span className="card-root">Root: {w.root}</span>}
+                              </div>
+                            );
+                          })}
+                        </div>
                       )}
-                      <span className="ayah-end-symbol"> ﴿{verse.ayah}﴾ </span>
-                    </div>
 
-                    {/* Word Cards Row with Transliteration & Roots */}
-                    {showWordCards && verse.words && verse.words.length > 0 && (
-                      <div className="word-cards-flow" dir="rtl">
-                        {verse.words.map((w, wIdx) => {
-                          const matchedWord = wordsInVerse[wIdx];
-                          const isActive =
-                            matchedWord && matchedWord.globalWordIdx === syncState.currentWordIdx;
-                          const isPast =
-                            matchedWord &&
-                            syncState.currentWordIdx >= 0 &&
-                            matchedWord.globalWordIdx < syncState.currentWordIdx;
-
-                          return (
-                            <div
-                              key={w.id || wIdx}
-                              className={`word-card-chip ${isActive ? 'active' : ''} ${
-                                isPast ? 'past' : ''
-                              }`}
-                              onClick={e => {
-                                e.stopPropagation();
-                                if (matchedWord) handleWordClick(matchedWord);
-                              }}
-                            >
-                              <span className="card-arabic">{w.arabic}</span>
-                              {w.translit && <span className="card-translit">{w.translit}</span>}
-                              {w.root && <span className="card-root">Root: {w.root}</span>}
-                            </div>
-                          );
-                        })}
-                      </div>
-                    )}
-
-                    {/* Translation */}
-                    {showTranslation && verse.translation && (
-                      <div className="translation-text">
-                        {verse.translation}
-                      </div>
-                    )}
-                  </article>
-                );
-              })}
+                      {/* Translation */}
+                      {showTranslation && verse.translation && (
+                        <div className="translation-text">
+                          {verse.translation}
+                        </div>
+                      )}
+                    </article>
+                  );
+                })}
+              </div>
             </div>
           )}
         </main>
+
+        {/* Biomechanical Vocal Apparatus & Visualizer (Positioned Below Quran Reader) */}
+        {showMakhraj && <MakhrajVisualizer currentChar={currentLetter ? currentLetter.char : null} isPlaying={syncState.isPlaying} />}
+        {showMakhraj && <BiomechanicalVocalHUD currentLetter={currentLetter} isPlaying={syncState.isPlaying} reciterId={selectedReciter} />}
       </div>
     </div>
   );

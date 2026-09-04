@@ -1,28 +1,31 @@
 /* ==========================================================================
-   MAH Quran - Letter-Precision Recitation Karaoke Theme
-   Emerald Glassmorphism & High-Precision Arabic Typography
+   MAH Quran - Ultra-Luxury Sacred Recitation Experience ($99M UX Tier)
+   Obsidian Glassmorphism, Liquid Lisan Kinetic Highlighting & Uthmani Calligraphy
    ========================================================================== */
 
 :root {
-  --bg-dark: #050805;
-  --bg-card: rgba(12, 20, 12, 0.8);
-  --bg-card-hover: rgba(18, 30, 18, 0.9);
-  --bg-secondary: #0a110a;
+  --bg-dark: #060911;
+  --bg-card: rgba(11, 18, 33, 0.72);
+  --bg-card-hover: rgba(16, 26, 48, 0.85);
+  --bg-secondary: #090e1c;
   
-  --emerald-primary: #00ff88;
-  --neon-green: #00ff41;
-  --emerald-dim: #008833;
-  --emerald-faint: rgba(0, 255, 136, 0.08);
+  --emerald-primary: #00ffaa;
+  --neon-green: #00ffaa;
+  --emerald-dim: #059669;
+  --emerald-faint: rgba(0, 255, 170, 0.08);
   
-  --text-main: #f0fff4;
-  --text-muted: #8fa88f;
-  --text-dim: #5c785c;
+  --gold-primary: #fbbf24;
+  --gold-glow: rgba(251, 191, 36, 0.45);
   
-  --border-glass: rgba(0, 255, 65, 0.18);
-  --border-glass-active: rgba(0, 255, 136, 0.45);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
   
-  --shadow-glow: 0 0 25px rgba(0, 255, 65, 0.15);
-  --shadow-active: 0 0 30px rgba(0, 255, 136, 0.35);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glass-active: rgba(0, 255, 170, 0.45);
+  
+  --shadow-glow: 0 14px 40px -6px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 255, 170, 0.14);
+  --shadow-active: 0 22px 50px -8px rgba(0, 0, 0, 0.75), 0 0 35px rgba(0, 255, 170, 0.32);
   
   --font-arabic: 'Amiri Quran', 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
   --font-latin: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -42,7 +45,12 @@
 
 body {
   font-family: var(--font-latin);
-  background-color: var(--bg-dark);
+  background: 
+    radial-gradient(circle at 50% 0%, rgba(0, 255, 170, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 10% 40%, rgba(14, 165, 233, 0.07) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.05) 0%, transparent 40%),
+    var(--bg-dark);
+  background-attachment: fixed;
   color: var(--text-main);
   min-height: 100vh;
   line-height: 1.5;
@@ -68,6 +76,92 @@ body {
   padding: 24px 20px 80px;
   position: relative;
   z-index: 1;
+}
+
+/* Luxury Sacred Top Navigation Bar */
+.luxury-top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+  background: rgba(10, 16, 30, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--emerald-primary);
+  box-shadow: 0 0 10px var(--emerald-primary);
+  animation: pulse-live 1.8s infinite ease-in-out;
+}
+
+.brand-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(0, 255, 170, 0.35);
+}
+
+.brand-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: rgba(0, 255, 170, 0.1);
+  border: 1px solid rgba(0, 255, 170, 0.3);
+  color: var(--emerald-primary);
+  letter-spacing: 0.5px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-action-btn:hover {
+  background: rgba(0, 255, 170, 0.12);
+  border-color: rgba(0, 255, 170, 0.45);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 255, 170, 0.15);
+}
+
+.nav-action-btn.active {
+  background: rgba(0, 255, 170, 0.18);
+  border-color: var(--emerald-primary);
+  color: var(--emerald-primary);
+  box-shadow: 0 0 16px rgba(0, 255, 170, 0.25);
 }
 
 /* Header Card */
@@ -563,26 +657,35 @@ body {
 /* Letter Spans */
 .letter-span {
   display: inline;
-  transition: color 0.1s ease, text-shadow 0.1s ease;
+  position: relative;
+  transition: color 0.08s ease, text-shadow 0.08s ease, filter 0.08s ease;
+  font-feature-settings: 'liga' 1, 'calt' 1, 'rlig' 1;
 }
 
 .letter-span.letter-active {
-  color: #00ff88;
-  font-weight: bold;
+  color: #00ffaa;
   text-shadow: 
-    0 0 10px #00ff88,
-    0 0 20px #00ff88,
-    0 0 35px #00ff41;
-  animation: letter-pulse 0.6s infinite alternate;
+    0 0 6px rgba(0, 255, 170, 0.95),
+    0 0 14px rgba(0, 255, 170, 0.75),
+    0 0 28px rgba(0, 255, 65, 0.55);
+  filter: drop-shadow(0 0 5px rgba(0, 255, 170, 0.85));
+  animation: letter-pulse 0.7s infinite alternate ease-in-out;
 }
 
 @keyframes letter-pulse {
-  from { opacity: 0.95; }
-  to { opacity: 1; }
+  from {
+    filter: drop-shadow(0 0 4px rgba(0, 255, 170, 0.7));
+    opacity: 0.95;
+  }
+  to {
+    filter: drop-shadow(0 0 9px rgba(0, 255, 170, 1));
+    opacity: 1;
+  }
 }
 
 .letter-span.letter-past {
-  color: var(--emerald-dim);
+  color: #6ee7b7;
+  opacity: 0.88;
 }
 
 .ayah-end-symbol {
@@ -998,3 +1101,1753 @@ body {
   font-size: 0.85rem;
   text-align: center;
 }
+
+
+/* --- MAKHRAJ & MUSHAFHAHA (LIP-SHAPE) VISUALIZER --- */
+.makhraj-panel {
+  background: rgba(10, 20, 35, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 255, 170, 0.25);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 16px rgba(0, 255, 170, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.makhraj-panel.is-active {
+  border-color: #00ffaa;
+  box-shadow: 0 8px 32px rgba(0, 255, 170, 0.15), inset 0 0 20px rgba(0, 255, 170, 0.08);
+}
+
+.makhraj-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 8px;
+}
+
+.makhraj-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #00ffaa;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.makhraj-char-big {
+  font-size: 2.2rem;
+  font-family: "Amiri", serif;
+  color: #ffffff;
+  text-shadow: 0 0 12px #00ffaa;
+  line-height: 1;
+}
+
+.makhraj-body {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .makhraj-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.makhraj-diagram-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.lip-animation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.lip-svg {
+  width: 120px;
+  height: 70px;
+  filter: drop-shadow(0 0 8px rgba(255, 0, 85, 0.4));
+  transition: transform 0.15s ease-out;
+}
+
+.diagram-sublabel {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.anatomical-tag {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.anat-group {
+  background: rgba(0, 255, 170, 0.2);
+  color: #00ffaa;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.anat-pos {
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+}
+
+.makhraj-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.makhraj-title-ar {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.makhraj-desc-ar {
+  font-size: 0.95rem;
+  font-family: "Amiri", serif;
+  color: #38bdf8;
+  line-height: 1.4;
+  direction: rtl;
+}
+
+.makhraj-desc-en {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.3;
+}
+
+.sifat-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.sifat-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+}
+
+.sifat-chip.tafkheem {
+  background: rgba(234, 179, 8, 0.2);
+  border-color: rgba(234, 179, 8, 0.5);
+  color: #facc15;
+}
+
+.sifat-chip.qalqalah {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #38bdf8;
+}
+
+.sifat-chip.ghunnah {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.5);
+  color: #4ade80;
+}
+
+
+/* --- 5-ORGAN SAGITTAL VOCAL TRACT DIAGRAM STYLES --- */
+.makhraj-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.makhraj-organ-chip {
+  background: rgba(0, 240, 255, 0.15);
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.makhraj-body-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .makhraj-body-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vocal-tract-diagram-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sagittal-vocal-tract-svg {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 170, 0.2));
+}
+
+.makhraj-details-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.makhraj-subloc-ar {
+  font-size: 1.15rem;
+  font-family: "Amiri", serif;
+  color: #38bdf8;
+  direction: rtl;
+  line-height: 1.4;
+}
+
+.makhraj-subloc-en {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.3;
+}
+
+.organ-status-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.organ-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+}
+
+.organ-pill.nasal-glow {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: #22c55e;
+  color: #4ade80;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
+}
+
+
+/* --- MOBILE RESPONSIVE TIGHTENING --- */
+@media (max-width: 640px) {
+  .app-container {
+    padding: 8px 12px !important;
+  }
+
+  .header h1 {
+    font-size: 1.6rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .header .subtitle {
+    font-size: 0.8rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .reciter-badge {
+    margin-bottom: 8px !important;
+    padding: 4px 10px !important;
+    font-size: 0.75rem !important;
+  }
+
+  .controls-panel {
+    padding: 10px !important;
+    margin-bottom: 12px !important;
+    gap: 8px !important;
+  }
+
+  .selectors-row {
+    gap: 6px !important;
+  }
+
+  .timing-calibration-widget {
+    padding: 6px 10px !important;
+    margin-top: 4px !important;
+  }
+
+  .quick-toggles-row {
+    gap: 4px !important;
+    margin-top: 6px !important;
+  }
+
+  .pill-toggle span {
+    font-size: 0.7rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .makhraj-panel {
+    padding: 10px 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .makhraj-char-big {
+    font-size: 1.8rem !important;
+  }
+
+  .surah-container {
+    padding: 12px !important;
+  }
+
+  .verse-arabic {
+    font-size: 1.7rem !important;
+    line-height: 2.2 !important;
+  }
+}
+
+
+/* ==========================================================================
+   STATE-OF-THE-ART HIGH-CONTRAST ARABIC RECITATION HIGHLIGHTING
+   ========================================================================== */
+
+.arabic-karaoke-block {
+  color: #94a3b8;
+  font-family: var(--font-arabic);
+  font-size: 2.3rem;
+  line-height: 2.6;
+  text-align: right;
+  direction: rtl;
+  margin-bottom: 16px;
+  padding: 16px 20px;
+  background: rgba(5, 12, 20, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-feature-settings: "liga" 1, "calt" 1, "rlig" 1;
+  font-kerning: normal;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+}
+
+.word-span {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.word-span:hover {
+  background-color: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.word-span.word-active {
+  background-color: rgba(0, 255, 170, 0.16);
+  border-color: rgba(0, 255, 170, 0.45);
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.25), inset 0 0 10px rgba(0, 255, 170, 0.1);
+  transform: translateY(-2px);
+}
+
+.word-span.word-past {
+  opacity: 0.95;
+}
+
+/* Individual Letter Highlighting with High Dynamic Contrast */
+.letter-span {
+  display: inline;
+  position: relative;
+  color: #64748b; /* Muted unread */
+  opacity: 0.7;
+  transition: color 0.05s ease, text-shadow 0.05s ease, opacity 0.05s ease;
+  font-feature-settings: "liga" 1, "calt" 1, "rlig" 1;
+}
+
+.letter-span.letter-active {
+  color: #00ffaa !important;
+  opacity: 1 !important;
+  font-weight: 700;
+  text-shadow: 
+    0 0 8px rgba(0, 255, 170, 1),
+    0 0 16px rgba(0, 255, 170, 0.8),
+    0 0 32px rgba(0, 240, 255, 0.6);
+  filter: drop-shadow(0 0 6px rgba(0, 255, 170, 0.9));
+}
+
+.letter-span.letter-past {
+  color: #ffffff !important; /* Fully illuminated passed letters */
+  opacity: 1 !important;
+  text-shadow: 0 0 6px rgba(0, 255, 170, 0.3);
+}
+
+
+/* --- LIQUID WAVE ENERGY BEAM OVER ACTIVE WORD --- */
+.word-span {
+  position: relative;
+}
+
+.liquid-wave-track {
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.liquid-wave-fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to left, #00f0ff, #00ffaa);
+  box-shadow: 0 0 8px #00ffaa, 0 0 16px #00f0ff;
+  border-radius: 2px;
+  transition: width 0.06s linear;
+}
+
+/* Fluid Liquid Gradient Text Fill on Active Word */
+.word-span.word-active {
+  background: linear-gradient(
+    to left,
+    rgba(0, 255, 170, 0.22) var(--word-progress, 0%),
+    rgba(255, 255, 255, 0.04) calc(var(--word-progress, 0%) + 10%)
+  );
+  border-color: rgba(0, 255, 170, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.25);
+}
+
+
+/* ==========================================================================
+   CONTINUOUS LIQUID GREEN WAVE COLOR FLOW ACROSS LETTERS
+   ========================================================================== */
+
+/* Past Recited Letters - Solid Luminous Radiant Green */
+.word-span.word-past .letter-span,
+.letter-span.letter-past {
+  color: #00ffaa !important;
+  opacity: 1 !important;
+  text-shadow: 0 0 6px rgba(0, 255, 170, 0.45);
+}
+
+/* Active Reciting Letter - Fluid Liquid Wave Gradient Filling Right-to-Left */
+.letter-span.letter-active {
+  background: linear-gradient(
+    to left,
+    #00ffaa 0%,
+    #00ffaa var(--letter-fill, 50%),
+    #ffffff calc(var(--letter-fill, 50%) + 1%),
+    #64748b calc(var(--letter-fill, 50%) + 6%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 170, 0.95));
+  font-weight: 700;
+  opacity: 1 !important;
+}
+
+/* Unrecited Upcoming Letters - Muted Silver */
+.letter-span {
+  color: #64748b;
+  opacity: 0.65;
+  transition: opacity 0.05s ease;
+}
+
+/* Active Word Ambient Green Aura */
+.word-span.word-active {
+  background-color: rgba(0, 255, 170, 0.12);
+  border-color: rgba(0, 255, 170, 0.4);
+  box-shadow: 0 0 16px rgba(0, 255, 170, 0.2);
+}
+
+
+/* ==========================================================================
+   CONTINUOUS LIQUID GREEN WAVE GRADIENT FLOW (RTL SWEET SPOT)
+   ========================================================================== */
+
+/* Recited Past Letters - Solid Radiant Luminous Emerald Green */
+.word-span.word-past .letter-span,
+.letter-span.letter-past {
+  color: #00ffaa !important;
+  opacity: 1 !important;
+  text-shadow: 0 0 6px rgba(0, 255, 170, 0.5);
+  -webkit-text-fill-color: #00ffaa !important;
+}
+
+/* Active Reciting Letter - Continuous Liquid Wave Gradient Sweeping RTL */
+.letter-span.letter-active {
+  background: linear-gradient(
+    to left,
+    #00ffaa 0%,
+    #00ffaa var(--letter-fill, 50%),
+    #ffffff calc(var(--letter-fill, 50%) + 1%),
+    #64748b calc(var(--letter-fill, 50%) + 6%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 170, 0.95));
+  font-weight: 700;
+  opacity: 1 !important;
+}
+
+/* Unrecited Upcoming Letters - Muted Silver */
+.letter-span {
+  color: #64748b;
+  opacity: 0.65;
+  transition: opacity 0.05s ease;
+}
+
+/* Continuous Liquid Energy Ribbon Under Active Word */
+.word-span {
+  position: relative;
+}
+
+.liquid-wave-track {
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.liquid-wave-fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to left, #00f0ff, #00ffaa);
+  box-shadow: 0 0 8px #00ffaa, 0 0 16px #00f0ff;
+  border-radius: 2px;
+  transition: width 0.06s linear;
+}
+
+.word-span.word-active {
+  background-color: rgba(0, 255, 170, 0.12);
+  border-color: rgba(0, 255, 170, 0.4);
+  box-shadow: 0 0 16px rgba(0, 255, 170, 0.2);
+}
+
+
+/* ==========================================================================
+   BIOMECHANICAL VOCAL APPARATUS (CHEST, THROAT, TONGUE, LIPS, NASAL) HUD
+   ========================================================================== */
+
+.biomechanical-hud-container {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.hud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hud-title-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.hud-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px currentColor;
+  animation: hud-pulse 1.5s infinite;
+}
+
+@keyframes hud-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+.hud-organ-badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 255, 170, 0.3);
+  background: rgba(0, 255, 170, 0.05);
+}
+
+.hud-body-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.hud-metric-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.hud-card-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.hud-card-value {
+  font-size: 0.82rem;
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+.hud-sub-desc {
+  font-size: 0.72rem;
+  color: #64748b;
+  line-height: 1.2;
+}
+
+.hud-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 0.25rem;
+}
+
+.hud-progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.1s ease-out;
+}
+
+
+/* ==========================================================================
+   DIRECT ACOUSTIC WAVEFORM SYNCHRONIZER CANVAS
+   ========================================================================== */
+
+.waveform-sync-container {
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 255, 170, 0.25);
+  border-radius: 16px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 255, 170, 0.1);
+}
+
+.waveform-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.waveform-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #00ffaa;
+}
+
+.waveform-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ffaa;
+  box-shadow: 0 0 8px #00ffaa;
+  animation: pulse-live 1.2s infinite;
+}
+
+@keyframes pulse-live {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.waveform-time-display {
+  color: #94a3b8;
+  font-family: monospace;
+}
+
+.waveform-sync-canvas {
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+
+/* ==========================================================================
+   SUBLIME WORD-LEVEL WAVEFORM PILL & TAJWEED VOCALISATION STYLES
+   ========================================================================== */
+
+.word-pill-container {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.75rem 0.6rem 0.75rem;
+  margin: 0.35rem 0.25rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.word-pill-container:hover {
+  background: rgba(15, 23, 42, 0.75);
+  border-color: rgba(0, 255, 170, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 170, 0.15);
+}
+
+.word-pill-container.word-active {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: var(--active-tajweed-color, #00ffaa);
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.25), inset 0 0 12px rgba(0, 255, 170, 0.05);
+  transform: scale(1.03);
+}
+
+.word-pill-container.word-past {
+  background: rgba(15, 23, 42, 0.35);
+  border-color: rgba(0, 255, 170, 0.2);
+}
+
+.word-text-row {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  direction: rtl;
+}
+
+.tajweed-letter-span {
+  position: relative;
+  display: inline-block;
+  color: #64748b;
+  transition: all 0.06s ease;
+}
+
+.tajweed-letter-span.letter-past {
+  color: #00ffaa !important;
+  -webkit-text-fill-color: #00ffaa !important;
+  text-shadow: 0 0 8px rgba(0, 255, 170, 0.6);
+  opacity: 1 !important;
+}
+
+.tajweed-letter-span.letter-active {
+  background: linear-gradient(
+    to left,
+    var(--tajweed-color, #00ffaa) 0%,
+    var(--tajweed-color, #00ffaa) var(--letter-fill, 50%),
+    #ffffff calc(var(--letter-fill, 50%) + 1%),
+    rgba(100, 116, 139, 0.4) calc(var(--letter-fill, 50%) + 6%)
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 0 14px var(--tajweed-color, #00ffaa)) !important;
+  font-weight: 700;
+  opacity: 1 !important;
+}
+
+.tajweed-floating-badge {
+  position: absolute;
+  top: -14px;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 0.65rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.95);
+  color: #00ffaa;
+  border: 1px solid rgba(0, 255, 170, 0.5);
+  box-shadow: 0 0 8px rgba(0, 255, 170, 0.4);
+  white-space: nowrap;
+  pointer-events: none;
+  animation: badge-fade-in 0.15s ease-out;
+}
+
+@keyframes badge-fade-in {
+  from { opacity: 0; transform: translate(50%, 4px); }
+  to { opacity: 1; transform: translate(50%, 0); }
+}
+
+/* Embedded Micro-Waveform Ribbon */
+.word-micro-waveform {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  width: 100%;
+  height: 12px;
+  margin-top: 4px;
+  padding: 0 2px;
+}
+
+.micro-bar {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1px;
+  min-height: 2px;
+  transition: background 0.08s ease, height 0.1s ease;
+}
+
+.micro-bar.bar-filled {
+  background: linear-gradient(180deg, #00f0ff, #00ffaa);
+  box-shadow: 0 0 4px #00ffaa;
+}
+
+
+/* ==========================================================================
+   MOBILE-FIRST RESPONSIVENESS & AUTHENTIC MUSHAF TAJWEED TEXT COLORS
+   ========================================================================== */
+
+/* Authentic Mushaf Tajweed Text Colors (Always Visible in Natural Colors) */
+.tajweed-letter-span {
+  position: relative;
+  display: inline-block;
+  color: var(--tajweed-color, #e2e8f0);
+  opacity: 0.95;
+  transition: all 0.08s ease;
+}
+
+.tajweed-letter-span.letter-past {
+  color: #00ffaa !important;
+  -webkit-text-fill-color: #00ffaa !important;
+  text-shadow: 0 0 10px rgba(0, 255, 170, 0.7);
+  opacity: 1 !important;
+}
+
+.tajweed-letter-span.letter-active {
+  background: linear-gradient(
+    to left,
+    var(--tajweed-color, #00ffaa) 0%,
+    var(--tajweed-color, #00ffaa) var(--letter-fill, 50%),
+    #ffffff calc(var(--letter-fill, 50%) + 1%),
+    var(--tajweed-color, #64748b) calc(var(--letter-fill, 50%) + 6%)
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 0 14px var(--tajweed-color, #00ffaa)) !important;
+  font-weight: 700;
+  opacity: 1 !important;
+}
+
+/* Mobile Tajweed Live Inspector HUD Bar */
+.mobile-tajweed-hud-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0.9rem;
+  margin-bottom: 0.75rem;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 170, 0.3);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.15s ease;
+}
+
+.mobile-tajweed-hud-bar .hud-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-tajweed-hud-bar .hud-word-arabic {
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  direction: rtl;
+}
+
+.mobile-tajweed-hud-bar .hud-rule-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid;
+}
+
+.mobile-tajweed-hud-bar .hud-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.mobile-tajweed-hud-bar .hud-harakat-count {
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+}
+
+/* Mobile Media Queries (< 768px) */
+@media (max-width: 768px) {
+  .app-container, .quran-reader-page {
+    padding: 0.5rem !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .quran-content-card {
+    padding: 0.75rem 0.5rem !important;
+    border-radius: 14px !important;
+  }
+
+  .arabic-karaoke-block {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+  }
+
+  .word-pill-container {
+    padding: 0.25rem 0.4rem 0.45rem 0.4rem !important;
+    margin: 0.2rem 0.15rem !important;
+    border-radius: 10px !important;
+  }
+
+  .word-text-row {
+    font-size: 1.65rem !important;
+  }
+
+  .word-micro-waveform {
+    height: 8px !important;
+    margin-top: 2px !important;
+  }
+
+  .tajweed-floating-badge {
+    top: -12px !important;
+    font-size: 0.55rem !important;
+    padding: 0.05rem 0.25rem !important;
+  }
+
+  .waveform-sync-container {
+    padding: 0.5rem !important;
+    border-radius: 12px !important;
+  }
+
+  .waveform-sync-canvas {
+    height: 50px !important;
+  }
+}
+
+
+/* Ensure Micro-Waveform Ribbon fills in authentic RTL direction */
+.word-micro-waveform {
+  direction: rtl !important;
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+
+/* ==========================================================================
+   AUTHENTIC MUSHAF TAJWEED CALLIGRAPHY & LETTER HIGHLIGHTING
+   ========================================================================== */
+
+.mushaf-word-pill {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.65rem 0.5rem 0.65rem;
+  margin: 0.25rem 0.2rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.mushaf-word-pill.word-active {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: var(--active-tajweed-color, #10b981);
+  box-shadow: 0 0 16px var(--active-tajweed-color, #10b981), inset 0 0 8px var(--active-tajweed-color, #10b981);
+  transform: scale(1.03);
+}
+
+.mushaf-word-pill.word-past {
+  background: rgba(15, 23, 42, 0.35);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+/* Unbroken Authentic Arabic Naskh Calligraphy */
+.mushaf-word-calligraphy {
+  display: inline-flex;
+  align-items: baseline;
+  direction: rtl;
+  font-family: "Amiri", "Noto Naskh Arabic", "Scheherazade New", serif;
+  font-size: 2.3rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-feature-settings: "liga" 1, "calt" 1, "dlig" 1;
+}
+
+/* Individual Tajweed Letter Spans */
+.mushaf-tajweed-char {
+  position: relative;
+  display: inline;
+  transition: all 0.08s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.mushaf-tajweed-char.char-active {
+  color: #ffffff !important;
+  text-shadow: 0 0 12px var(--char-tajweed-color, #10b981), 0 0 24px var(--char-tajweed-color, #10b981) !important;
+  filter: drop-shadow(0 0 8px var(--char-tajweed-color, #10b981));
+  font-weight: 700;
+}
+
+.mushaf-tajweed-char.char-past {
+  color: #10b981 !important;
+  text-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+}
+
+
+/* ==========================================================================
+   AUTHENTIC ORIGINAL MUSHAF PAGE DISPLAY & CURRENT-LETTER HIGHLIGHTING
+   ========================================================================== */
+
+.arabic-karaoke-block {
+  display: block !important;
+  text-align: justify !important;
+  text-align-last: center !important;
+  line-height: 2.3 !important;
+  direction: rtl !important;
+  font-family: "Amiri Quran", "Amiri", "Noto Naskh Arabic", "Scheherazade New", serif !important;
+  font-size: clamp(2.1rem, 6vw, 3rem) !important;
+  padding: 1.2rem 1.4rem !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  border-radius: 18px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+.mushaf-word-inline {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.22rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: transform 0.1s ease;
+}
+
+.mushaf-word-inline:hover {
+  transform: translateY(-2px);
+}
+
+.mushaf-char-span {
+  position: relative;
+  display: inline;
+  transition: all 0.06s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Actively Reciting Current Letter - High Radiance & Tajweed Aura */
+.mushaf-char-span.char-active {
+  color: #ffffff !important;
+  text-shadow: 0 0 16px var(--tajweed-glow, #00ffaa), 0 0 32px var(--tajweed-glow, #00ffaa), 0 0 48px var(--tajweed-glow, #00ffaa) !important;
+  filter: drop-shadow(0 0 12px var(--tajweed-glow, #00ffaa)) !important;
+  font-weight: 700 !important;
+}
+
+/* Recited Past Letters - Solid Radiant Emerald Green */
+.mushaf-char-span.char-past {
+  color: #00ffaa !important;
+  text-shadow: 0 0 8px rgba(0, 255, 170, 0.5) !important;
+}
+
+/* Ayah End Medallion Symbol */
+.ayah-end-symbol {
+  font-family: "Amiri Quran", "Amiri", serif !important;
+  color: #fbbf24 !important;
+  font-size: 1.25em !important;
+  margin: 0 0.35rem !important;
+  vertical-align: middle !important;
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.4) !important;
+}
+
+
+/* ==========================================================================
+   LIQUID WATER WAVE FLOW (RTL) - ALL RECITED STAYS RADIANT GREEN
+   ========================================================================== */
+
+/* 1. Recited Letters - Permanently Lock into Solid Radiant Emerald Green */
+.mushaf-word-inline.word-past .mushaf-char-span,
+.mushaf-char-span.char-past {
+  color: #00ffaa !important;
+  -webkit-text-fill-color: #00ffaa !important;
+  text-shadow: 0 0 10px rgba(0, 255, 170, 0.7), 0 0 20px rgba(0, 255, 170, 0.3) !important;
+  opacity: 1 !important;
+}
+
+/* 2. Actively Reciting Word & Letter - Liquid Green Water Wave (RTL) */
+.mushaf-char-span.char-active {
+  background: linear-gradient(
+    to left,
+    #00ffaa 0%,
+    #00ffaa var(--letter-fill, 50%),
+    #ffffff calc(var(--letter-fill, 50%) + 1%),
+    var(--tajweed-color, #e2e8f0) calc(var(--letter-fill, 50%) + 6%)
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 0 14px rgba(0, 255, 170, 0.95)) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+/* 3. Upcoming Unrecited Letters - Display in their Authentic Tajweed Colors */
+.mushaf-char-span {
+  position: relative;
+  display: inline;
+  color: var(--tajweed-color, #e2e8f0);
+  opacity: 0.95;
+  transition: opacity 0.05s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* 4. Liquid Water Wave Beam Underneath Active Word (RTL Sweep) */
+.liquid-wave-track {
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  direction: rtl;
+}
+
+.liquid-wave-fill {
+  height: 100%;
+  background: linear-gradient(to left, #ffffff, #00ffaa);
+  box-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa;
+  border-radius: 2px;
+  transition: width 0.05s linear;
+}
+
+
+/* ==========================================================================
+   $10M DOLLAR MOBILE-FIRST SACRED MUSHAF DESIGN SYSTEM
+   ========================================================================== */
+
+/* 1. Unbroken Sacred Mushaf Container */
+.arabic-karaoke-block {
+  display: block !important;
+  text-align: justify !important;
+  text-align-last: center !important;
+  line-height: 2.3 !important;
+  direction: rtl !important;
+  font-family: "Amiri Quran", "Amiri", "Noto Naskh Arabic", "Scheherazade New", serif !important;
+  font-size: clamp(2.1rem, 6.2vw, 3.1rem) !important;
+  padding: 1.25rem 1.2rem !important;
+  background: rgba(15, 23, 42, 0.65) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(0, 255, 170, 0.15) !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), inset 0 0 24px rgba(0, 255, 170, 0.03) !important;
+}
+
+/* 2. Zero-Glitch Inline Word Flow */
+.mushaf-word-flow {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.2rem;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.mushaf-word-flow:hover {
+  transform: translateY(-2px);
+}
+
+/* 3. Pure Tajweed Letter Flow (No Glitchy Borders) */
+.mushaf-char-flow {
+  position: relative;
+  display: inline;
+  color: var(--tajweed-color, #f8fafc);
+  opacity: 0.95;
+  transition: opacity 0.04s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* 4. Active Reciting Letter - Fluid Liquid Water Wave (RTL Flow) */
+.mushaf-char-flow.char-active {
+  background: linear-gradient(
+    to left,
+    #00ffaa 0%,
+    #00ffaa var(--letter-fill, 50%),
+    #ffffff calc(var(--letter-fill, 50%) + 1%),
+    var(--tajweed-color, #f8fafc) calc(var(--letter-fill, 50%) + 6%)
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 170, 0.95)) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+/* 5. Recited Letters - Permanently Lock into Solid Radiant Emerald Green */
+.mushaf-word-flow.word-past .mushaf-char-flow,
+.mushaf-char-flow.char-past {
+  color: #00ffaa !important;
+  -webkit-text-fill-color: #00ffaa !important;
+  text-shadow: 0 0 10px rgba(0, 255, 170, 0.7), 0 0 20px rgba(0, 255, 170, 0.25) !important;
+  opacity: 1 !important;
+}
+
+/* 6. Ayah End Medallion */
+.ayah-end-symbol {
+  font-family: "Amiri Quran", "Amiri", serif !important;
+  color: #fbbf24 !important;
+  font-size: 1.2em !important;
+  margin: 0 0.35rem !important;
+  vertical-align: middle !important;
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.4) !important;
+}
+
+
+/* ==========================================================================
+   MOBILE-FIRST ULTRA-SLEEK VIEWPORT TUNING
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0.5rem 0.5rem 2rem 0.5rem !important;
+  }
+
+  .header-card {
+    padding: 0.75rem 1rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .header-badge {
+    display: none !important;
+  }
+
+  .header-title {
+    font-size: 1.5rem !important;
+    margin: 0.2rem 0 !important;
+  }
+
+  .reciter-subtitle {
+    font-size: 0.8rem !important;
+  }
+
+  .controls-card {
+    padding: 0.6rem 0.8rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .select-row {
+    flex-direction: row !important;
+    gap: 0.5rem !important;
+  }
+
+  .toggles-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.35rem !important;
+    margin-top: 0.4rem !important;
+  }
+
+  .pill-toggle {
+    font-size: 0.7rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .audio-player-card {
+    padding: 0.75rem 0.9rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .arabic-karaoke-block {
+    font-size: 2.1rem !important;
+    line-height: 2.2 !important;
+    padding: 1rem 0.8rem !important;
+  }
+}
+
+
+/* Settings Toggle Button */
+.settings-drawer-toggle-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.35rem;
+}
+
+.settings-toggle-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.settings-toggle-btn:hover {
+  background: rgba(0, 255, 170, 0.1);
+  border-color: rgba(0, 255, 170, 0.3);
+  color: #00ffaa;
+}
+
+
+/* ==========================================================================
+   LIQUID LISAN STANDARD: INLINE AYAH MARKERS & KINETIC DEPTH GLOW
+   ========================================================================= */
+
+.verse-item {
+  margin-bottom: 0.5rem !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.verse-item.verse-active {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Inline Delicate Quranic Ayah End Marker (Uthmani Standard) */
+.inline-ayah-marker {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: "Amiri Quran", "Amiri", "Noto Naskh Arabic", serif !important;
+  font-size: 0.85em !important;
+  color: #fbbf24 !important;
+  margin: 0 0.4rem !important;
+  padding: 0 0.2rem !important;
+  vertical-align: baseline !important;
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.4) !important;
+  user-select: none !important;
+  cursor: pointer !important;
+  transition: transform 0.15s ease !important;
+}
+
+.inline-ayah-marker:hover {
+  transform: scale(1.15) !important;
+  color: #fde68a !important;
+}
+
+/* Liquid Lisan Standard: Multi-Layered Kinetic Depth Glow & Pulse */
+@keyframes liquidLisanPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px var(--tajweed-color, #00ffaa)) 
+            drop-shadow(0 0 14px rgba(0, 255, 170, 0.7));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px var(--tajweed-color, #00ffaa)) 
+            drop-shadow(0 0 24px rgba(0, 255, 170, 0.95));
+  }
+}
+
+.mushaf-char-flow.char-active {
+  background: linear-gradient(
+    to left,
+    #00ffaa 0%,
+    #00ffaa var(--letter-fill, 50%),
+    #ffffff calc(var(--letter-fill, 50%) + 1%),
+    var(--tajweed-color, #f8fafc) calc(var(--letter-fill, 50%) + 6%)
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  animation: liquidLisanPulse 0.65s infinite alternate ease-in-out !important;
+}
+
+
+/* ==========================================================================
+   GPU HARDWARE-ACCELERATED FLUID MUSHAF CANVAS
+   ========================================================================== */
+
+.fluid-mushaf-canvas-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0.5rem 0 !important;
+  direction: rtl !important;
+}
+
+.fluid-mushaf-canvas {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  border-radius: 16px !important;
+  transition: opacity 0.2s ease;
+}
+
+/* Tajweed Legend Drawer Card */
+.tajweed-legend-card {
+  background: rgba(10, 18, 14, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-top: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 255, 136, 0.1);
+  animation: fadeInDown 0.25s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.legend-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--emerald-primary);
+  margin-bottom: 12px;
+  text-align: right;
+  letter-spacing: 0.3px;
+}
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.legend-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.legend-name {
+  color: #f1f5f9;
+  font-weight: 600;
+  flex: 1;
+}
+
+.legend-symbol {
+  font-family: var(--font-arabic);
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.hud-letter-pill {
+  font-family: var(--font-arabic);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 12px;
+  border: 1px solid;
+  display: inline-flex;
+  align-items: center;
+}
+
+.mobile-tajweed-hud-bar.hovered {
+  border-style: dashed;
+  animation: pulseHover 1.5s infinite alternate;
+}
+
+@keyframes pulseHover {
+  from {
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.2);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.45);
+  }
+}
+
+/* =======================================================
+   VIEW MODE SWITCHER & WORD-LEVEL AUDIO AUDITIONING
+   ======================================================= */
+.view-mode-selector-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 14px 0 18px 0;
+  width: 100%;
+}
+
+.view-mode-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 8px 18px;
+  color: #94a3b8;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(12px);
+}
+
+.view-mode-tab-btn:hover {
+  border-color: rgba(0, 255, 170, 0.4);
+  color: #f1f5f9;
+  transform: translateY(-1px);
+}
+
+.view-mode-tab-btn.active {
+  background: rgba(0, 255, 170, 0.15);
+  border-color: #00ffaa;
+  color: #00ffaa;
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.35), inset 0 0 12px rgba(0, 255, 170, 0.1);
+}
+
+.view-mode-tab-btn .tab-badge {
+  font-size: 0.7rem;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.view-mode-tab-btn.active .tab-badge {
+  background: rgba(0, 255, 170, 0.25);
+  color: #00ffaa;
+  font-weight: 700;
+}
+
+/* Flow Mode Helper Banner */
+.flow-mode-helper-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 255, 170, 0.06);
+  border: 1px solid rgba(0, 255, 170, 0.22);
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 18px;
+  font-size: 0.85rem;
+  color: #a7f3d0;
+  backdrop-filter: blur(10px);
+}
+
+.flow-mode-helper-banner .banner-icon {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.flow-mode-helper-banner .banner-tag {
+  background: rgba(0, 255, 170, 0.2);
+  color: #00ffaa;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+}
+
+/* Single Word Auditioning Pulse */
+.mushaf-word-flow.word-auditioning {
+  border-radius: 8px !important;
+  background: rgba(0, 255, 170, 0.18) !important;
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.7), inset 0 0 10px rgba(0, 255, 170, 0.3) !important;
+  transform: scale(1.08) !important;
+  animation: wordAuditionPulse 0.6s ease-in-out infinite alternate !important;
+}
+
+@keyframes wordAuditionPulse {
+  from {
+    box-shadow: 0 0 12px rgba(0, 255, 170, 0.4), inset 0 0 6px rgba(0, 255, 170, 0.2);
+  }
+  to {
+    box-shadow: 0 0 26px rgba(0, 255, 170, 0.9), inset 0 0 14px rgba(0, 255, 170, 0.4);
+  }
+}
+
+.audition-badge {
+  font-size: 0.75rem;
+  vertical-align: super;
+  margin-left: 2px;
+  filter: drop-shadow(0 0 6px #00ffaa);
+  animation: bounceBadge 0.5s infinite alternate;
+}
+
+@keyframes bounceBadge {
+  from { transform: translateY(0); }
+  to { transform: translateY(-2px); }
+}
+
+.word-card-chip.auditioning {
+  border-color: #00ffaa !important;
+  background: rgba(0, 255, 170, 0.22) !important;
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.6) !important;
+  transform: translateY(-3px) scale(1.06) !important;
+}
+
+.word-card-chip.auditioning .card-arabic {
+  color: #00ffaa !important;
+  text-shadow: 0 0 12px rgba(0, 255, 170, 0.8) !important;
+}
+
+/* Reciter Tajweed Voicefingerprint Telemetry Bar */
+.voicefinger-telemetry-bar {
+  margin-top: 14px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(0, 255, 170, 0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
+  backdrop-filter: blur(14px);
+}
+
+.vf-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.vf-header .vf-icon {
+  font-size: 1.1rem;
+}
+
+.vf-header .vf-title {
+  color: #94a3b8;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.vf-header .vf-name {
+  color: #00ffaa;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.vf-header .vf-style-badge {
+  background: rgba(0, 255, 170, 0.15);
+  border: 1px solid rgba(0, 255, 170, 0.3);
+  color: #00ffaa;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+.vf-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.vf-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+}
+
+.vf-stat-lbl {
+  color: #94a3b8;
+}
+
+.vf-stat-val {
+  color: #f1f5f9;
+  font-weight: 700;
+  font-family: monospace;
+}
+

@@ -12,6 +12,8 @@
   "dependencies": {
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
+    "@xenova/transformers": "^2.17.2",
+    "mpg123-decoder": "^1.0.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "three": "^0.182.0"

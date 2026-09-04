@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.ssh_keys/
+
+# Large binary audio datasets
+public/audio/abdul_basit_murattal/

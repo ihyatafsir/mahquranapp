@@ -7,7 +7,8 @@
     "duration": 0.177,
     "wordIdx": 0,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 1,
@@ -17,7 +18,8 @@
     "duration": 0.124,
     "wordIdx": 0,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 2,
@@ -27,7 +29,8 @@
     "duration": 0.156,
     "wordIdx": 1,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 3,
@@ -37,7 +40,8 @@
     "duration": 0.125,
     "wordIdx": 1,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 4,
@@ -47,7 +51,8 @@
     "duration": 0.18,
     "wordIdx": 2,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 5,
@@ -57,7 +62,8 @@
     "duration": 0.18,
     "wordIdx": 2,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 6,
@@ -67,7 +73,8 @@
     "duration": 0.359,
     "wordIdx": 2,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 7,
@@ -77,7 +84,8 @@
     "duration": 0.225,
     "wordIdx": 2,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 8,
@@ -87,7 +95,8 @@
     "duration": 0.519,
     "wordIdx": 3,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 9,
@@ -97,7 +106,8 @@
     "duration": 0.648,
     "wordIdx": 3,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 10,
@@ -107,7 +117,8 @@
     "duration": 0.519,
     "wordIdx": 3,
     "ayah": 1,
-    "verseIdx": 0
+    "verseIdx": 0,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 11,
@@ -117,7 +128,8 @@
     "duration": 0.183,
     "wordIdx": 4,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 12,
@@ -127,7 +139,8 @@
     "duration": 0.183,
     "wordIdx": 4,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 13,
@@ -137,7 +150,8 @@
     "duration": 0.367,
     "wordIdx": 4,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 14,
@@ -147,7 +161,8 @@
     "duration": 0.229,
     "wordIdx": 4,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 15,
@@ -157,7 +172,8 @@
     "duration": 0.258,
     "wordIdx": 5,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 16,
@@ -167,7 +183,8 @@
     "duration": 0.258,
     "wordIdx": 5,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 17,
@@ -177,7 +194,8 @@
     "duration": 0.515,
     "wordIdx": 5,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 18,
@@ -187,7 +205,8 @@
     "duration": 0.258,
     "wordIdx": 5,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 19,
@@ -197,7 +216,8 @@
     "duration": 0.257,
     "wordIdx": 5,
     "ayah": 2,
-    "verseIdx": 1
+    "verseIdx": 1,
+    "charIdxInWord": 4
   },
   {
     "charIdx": 20,
@@ -207,7 +227,8 @@
     "duration": 0.177,
     "wordIdx": 6,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 21,
@@ -217,7 +238,8 @@
     "duration": 0.124,
     "wordIdx": 6,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 22,
@@ -227,7 +249,8 @@
     "duration": 0.214,
     "wordIdx": 7,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 23,
@@ -237,7 +260,8 @@
     "duration": 0.214,
     "wordIdx": 7,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 24,
@@ -247,7 +271,8 @@
     "duration": 0.214,
     "wordIdx": 7,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 25,
@@ -257,7 +282,8 @@
     "duration": 0.216,
     "wordIdx": 8,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 26,
@@ -267,7 +293,8 @@
     "duration": 0.216,
     "wordIdx": 8,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 27,
@@ -277,7 +304,8 @@
     "duration": 0.151,
     "wordIdx": 8,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 28,
@@ -287,7 +315,8 @@
     "duration": 0.313,
     "wordIdx": 9,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 29,
@@ -297,7 +326,8 @@
     "duration": 0.688,
     "wordIdx": 9,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 30,
@@ -307,7 +337,8 @@
     "duration": 0.313,
     "wordIdx": 9,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 31,
@@ -317,7 +348,8 @@
     "duration": 0.313,
     "wordIdx": 9,
     "ayah": 3,
-    "verseIdx": 2
+    "verseIdx": 2,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 32,
@@ -327,7 +359,8 @@
     "duration": 0.179,
     "wordIdx": 10,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 33,
@@ -337,7 +370,8 @@
     "duration": 0.179,
     "wordIdx": 10,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 34,
@@ -347,7 +381,8 @@
     "duration": 0.125,
     "wordIdx": 10,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 35,
@@ -357,7 +392,8 @@
     "duration": 0.181,
     "wordIdx": 11,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 36,
@@ -367,7 +403,8 @@
     "duration": 0.181,
     "wordIdx": 11,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 37,
@@ -377,7 +414,8 @@
     "duration": 0.181,
     "wordIdx": 11,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 38,
@@ -387,7 +425,8 @@
     "duration": 0.302,
     "wordIdx": 12,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 39,
@@ -397,7 +436,8 @@
     "duration": 0.189,
     "wordIdx": 12,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 40,
@@ -407,7 +447,8 @@
     "duration": 0.151,
     "wordIdx": 12,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 41,
@@ -417,7 +458,8 @@
     "duration": 0.193,
     "wordIdx": 13,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 42,
@@ -427,7 +469,8 @@
     "duration": 0.193,
     "wordIdx": 13,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 43,
@@ -437,7 +480,8 @@
     "duration": 0.193,
     "wordIdx": 13,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 2
   },
   {
     "charIdx": 44,
@@ -447,7 +491,8 @@
     "duration": 0.424,
     "wordIdx": 13,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 3
   },
   {
     "charIdx": 45,
@@ -457,7 +502,8 @@
     "duration": 0.364,
     "wordIdx": 14,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 0
   },
   {
     "charIdx": 46,
@@ -467,7 +513,8 @@
     "duration": 0.455,
     "wordIdx": 14,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 1
   },
   {
     "charIdx": 47,
@@ -477,6 +524,7 @@
     "duration": 0.364,
     "wordIdx": 14,
     "ayah": 4,
-    "verseIdx": 3
+    "verseIdx": 3,
+    "charIdxInWord": 2
   }
 ]

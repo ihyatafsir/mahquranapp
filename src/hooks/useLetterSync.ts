@@ -1,12 +1,44 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import type { LetterTiming, SyncState } from '../types/quran';
 
-// Binary search to find current letter index based on audio time
-// Returns -1 if playback is in a long breath pause / silence gap
-export function findCurrentLetterIdx(timing: LetterTiming[], currentTime: number): number {
+/**
+ * High-precision temporal alignment search with O(1) locality caching & binary search fallback.
+ * Handles continuous playback, micro-legato letter smoothing, and abrupt seeking.
+ */
+export function findCurrentLetterIdx(
+    timing: LetterTiming[],
+    currentTime: number,
+    offsetMs: number = 0,
+    hintIdx: number = -1
+): number {
     if (!timing || timing.length === 0) return -1;
-    if (currentTime < timing[0].start) return -1;
+    const adjustedTime = Math.max(0, currentTime + (offsetMs / 1000));
+    if (adjustedTime < timing[0].start - 0.05) return -1;
 
+    // Fast O(1) temporal locality check for continuous forward playback
+    if (hintIdx >= 0 && hintIdx < timing.length) {
+        const currentLetter = timing[hintIdx];
+        // 1. Still inside current letter
+        if (adjustedTime >= currentLetter.start && adjustedTime < currentLetter.end) {
+            return hintIdx;
+        }
+
+        // 2. Advanced to immediate next letter
+        if (hintIdx + 1 < timing.length) {
+            const nextLetter = timing[hintIdx + 1];
+            if (adjustedTime >= nextLetter.start && adjustedTime < nextLetter.end) {
+                return hintIdx + 1;
+            }
+            // 3. In micro-gap between current and next letter (< 0.25s)
+            if (adjustedTime >= currentLetter.end && adjustedTime < nextLetter.start && (nextLetter.start - currentLetter.end) <= 0.25) {
+                return hintIdx;
+            }
+        } else if (adjustedTime >= currentLetter.end && adjustedTime < currentLetter.end + 0.3) {
+            return hintIdx;
+        }
+    }
+
+    // Binary search fallback for seeking / rewinding / initial alignment
     let left = 0;
     let right = timing.length - 1;
 
@@ -14,24 +46,25 @@ export function findCurrentLetterIdx(timing: LetterTiming[], currentTime: number
         const mid = Math.floor((left + right) / 2);
         const letter = timing[mid];
 
-        if (currentTime >= letter.start && currentTime < letter.end) {
+        if (adjustedTime >= letter.start && adjustedTime < letter.end) {
             return mid;
         }
 
-        if (currentTime < letter.start) {
+        if (adjustedTime < letter.start) {
             right = mid - 1;
         } else {
             left = mid + 1;
         }
     }
 
-    // If currentTime falls slightly past the letter end but before a new letter starts
+    // Micro-legato smoothing fallback
     if (right >= 0 && right < timing.length) {
         const prev = timing[right];
         const next = right + 1 < timing.length ? timing[right + 1] : null;
-        
-        // If next letter is within 0.15s, keep prev active for smooth visual legato
-        if (currentTime >= prev.start && (next ? currentTime < next.start : currentTime < prev.end + 0.3)) {
+
+        if (next && adjustedTime < next.start && (next.start - prev.end) <= 0.25) {
+            return right;
+        } else if (!next && adjustedTime < prev.end + 0.3) {
             return right;
         }
     }
@@ -41,7 +74,10 @@ export function findCurrentLetterIdx(timing: LetterTiming[], currentTime: number
 
 export function useLetterSync(
     audioRef: React.RefObject<HTMLAudioElement | null>,
-    letterTiming: LetterTiming[]
+    letterTiming: LetterTiming[],
+    offsetMs: number = 0,
+    stopAtTimeRef?: React.MutableRefObject<number | null>,
+    onStopReached?: () => void
 ) {
     const [syncState, setSyncState] = useState<SyncState>({
         currentTime: 0,
@@ -49,6 +85,7 @@ export function useLetterSync(
         currentLetterIdx: -1,
         currentWordIdx: -1,
         currentVerseIdx: 0,
+        letterProgress: 0,
         isPlaying: false,
     });
 
@@ -56,6 +93,8 @@ export function useLetterSync(
     const lastLetterIdxRef = useRef<number>(-1);
     const lastWordIdxRef = useRef<number>(-1);
     const lastVerseIdxRef = useRef<number>(-1);
+    const lastTimeRef = useRef<number>(0);
+    const lastPlayStateRef = useRef<boolean>(false);
 
     const updateSync = useCallback(() => {
         const audio = audioRef.current;
@@ -63,20 +102,39 @@ export function useLetterSync(
 
         const currentTime = audio.currentTime;
         const duration = audio.duration || 0;
+        const isPlaying = !audio.paused;
+
+        // Auto-pause boundary check for single-word auditioning (WhisperX precision)
+        if (stopAtTimeRef && stopAtTimeRef.current !== null && isPlaying) {
+            if (currentTime >= stopAtTimeRef.current) {
+                audio.pause();
+                stopAtTimeRef.current = null;
+                if (onStopReached) {
+                    onStopReached();
+                }
+            }
+        }
 
         if (letterTiming.length === 0) {
-            setSyncState(prev => ({
-                ...prev,
-                currentTime,
-                duration,
-                isPlaying: !audio.paused,
-            }));
+            if (Math.abs(currentTime - lastTimeRef.current) > 0.05 || isPlaying !== lastPlayStateRef.current) {
+                lastTimeRef.current = currentTime;
+                lastPlayStateRef.current = isPlaying;
+                setSyncState(prev => ({
+                    ...prev,
+                    currentTime,
+                    duration,
+                    letterProgress: 0,
+                    isPlaying,
+                }));
+            }
             return;
         }
 
-        const letterIdx = findCurrentLetterIdx(letterTiming, currentTime);
+        const adjustedTime = Math.max(0, currentTime + (offsetMs / 1000));
+        const letterIdx = findCurrentLetterIdx(letterTiming, currentTime, offsetMs, lastLetterIdxRef.current);
         let wordIdx = -1;
         let verseIdx = 0;
+        let letterProgress = 0;
 
         if (letterIdx >= 0 && letterIdx < letterTiming.length) {
             const letter = letterTiming[letterIdx];
@@ -84,20 +142,29 @@ export function useLetterSync(
             verseIdx = typeof letter.verseIdx !== 'undefined'
                 ? letter.verseIdx
                 : (letter.ayah ? letter.ayah - 1 : 0);
+
+            const letterDuration = Math.max(0.005, letter.end - letter.start);
+            letterProgress = Math.max(0, Math.min(1, (adjustedTime - letter.start) / letterDuration));
         } else if (lastWordIdxRef.current >= 0) {
-            // In a pause, keep current verse
+            wordIdx = lastWordIdxRef.current;
             verseIdx = lastVerseIdxRef.current >= 0 ? lastVerseIdxRef.current : 0;
         }
 
-        // Only trigger React state updates when indices change or audio time moves
-        if (
+        const indicesChanged = (
             letterIdx !== lastLetterIdxRef.current ||
             wordIdx !== lastWordIdxRef.current ||
             verseIdx !== lastVerseIdxRef.current
-        ) {
+        );
+
+        const timeMoved = Math.abs(currentTime - lastTimeRef.current) > 0.03;
+        const playStateChanged = isPlaying !== lastPlayStateRef.current;
+
+        if (indicesChanged || (isPlaying && timeMoved) || playStateChanged) {
             lastLetterIdxRef.current = letterIdx;
             lastWordIdxRef.current = wordIdx;
             lastVerseIdxRef.current = verseIdx;
+            lastTimeRef.current = currentTime;
+            lastPlayStateRef.current = isPlaying;
 
             setSyncState({
                 currentTime,
@@ -105,10 +172,11 @@ export function useLetterSync(
                 currentLetterIdx: letterIdx,
                 currentWordIdx: wordIdx,
                 currentVerseIdx: verseIdx,
-                isPlaying: !audio.paused,
+                letterProgress,
+                isPlaying,
             });
         }
-    }, [audioRef, letterTiming]);
+    }, [audioRef, letterTiming, offsetMs, stopAtTimeRef, onStopReached]);
 
     useEffect(() => {
         const loop = () => {
